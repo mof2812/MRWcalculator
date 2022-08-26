@@ -1,0 +1,96 @@
+LM: git diff 85821736846e353f6a05586d6de395f73f14bda2 14c8068f27c4a80aa640ac2ef8c4973fdfb3efd8 Weight.c > Weight_c.txt
+
+diff --git a/Weight.c b/Weight.c
+index de70fb6..e9ef501 100644
+--- a/Weight.c
++++ b/Weight.c
+@@ -1,8 +1,8 @@
+ /*~+:File :        Weight.c*/
+ /*~+:*/
+-/*~+:Version :     V1.0*/
++/*~+:Version :     V1.001*/
+ /*~+:*/
+-/*~+:Date :        31.05.2005*/
++/*~+:Date :        09.02.2022*/
+ /*~+:*/
+ /*~+:Time :        10:23*/
+ /*~+:*/
+@@ -37,6 +37,7 @@ char 				Weight_SetZeroRegardingActualWeight(void);
+ /*~+:Globale Variablen*/
+ MEASUREMENT_VALUE Weight_MeasurementFromADC;
+ MEASUREMENT_VALUE Weight_FilteredMeasurement;
++MEASUREMENT_VALUE Weight_CorrectedMeasurement;
+ MEASUREMENT_VALUE Weight_ZeroCorrectedMeasurement;
+ MEASUREMENT_VALUE Weight_ZeroCorrectedMeasurementStandardized;
+ MEASUREMENT_VALUE Weight_ZeroCorrectedMeasurementWithTare;
+@@ -68,6 +69,9 @@ void Weight(void)
+    MEASUREMENT_VALUE Measurement;
+    MEASUREMENT_MOTIONPARAMETER MotionParameter;
+    float fCalibrationFactor;
++   /*~+:*/
++   MEASUREMENT_VALUE 	MVTemp;
++   /*~+:*/
+    /*~+:Variableninitialsierungen*/
+ 
+    if ((ADuC836_ADCIsNewConversionValue(ADuC836_ADC_PRIMARY) != 0)||(g_SystemControl.bySimulate & 0x01))
+@@ -75,10 +79,10 @@ void Weight(void)
+       // JA
+ 
+       /*~+:Nur zu Debugzwecken - SYSTEM_CND_LEDS_4_DEBUG_P06_CHECK_WEIGHING_CYCLE*/
+-#ifdef SYSTEM_CND_LEDS_4_DEBUG_P06_CHECK_WEIGHING_CYCLE
++#ifdef SYSTEM_CND_LEDS_4_DEBUG_P06_CHECK_WEIGHING_CYCLE		// nicht definiert
+       P06 = 0;
+ #endif
+-#ifdef MIT_GEWICHTSSIMULATION
++#ifdef MIT_GEWICHTSSIMULATION		// nicht simuliert
+       /*~+:MIT_GEWICHTSSIMULATION*/
+       if (!(g_SystemControl.bySimulate & 0x01))
+       {
+@@ -95,14 +99,34 @@ void Weight(void)
+       Measurement.nLong = ADuC836_ADCGetConversionValue(ADuC836_ADC_PRIMARY,0);
+ #endif
+       Weight_MeasurementFromADC = Measurement;
+-      // Temperatur- und E-Modul-Kompensation
+-      Measurement_Processing(MEASUREMENT_PROCESSING_CORRECTION,WEIGHT_WEIGHTCHANNEL,&Measurement);
++      /*~+:*/
++      // Temperaturkompensation durchführen
++      MRW_Compensation_TemperatureCompensation(&Measurement.nLong,Global.byTemperature);
++      /*~+:*/
+       // Rohmesswertfilterung (nur wenn tatsächlich ein neuer Wert vorliegt !!!)
+       Measurement_Processing(MEASUREMENT_PROCESSING_FILTER,WEIGHT_WEIGHTCHANNEL,&Measurement);
+-      Weight_FilteredMeasurement = Measurement;
+       // Nullpunktverrechnung
+       Measurement_Processing(MEASUREMENT_PROCESSING_ZERO,WEIGHT_WEIGHTCHANNEL,&Measurement);
+-      Weight_ZeroCorrectedMeasurement = Measurement;
++      // E-Modul-Kompensation
++      if (Global.chEModulCompensationOn)
++      {
++         /*~+:// E-Modul-Kompensation eingeschaltet*/
++         if (!MRW_Compensation_GetRecCharacteristicsOnOffStatus())
++         {
++            /*~+:// Keine Kennlinienaufnahme*/
++            // E-Modul-Kompensation
++            Measurement.nLong = Measurement.nLong + (long)((float)Measurement.nLong * (float)(Global.byTemperature - 20) * FACTOR_E_MODUL);
++
++            Weight_ZeroCorrectedMeasurement = Measurement;
++         }
++      }
++      /* Für die Kennlinienaufnahme bedarf des korrigierten, aber nicht nullpunktverrechneten Messwerts */
++      {
++         Measurement_GetZero(WEIGHT_WEIGHTCHANNEL,&MVTemp); /* Nullpunkt holen */
++
++         Weight_FilteredMeasurement.nLong = Weight_ZeroCorrectedMeasurement.nLong + MVTemp.nLong;	/* und verrechnen */
++
++      }
+       // Normierung
+       Measurement_Processing(MEASUREMENT_PROCESSING_STANDARDIZATION,WEIGHT_WEIGHTCHANNEL,&Measurement);
+       Weight_ZeroCorrectedMeasurementStandardized = Measurement;
+@@ -168,7 +192,7 @@ void Weight_GetMotionParameter(MEASUREMENT_MOTIONPARAMETER *pMotionParameter)
+ {
+    Measurement_GetMotionParameter(WEIGHT_WEIGHTCHANNEL,pMotionParameter);
+ }
+-/*~+:unsigned char 		Weight_Ini(unsigned char byMode)*/
++/*~+:unsigned char 			Weight_Ini(unsigned char byMode)*/
+ unsigned char Weight_Ini(unsigned char byMode)
+ {
+    /*~+:Beschreibung*/

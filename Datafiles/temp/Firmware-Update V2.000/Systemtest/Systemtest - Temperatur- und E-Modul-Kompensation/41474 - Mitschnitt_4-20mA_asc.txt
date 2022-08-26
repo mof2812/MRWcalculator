@@ -1,0 +1,107 @@
+Docklight Log File (ASCII) - Started 29.03.2022 15:33:35.308 
+
+29.03.2022 15:33:49.699 [TX] - ACR 0 255 0
+29.03.2022 15:33:49.814 [RX] - T3020 - SystemID : .............................................................  41474
+
+T3000 - Hardware-Version : .....................................................  V1.2_,     02/2007
+T3010 - Software-Version : .....................................................  V1.202 24.02.2022
+
+T0005 - Kanal 0 :  
+T4000 - =========  
+
+T3550 - Zellenkennlinie :   
+
+T4020 -    Temperatur       Korrekturwert 
+              70              -24 (-1240)
+              65              -13 (-1229)
+              60               -6 (-1222)
+              55               -1 (-1217)
+              50                2 (-1214)
+              45                4 (-1212)
+              40                4 (-1212)
+              35                4 (-1212)
+              30                4 (-1212)
+              25                2 (-1214)
+              20                0 (-1216)
+              15               -2 (-1218)
+              10               -4 (-1220)
+               5               -6 (-1222)
+               0               -8 (-1224)
+              -5              -10 (-1226)
+             -10              -12 (-1228)
+             -15              -14 (-1230)
+             -20              -16 (-1232)
+             -25              -18 (-1234)
+             -30              -21 (-1237)
+
+T3400 - Überprüfung der Kompensation :  
+T3480 - Maximalwert bei Temperatur  :  52
+T3490 - Maximalwert :                  1.03kg (9)
+T3500 - Minimalwert bei Temperatur  :  67
+T3510 - Minimalwert :                  0.34kg (3)
+
+
+T3410 - Driftermittlung :  
+T3520 - 1.Wert :  -1231
+T3530 - 2.Wert :  -1212
+T3540 - Drift  :  19 (2.17kg)
+
+T3430 - Kennlinienaufnahme komplett abgeschlossen  
+T0640 - Kanal 0 : Kennlinienaufnahme und Überprüfung erfolgreich abgeschlossen ! 
+
+
+29.03.2022 15:33:52.037 [RX] - 
+T1005 - Kanal 1 :  
+T4000 - =========  
+
+T3550 - Zellenkennlinie :   
+
+T4020 -    Temperatur       Korrekturwert 
+              70               46 ( 1904)
+              65               40 ( 1898)
+              60               34 ( 1892)
+              55               29 ( 1887)
+              50               24 ( 1882)
+              45               20 ( 1878)
+              40               16 ( 1874)
+              35               12 ( 1870)
+              30                8 ( 1866)
+              25                4 ( 1862)
+              20                0 ( 1858)
+              15               -4 ( 1854)
+              10               -8 ( 1850)
+               5              -14 ( 1844)
+               0              -18 ( 1840)
+              -5              -22 ( 1836)
+             -10              -27 ( 1831)
+             -15              -31 ( 1827)
+             -20              -36 ( 1822)
+             -25              -41 ( 1817)
+             -30              -46 ( 1812)
+
+T3400 - Überprüfung der Kompensation :  
+T3480 - Maximalwert bei Temperatur  :  27
+T3490 - Maximalwert :                  1.37kg (12)
+T3500 - Minimalwert bei Temperatur  :  27
+T3510 - Minimalwert :                  0.34kg (3)
+
+
+T3410 - Driftermittlung :  
+T3520 - 1.Wert :  1833
+T3530 - 2.Wert :  1853
+T3540 - Drift  :  20 (2.29kg)
+
+T3430 - Kennlinienaufnahme komplett abgeschlossen  
+T1640 - Kanal 1 : Kennlinienaufnahme und Überprüfung erfolgreich abgeschlossen ! 
+
+
+
+
+
+
+T9010 - Datum : ___________________________           Prüfer : ___________________________ 
+
+
+
+Docklight Log File (ASCII) - Stopped 29.03.2022 15:34:22.224 
+

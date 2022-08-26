@@ -1,0 +1,277 @@
+﻿namespace MRWCalculator
+{
+    partial class CellCharacteristics
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.grpCellTemperaturInfluence = new System.Windows.Forms.GroupBox();
+            this.lblUnitCellTemperaturInfluence_Minus30 = new System.Windows.Forms.Label();
+            this.lblUnitCellTemperaturInfluence_70 = new System.Windows.Forms.Label();
+            this.txtCellTemperaturInfluence_Minus30 = new System.Windows.Forms.TextBox();
+            this.lblCellTemperaturInfluence_Minus30 = new System.Windows.Forms.Label();
+            this.txtCellTemperaturInfluence_70 = new System.Windows.Forms.TextBox();
+            this.lblCellTemperaturInfluence_70 = new System.Windows.Forms.Label();
+            this.lblDMSOffset = new System.Windows.Forms.Label();
+            this.lblDMSGain = new System.Windows.Forms.Label();
+            this.lblUnitDMSOffset = new System.Windows.Forms.Label();
+            this.lblUnitDMSGain = new System.Windows.Forms.Label();
+            this.textDMSOffset = new System.Windows.Forms.TextBox();
+            this.txtDMSGain = new System.Windows.Forms.TextBox();
+            this.lblUnitCellEModuleFactor = new System.Windows.Forms.Label();
+            this.txtCellEModuleFactor = new System.Windows.Forms.TextBox();
+            this.lblCellEModuleFactor = new System.Windows.Forms.Label();
+            this.grpCellTemperaturInfluence.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // grpCellTemperaturInfluence
+            // 
+            this.grpCellTemperaturInfluence.Controls.Add(this.lblUnitCellEModuleFactor);
+            this.grpCellTemperaturInfluence.Controls.Add(this.txtCellEModuleFactor);
+            this.grpCellTemperaturInfluence.Controls.Add(this.lblCellEModuleFactor);
+            this.grpCellTemperaturInfluence.Controls.Add(this.lblUnitCellTemperaturInfluence_Minus30);
+            this.grpCellTemperaturInfluence.Controls.Add(this.lblUnitCellTemperaturInfluence_70);
+            this.grpCellTemperaturInfluence.Controls.Add(this.txtCellTemperaturInfluence_Minus30);
+            this.grpCellTemperaturInfluence.Controls.Add(this.lblCellTemperaturInfluence_Minus30);
+            this.grpCellTemperaturInfluence.Controls.Add(this.txtCellTemperaturInfluence_70);
+            this.grpCellTemperaturInfluence.Controls.Add(this.lblCellTemperaturInfluence_70);
+            this.grpCellTemperaturInfluence.Location = new System.Drawing.Point(655, 23);
+            this.grpCellTemperaturInfluence.Name = "grpCellTemperaturInfluence";
+            this.grpCellTemperaturInfluence.Size = new System.Drawing.Size(458, 360);
+            this.grpCellTemperaturInfluence.TabIndex = 0;
+            this.grpCellTemperaturInfluence.TabStop = false;
+            this.grpCellTemperaturInfluence.Text = "Temperatureinflüsse";
+            // 
+            // lblUnitCellTemperaturInfluence_Minus30
+            // 
+            this.lblUnitCellTemperaturInfluence_Minus30.AutoSize = true;
+            this.lblUnitCellTemperaturInfluence_Minus30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblUnitCellTemperaturInfluence_Minus30.Location = new System.Drawing.Point(310, 159);
+            this.lblUnitCellTemperaturInfluence_Minus30.Name = "lblUnitCellTemperaturInfluence_Minus30";
+            this.lblUnitCellTemperaturInfluence_Minus30.Size = new System.Drawing.Size(52, 25);
+            this.lblUnitCellTemperaturInfluence_Minus30.TabIndex = 15;
+            this.lblUnitCellTemperaturInfluence_Minus30.Text = "digit";
+            // 
+            // lblUnitCellTemperaturInfluence_70
+            // 
+            this.lblUnitCellTemperaturInfluence_70.AutoSize = true;
+            this.lblUnitCellTemperaturInfluence_70.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblUnitCellTemperaturInfluence_70.Location = new System.Drawing.Point(310, 75);
+            this.lblUnitCellTemperaturInfluence_70.Name = "lblUnitCellTemperaturInfluence_70";
+            this.lblUnitCellTemperaturInfluence_70.Size = new System.Drawing.Size(52, 25);
+            this.lblUnitCellTemperaturInfluence_70.TabIndex = 12;
+            this.lblUnitCellTemperaturInfluence_70.Text = "digit";
+            // 
+            // txtCellTemperaturInfluence_Minus30
+            // 
+            this.txtCellTemperaturInfluence_Minus30.Location = new System.Drawing.Point(160, 159);
+            this.txtCellTemperaturInfluence_Minus30.Name = "txtCellTemperaturInfluence_Minus30";
+            this.txtCellTemperaturInfluence_Minus30.Size = new System.Drawing.Size(134, 30);
+            this.txtCellTemperaturInfluence_Minus30.TabIndex = 14;
+            this.txtCellTemperaturInfluence_Minus30.Text = "Offset@-30°C";
+            this.txtCellTemperaturInfluence_Minus30.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblCellTemperaturInfluence_Minus30
+            // 
+            this.lblCellTemperaturInfluence_Minus30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblCellTemperaturInfluence_Minus30.Location = new System.Drawing.Point(15, 132);
+            this.lblCellTemperaturInfluence_Minus30.Name = "lblCellTemperaturInfluence_Minus30";
+            this.lblCellTemperaturInfluence_Minus30.Size = new System.Drawing.Size(126, 86);
+            this.lblCellTemperaturInfluence_Minus30.TabIndex = 13;
+            this.lblCellTemperaturInfluence_Minus30.Text = "Temperatureinfluss bei -30°C";
+            this.lblCellTemperaturInfluence_Minus30.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtCellTemperaturInfluence_70
+            // 
+            this.txtCellTemperaturInfluence_70.Location = new System.Drawing.Point(160, 75);
+            this.txtCellTemperaturInfluence_70.Name = "txtCellTemperaturInfluence_70";
+            this.txtCellTemperaturInfluence_70.Size = new System.Drawing.Size(134, 30);
+            this.txtCellTemperaturInfluence_70.TabIndex = 11;
+            this.txtCellTemperaturInfluence_70.Text = "Offset@70°C";
+            this.txtCellTemperaturInfluence_70.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblCellTemperaturInfluence_70
+            // 
+            this.lblCellTemperaturInfluence_70.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblCellTemperaturInfluence_70.Location = new System.Drawing.Point(15, 48);
+            this.lblCellTemperaturInfluence_70.Name = "lblCellTemperaturInfluence_70";
+            this.lblCellTemperaturInfluence_70.Size = new System.Drawing.Size(138, 88);
+            this.lblCellTemperaturInfluence_70.TabIndex = 10;
+            this.lblCellTemperaturInfluence_70.Text = "Temperatur-Einfluss bei 70°C";
+            this.lblCellTemperaturInfluence_70.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblDMSOffset
+            // 
+            this.lblDMSOffset.AutoSize = true;
+            this.lblDMSOffset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblDMSOffset.Location = new System.Drawing.Point(43, 75);
+            this.lblDMSOffset.Name = "lblDMSOffset";
+            this.lblDMSOffset.Size = new System.Drawing.Size(126, 25);
+            this.lblDMSOffset.TabIndex = 0;
+            this.lblDMSOffset.Text = "DMS-Offset";
+            this.lblDMSOffset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblDMSGain
+            // 
+            this.lblDMSGain.AutoSize = true;
+            this.lblDMSGain.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblDMSGain.Location = new System.Drawing.Point(26, 159);
+            this.lblDMSGain.Name = "lblDMSGain";
+            this.lblDMSGain.Size = new System.Drawing.Size(146, 25);
+            this.lblDMSGain.TabIndex = 3;
+            this.lblDMSGain.Text = "DMS-Steilheit";
+            this.lblDMSGain.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblUnitDMSOffset
+            // 
+            this.lblUnitDMSOffset.AutoSize = true;
+            this.lblUnitDMSOffset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblUnitDMSOffset.Location = new System.Drawing.Point(324, 75);
+            this.lblUnitDMSOffset.Name = "lblUnitDMSOffset";
+            this.lblUnitDMSOffset.Size = new System.Drawing.Size(52, 25);
+            this.lblUnitDMSOffset.TabIndex = 2;
+            this.lblUnitDMSOffset.Text = "digit";
+            // 
+            // lblUnitDMSGain
+            // 
+            this.lblUnitDMSGain.AutoSize = true;
+            this.lblUnitDMSGain.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblUnitDMSGain.Location = new System.Drawing.Point(324, 159);
+            this.lblUnitDMSGain.Name = "lblUnitDMSGain";
+            this.lblUnitDMSGain.Size = new System.Drawing.Size(82, 25);
+            this.lblUnitDMSGain.TabIndex = 5;
+            this.lblUnitDMSGain.Text = "digit/kg";
+            // 
+            // textDMSOffset
+            // 
+            this.textDMSOffset.Location = new System.Drawing.Point(174, 75);
+            this.textDMSOffset.Name = "textDMSOffset";
+            this.textDMSOffset.Size = new System.Drawing.Size(134, 30);
+            this.textDMSOffset.TabIndex = 1;
+            this.textDMSOffset.Text = "DMS-Offset";
+            this.textDMSOffset.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtDMSGain
+            // 
+            this.txtDMSGain.Location = new System.Drawing.Point(174, 159);
+            this.txtDMSGain.Name = "txtDMSGain";
+            this.txtDMSGain.Size = new System.Drawing.Size(134, 30);
+            this.txtDMSGain.TabIndex = 4;
+            this.txtDMSGain.Text = "DMS-Gain";
+            this.txtDMSGain.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblUnitCellEModuleFactor
+            // 
+            this.lblUnitCellEModuleFactor.AutoSize = true;
+            this.lblUnitCellEModuleFactor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblUnitCellEModuleFactor.Location = new System.Drawing.Point(324, 268);
+            this.lblUnitCellEModuleFactor.Name = "lblUnitCellEModuleFactor";
+            this.lblUnitCellEModuleFactor.Size = new System.Drawing.Size(52, 25);
+            this.lblUnitCellEModuleFactor.TabIndex = 18;
+            this.lblUnitCellEModuleFactor.Text = "digit";
+            // 
+            // txtCellEModuleFactor
+            // 
+            this.txtCellEModuleFactor.Location = new System.Drawing.Point(174, 268);
+            this.txtCellEModuleFactor.Name = "txtCellEModuleFactor";
+            this.txtCellEModuleFactor.Size = new System.Drawing.Size(134, 30);
+            this.txtCellEModuleFactor.TabIndex = 17;
+            this.txtCellEModuleFactor.Text = "Offset@-30°C";
+            this.txtCellEModuleFactor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblCellEModuleFactor
+            // 
+            this.lblCellEModuleFactor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lblCellEModuleFactor.Location = new System.Drawing.Point(29, 241);
+            this.lblCellEModuleFactor.Name = "lblCellEModuleFactor";
+            this.lblCellEModuleFactor.Size = new System.Drawing.Size(126, 86);
+            this.lblCellEModuleFactor.TabIndex = 16;
+            this.lblCellEModuleFactor.Text = "Temperatureinfluss bei -30°C";
+            this.lblCellEModuleFactor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // CellCharacteristics
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DimGray;
+            this.ClientSize = new System.Drawing.Size(1706, 562);
+            this.Controls.Add(this.txtDMSGain);
+            this.Controls.Add(this.textDMSOffset);
+            this.Controls.Add(this.lblUnitDMSGain);
+            this.Controls.Add(this.lblUnitDMSOffset);
+            this.Controls.Add(this.lblDMSGain);
+            this.Controls.Add(this.lblDMSOffset);
+            this.Controls.Add(this.grpCellTemperaturInfluence);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "CellCharacteristics";
+            this.Text = "Wägezellen-Kennwerte";
+            this.grpCellTemperaturInfluence.ResumeLayout(false);
+            this.grpCellTemperaturInfluence.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+            // 
+            // txtCellEModuleFactor
+            // 
+            this.txtCellEModuleFactor.Location = new System.Drawing.Point(160, 303);
+            this.txtCellEModuleFactor.Name = "txtCellEModuleFactor";
+            this.txtCellEModuleFactor.Size = new System.Drawing.Size(134, 30);
+            this.txtCellEModuleFactor.TabIndex = 17;
+            this.txtCellEModuleFactor.Text = "E-Module factor";
+            this.txtCellEModuleFactor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblCellEModuleFactor
+            // 
+            this.lblCellEModuleFactor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblCellEModuleFactor.Location = new System.Drawing.Point(15, 276);
+            this.lblCellEModuleFactor.Name = "lblCellEModuleFactor";
+            this.lblCellEModuleFactor.Size = new System.Drawing.Size(126, 86);
+            this.lblCellEModuleFactor.TabIndex = 16;
+            this.lblCellEModuleFactor.Text = "E-Modul - Faktor";
+            this.lblCellEModuleFactor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.GroupBox grpCellTemperaturInfluence;
+        private System.Windows.Forms.Label lblCellTemperaturInfluence_70;
+        private System.Windows.Forms.Label lblUnitCellTemperaturInfluence_Minus30;
+        private System.Windows.Forms.Label lblUnitCellTemperaturInfluence_70;
+        private System.Windows.Forms.TextBox txtCellTemperaturInfluence_Minus30;
+        private System.Windows.Forms.Label lblCellTemperaturInfluence_Minus30;
+        private System.Windows.Forms.TextBox txtCellTemperaturInfluence_70;
+        private System.Windows.Forms.Label lblDMSOffset;
+        private System.Windows.Forms.Label lblDMSGain;
+        private System.Windows.Forms.Label lblUnitDMSOffset;
+        private System.Windows.Forms.Label lblUnitDMSGain;
+        private System.Windows.Forms.TextBox textDMSOffset;
+        private System.Windows.Forms.TextBox txtDMSGain;
+        private System.Windows.Forms.Label lblUnitCellEModuleFactor;
+        private System.Windows.Forms.TextBox txtCellEModuleFactor;
+        private System.Windows.Forms.Label lblCellEModuleFactor;
+    }
+}

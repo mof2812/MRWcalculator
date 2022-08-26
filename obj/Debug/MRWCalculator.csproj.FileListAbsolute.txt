@@ -1,0 +1,14 @@
+f:\Daten\Visual Studio - Projekte\VisualStudio 2022\MRWcalculator\V2.000\bin\Debug\MRWCalculator.exe.config
+f:\Daten\Visual Studio - Projekte\VisualStudio 2022\MRWcalculator\V2.000\bin\Debug\MRWCalculator.exe
+f:\Daten\Visual Studio - Projekte\VisualStudio 2022\MRWcalculator\V2.000\bin\Debug\MRWCalculator.pdb
+f:\Daten\Visual Studio - Projekte\VisualStudio 2022\MRWcalculator\V2.000\obj\Debug\MRWCalculator.csproj.AssemblyReference.cache
+f:\Daten\Visual Studio - Projekte\VisualStudio 2022\MRWcalculator\V2.000\obj\Debug\MRWCalculator.csproj.SuggestedBindingRedirects.cache
+f:\Daten\Visual Studio - Projekte\VisualStudio 2022\MRWcalculator\V2.000\obj\Debug\MRWCalculator.Properties.Resources.resources
+f:\Daten\Visual Studio - Projekte\VisualStudio 2022\MRWcalculator\V2.000\obj\Debug\MRWCalculator.csproj.GenerateResource.cache
+f:\Daten\Visual Studio - Projekte\VisualStudio 2022\MRWcalculator\V2.000\obj\Debug\MRWCalculator.csproj.CoreCompileInputs.cache
+f:\Daten\Visual Studio - Projekte\VisualStudio 2022\MRWcalculator\V2.000\obj\Debug\MRWCalculator.exe
+f:\Daten\Visual Studio - Projekte\VisualStudio 2022\MRWcalculator\V2.000\obj\Debug\MRWCalculator.pdb
+f:\Daten\Visual Studio - Projekte\VisualStudio 2022\MRWcalculator\V2.000\obj\Debug\MRWCalculator.CellCharacteristics.resources
+f:\Daten\Visual Studio - Projekte\VisualStudio 2022\MRWcalculator\V2.000\obj\Debug\MRWCalculator.Main.resources
+f:\Daten\Visual Studio - Projekte\VisualStudio 2022\MRWcalculator\V2.000\obj\Debug\MRWCalculator.TempCharacteristics.resources
+F:\Daten\Visual Studio - Projekte\VisualStudio 2022\MRWcalculator\V2.000\obj\Debug\MRWCalculator.SetupLoadcellInterface.resources

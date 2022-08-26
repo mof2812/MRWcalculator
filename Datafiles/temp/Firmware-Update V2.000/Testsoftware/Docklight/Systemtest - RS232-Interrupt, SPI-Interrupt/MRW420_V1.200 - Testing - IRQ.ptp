@@ -1,0 +1,52 @@
+VERSION
+8
+
+COMMSETTINGS
+0
+COM6
+COM2
+9600
+2
+0
+4
+0
+0
+
+COMMDISPLAY
+0
+
+VERSATAP
+0
+
+CHANNELALIAS
+
+
+
+SEND
+0
+TST - Frame passt exakt in den Puffer
+02 54 53 54 20 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 03
+0
+.2
+
+SEND
+1
+TST - Frame zu groß für Puffer
+02 54 53 54 20 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 03
+0
+.2
+
+SEND
+2
+iTST - Frame passt exakt in den Puffer
+02 69 54 53 54 20 31 03
+0
+.2
+
+SEND
+3
+iTST - Frame zu groß für Puffer
+02 69 54 53 54 20 30 03
+0
+.2
+

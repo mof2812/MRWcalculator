@@ -1,0 +1,611 @@
+DL_SCRIPTVERSION
+1
+37109
+
+Const APPLICATION = "RS232 command locking - MRW420-V2.000"											'MRWcan , MRW420
+Const DEVICE = "F:"																				'Logging device
+Const OVERWRITE_DAILY_LOGGINGS = true											'Overwrite the loggings of one day
+Const LOG_HEX_DATA = false																	'true: Additional logging of the hex data
+
+Dim PAUSE
+Dim TimePast
+Dim OKReceived
+Dim TimeWait4OK
+Dim TimeWait4Acknowledge
+Dim TimeWaitAfterCommand
+Dim TimeWaitAfterAll
+Dim Durchlaeufe
+Dim Errorcounter
+Dim NewData
+Dim Weight
+Dim WeightReceived
+Dim OK_Received
+Dim NbWeightsReceived_CH0
+Dim NbWeightsReceived_CH1
+Dim TestCnt
+Dim Test_12_1_0
+Dim Test_12_1_1
+Dim Test_12_1_2
+Dim Test_12_1_3
+Dim Test_12_1_4
+Dim Test_12_1_5
+
+
+TimeWaitAfterCommand = 0
+TimeWaitAfterETX = 50
+TimeWait4OK = 500
+NewData = False
+WeightReceived = False
+OK_Received = False
+Weight = 99999.9
+NbWeightsReceived_CH0 = 0
+NbWeightsReceived_CH1 = 0
+TestCnt = 0
+Test_12_1_0 = False
+Test_12_1_1 = False
+Test_12_1_2 = False
+Test_12_1_3 = False
+Test_12_1_4 = False
+Test_12_1_5 = False
+
+DataPathLogging = DEVICE & "\Daten 'Moba'\Docklight\MRW420\Logs\" & APPLICATION & "\"		
+LogFile = DataPathLogging & Year(Now) & "-" & Month(Now) & "-" & Day(Now) & "_" & Hour(Now) & "-" & Minute(Now) & "-" & Second(Now) & " - " & "Log.txt"
+DL.AddComment "Logging to file: " & LogFile
+DL.AddComment
+
+DL.ClearCommWindows
+
+Restart
+
+DL.ClearCommWindows
+
+If LOG_HEX_DATA = true Then
+	DL.StartLogging LogFile , False, "AH"
+Else
+	DL.StartLogging LogFile , False, "A"
+End If
+
+DL.ClearCommWindows
+
+'OKReceived = DL.WaitForSequence ("ISDL empfangen",1,10000)
+
+DL.AddComment
+DL.AddComment	"***************************"
+DL.AddComment "**       ST12.1.0        **"
+DL.AddComment	"***************************"
+DL.AddComment
+
+TestCnt = 0
+
+DL.AddComment "** Test for RS232 command locking **"
+
+DisableRS232Communication	
+
+If CheckNoWeights = True Then
+	TestCnt = TestCnt + 1
+End If	
+
+DL.AddComment "** Test for RS232 command release **"
+
+EnableRS232Communication	
+
+If CheckWeights = True Then
+	TestCnt = TestCnt + 1
+End If	
+
+DL.AddComment
+DL.AddComment
+DL.AddComment "** Test for wrong codes **"
+DL.AddComment
+
+DL.SendSequence "DIS 0 1437226411 - DISable RS232-Kommunikation - Channel 0 - Test 'Wrong code'"
+If CheckForError_E005 = True Then
+	TestCnt = TestCnt + 1
+End If	
+	
+DL.Pause 200
+DL.AddComment
+DL.SendSequence "DIS 1 1437226411 - DISable RS232-Kommunikation - Channel 1 - Test 'Wrong code'"
+If CheckForError_E005 = True Then
+	TestCnt = TestCnt + 1
+End If	
+DL.Pause 200	
+
+DL.AddComment
+DL.SendSequence "ENA 0 1437226411 - ENAble RS232-Kommunikation - Channel 0 - Test 'Wrong code'"
+If CheckForError_E005 = True Then
+	TestCnt = TestCnt + 1
+End If	
+DL.Pause 200
+DL.AddComment
+DL.SendSequence "ENA 1 1437226411 - ENAble RS232-Kommunikation - Channel 1 - Test 'Wrong code'"
+If CheckForError_E005 = True Then
+	TestCnt = TestCnt + 1
+End If	
+
+DL.AddComment
+DL.AddComment	"***************************************************"
+If TestCnt = 6 Then
+	Test_12_1_0 = True
+	DL.AddComment "**  Result of Test ST12.1.0: Fault[ ]  Okay [X]  **"
+Else
+	DL.AddComment "**  Result of Test ST12.1.0: Fault[X]  Okay [ ]  **"
+End If	
+DL.AddComment	"***************************************************"
+DL.AddComment
+
+DL.AddComment "-------------------------------------------------------------------------------------"
+
+DL.Pause 1000	
+
+DL.AddComment
+DL.AddComment	"***************************"
+DL.AddComment "**       ST12.1.1        **"
+DL.AddComment	"***************************"
+DL.AddComment
+
+TestCnt = 0
+
+DL.AddComment "** Test for additional parameter **"
+
+DL.AddComment
+DL.SendSequence "DIS 0 1437226410 0 - DISable RS232-Kommunikation - Channel 0 - Test E008"
+If CheckForError_E008 = True Then
+	TestCnt = TestCnt + 1
+End If	
+DL.Pause 200
+DL.AddComment
+DL.SendSequence "DIS 1 1437226410 0 - DISable RS232-Kommunikation - Channel 1 - Test E008"
+If CheckForError_E008 = True Then
+	TestCnt = TestCnt + 1
+End If	
+DL.Pause 200	
+
+DL.AddComment
+DL.SendSequence "ENA 0 1437226410 0 - ENAble RS232-Kommunikation - Channel 0 - Test E008"
+If CheckForError_E008 = True Then
+	TestCnt = TestCnt + 1
+End If	
+DL.Pause 200
+DL.AddComment
+DL.SendSequence "ENA 1 1437226410 0 - ENAble RS232-Kommunikation - Channel 1 - Test E008"
+If CheckForError_E008 = True Then
+	TestCnt = TestCnt + 1
+End If	
+DL.Pause 1000	
+
+DL.AddComment
+DL.AddComment
+DL.AddComment "** Test for missing parameter **"
+
+DL.AddComment
+DL.SendSequence "DIS 0 - DISable RS232-Kommunikation - Channel 0 - Test E007"
+If CheckForError_E007 = True Then
+	TestCnt = TestCnt + 1
+End If	
+DL.Pause 200
+DL.AddComment
+DL.SendSequence "DIS 1 - DISable RS232-Kommunikation - Channel 1 - Test E007"
+If CheckForError_E007 = True Then
+	TestCnt = TestCnt + 1
+End If	
+DL.Pause 200	
+
+DL.AddComment
+DL.SendSequence "ENA 0 - ENAble RS232-Kommunikation - Channel 0 - Test E007"
+If CheckForError_E007 = True Then
+	TestCnt = TestCnt + 1
+End If	
+DL.Pause 200
+DL.AddComment
+DL.SendSequence "ENA 1 - ENAble RS232-Kommunikation - Channel 1 - Test E007"
+If CheckForError_E007 = True Then
+	TestCnt = TestCnt + 1
+End If	
+
+DL.AddComment
+DL.AddComment	"***************************************************"
+If TestCnt = 8 Then
+	Test_12_1_1 = True
+	DL.AddComment "**  Result of Test ST12.1.1: Fault[ ]  Okay [X]  **"
+Else	
+	DL.AddComment "**  Result of Test ST12.1.1: Fault[X]  Okay [ ]  **"
+End If
+DL.AddComment	"***************************************************"
+DL.AddComment
+
+DL.AddComment "-------------------------------------------------------------------------------------"
+
+DL.Pause 1000	
+
+DL.AddComment
+DL.AddComment	"***************************"
+DL.AddComment "**       ST12.1.2        **"
+DL.AddComment	"***************************"
+DL.AddComment
+
+TestCnt = 0
+
+DL.AddComment "** Test for parameter retention **"
+
+If CheckWeights = True Then
+	TestCnt = TestCnt + 1
+End If	
+
+DisableRS232Communication	
+
+If CheckNoWeights = True Then
+	TestCnt = TestCnt + 1
+End If	
+
+Restart
+
+If CheckNoWeights = True Then
+	TestCnt = TestCnt + 1
+End If	
+
+DL.AddComment
+DL.AddComment	"***************************************************"
+If TestCnt = 3 Then
+	Test_12_1_2 = True
+	DL.AddComment "**  Result of Test ST12.1.2: Fault[ ]  Okay [X]  **"
+Else
+	DL.AddComment "**  Result of Test ST12.1.2: Fault[X]  Okay [ ]  **"
+End If		
+DL.AddComment	"***************************************************"
+DL.AddComment
+
+DL.AddComment "-------------------------------------------------------------------------------------"
+
+DL.Pause 1000
+
+DL.ClearCommWindows
+DL.AddComment
+DL.AddComment	"***************************"
+DL.AddComment "**       ST12.1.3        **"
+DL.AddComment	"***************************"
+DL.AddComment
+
+TestCnt = 0
+
+DL.AddComment "** Test for RS232 command release by default settings **"
+
+EnableRS232Communication
+
+SetFactorySettings
+
+DisableRS232Communication
+
+If CheckNoWeights = True Then
+	TestCnt = TestCnt + 1
+End If	
+
+Restart
+
+If CheckWeights = True Then
+	TestCnt = TestCnt + 1
+End If
+
+DL.AddComment
+DL.AddComment	"***************************************************"
+If TestCnt = 2 Then
+	Test_12_1_3 = True
+	DL.AddComment "**  Result of Test ST12.1.3: Fault[ ]  Okay [X]  **"
+Else
+	DL.AddComment "**  Result of Test ST12.1.3: Fault[X]  Okay [ ]  **"
+End If	
+DL.AddComment	"***************************************************"
+DL.AddComment
+
+DL.AddComment "-------------------------------------------------------------------------------------"
+
+DL.AddComment
+DL.AddComment	"***************************"
+DL.AddComment "**       ST12.1.4        **"
+DL.AddComment	"***************************"
+DL.AddComment
+
+TestCnt = 0
+
+DL.AddComment "** Test for special RS232 commands release **"
+
+DisableRS232Communication
+
+If CheckNoWeights = True Then
+	TestCnt = TestCnt + 1
+End If	
+
+DL.SendSequence "CDL 0 - Connect2DockLight - Disconnect"
+DL.Pause 200
+If CheckForOK = True Then
+	TestCnt = TestCnt + 1
+End If	
+
+
+DL.AddComment
+DL.AddComment	"***************************************************"
+If TestCnt = 2 Then
+	Test_12_1_4 = True
+	DL.AddComment "**  Result of Test ST12.1.4: Fault[ ]  Okay [X]  **"
+Else
+	DL.AddComment "**  Result of Test ST12.1.4: Fault[X]  Okay [ ]  **"
+End If		
+DL.AddComment	"***************************************************"
+DL.AddComment
+
+DL.AddComment "-------------------------------------------------------------------------------------"
+
+DL.AddComment
+DL.AddComment
+DL.AddComment	"***************************************************"
+DL.AddComment	"**            Summary of the results             **"
+DL.AddComment	"***************************************************"
+If Test_12_1_0 = True Then
+	DL.AddComment "**  Result of Test ST12.1.0: Fault[ ]  Okay [X]  **"
+Else
+	DL.AddComment "**  Result of Test ST12.1.0: Fault[X]  Okay [ ]  **"
+End If	
+If Test_12_1_1 = True Then
+	DL.AddComment "**  Result of Test ST12.1.1: Fault[ ]  Okay [X]  **"
+Else
+	DL.AddComment "**  Result of Test ST12.1.1: Fault[X]  Okay [ ]  **"
+End If	
+If Test_12_1_2 = True Then
+	DL.AddComment "**  Result of Test ST12.1.2: Fault[ ]  Okay [X]  **"
+Else
+	DL.AddComment "**  Result of Test ST12.1.2: Fault[X]  Okay [ ]  **"
+End If	
+If Test_12_1_3 = True Then
+	DL.AddComment "**  Result of Test ST12.1.3: Fault[ ]  Okay [X]  **"
+Else
+	DL.AddComment "**  Result of Test ST12.1.3: Fault[X]  Okay [ ]  **"
+End If	
+If Test_12_1_4 = True Then
+	DL.AddComment "**  Result of Test ST12.1.4: Fault[ ]  Okay [X]  **"
+Else
+	DL.AddComment "**  Result of Test ST12.1.4: Fault[X]  Okay [ ]  **"
+End If	
+DL.AddComment	"***************************************************"
+DL.AddComment
+
+
+Function CheckWeights
+	Cnt = 3
+	NbWeightsReceived_CH0 = 0
+	NbWeightsReceived_CH1 = 0
+	IsWeight = false	
+
+	DL.AddComment
+	Do
+		DL.AddComment
+		DL.SendSequence "RCW 0 - ReadChannelWeight Channel 0"
+		If CheckForWeight = True Then
+			NbWeightsReceived_CH0 = NbWeightsReceived_CH0 + 1
+		End If
+'		DL.Pause 200
+		DL.AddComment
+		DL.SendSequence "RCW 1 - ReadChannelWeight Channel 1"
+		If CheckForWeight = True Then
+			NbWeightsReceived_CH1 = NbWeightsReceived_CH1 + 1
+		End If
+'		DL.Pause 200
+		Cnt = Cnt - 1
+	Loop While Cnt > 0
+	
+	If NbWeightsReceived_CH0 = 3 And NbWeightsReceived_CH1 = 3 Then
+		CheckWeights = True
+	Else
+		CheckWeights = False
+	End If		
+End Function
+
+Function CheckNoWeights
+	Cnt = 3
+	NbWeightsReceived_CH0 = 0
+	NbWeightsReceived_CH1 = 0
+	IsWeight = false	
+
+	DL.AddComment
+	Do
+		DL.AddComment
+		DL.SendSequence "RCW 0 - ReadChannelWeight Channel 0"
+		If CheckForWeight = True Then
+			NbWeightsReceived_CH0 = NbWeightsReceived_CH0 + 1
+		End If
+'		DL.Pause 200
+		DL.AddComment
+		DL.SendSequence "RCW 1 - ReadChannelWeight Channel 1"
+		If CheckForWeight = True Then
+			NbWeightsReceived_CH1 = NbWeightsReceived_CH1 + 1
+		End If
+'		DL.Pause 200
+		Cnt = Cnt - 1
+	Loop While Cnt > 0
+	
+	If NbWeightsReceived_CH0 = 0 And NbWeightsReceived_CH1 = 0 Then
+		CheckNoWeights = True
+	Else
+		CheckNoWeights = False
+	End If		
+End Function
+
+Function CheckForWeight()
+	WeightReceived = False
+	
+	DL.Pause(200)
+	
+	CheckForWeight = WeightReceived
+	
+	If WeightReceived = False Then
+		DL.AddComment "No weight received"
+		DL.AddComment
+	End If	
+End Function
+
+Function CheckForOK()
+	DL.Pause(200)
+	CheckForOK = OK_Received
+	
+'	If CheckForOK = True Then
+'		DL.AddComment
+'		DL.AddComment "OK received - Test okay"
+'		DL.AddComment
+'	Else	
+'		DL.AddComment
+'		DL.AddComment "No OK received - Error " & OK_Received
+'		DL.AddComment
+'	End If
+End Function
+
+Function CheckForOK_()
+	DL.ResetReceiveCounter
+	CheckForOK = False
+
+	OKReceived = DL.WaitForSequence ("OK - empfangen",1,1000)
+	
+	If OKReceived > 0 Then
+		DL.AddComment
+		DL.AddComment "OK received - Test okay"
+		DL.AddComment
+		
+		CheckForOK = True
+	Else	
+		DL.AddComment
+		DL.AddComment "No OK received - Error " & OK_Received
+		DL.AddComment
+	End If
+			
+End Function
+
+Function CheckForError_E005()
+	DL.ResetReceiveCounter
+	CheckForError_E005 = False
+
+	E005Received = DL.WaitForSequence ("E005 - empfangen",1,1000)
+	
+	If E005Received > 0 Then
+	'	DL.AddComment
+	'	DL.AddComment "E005 received - Test okay"
+	'	DL.AddComment
+		
+		CheckForError_E005 = True
+	End If
+			
+End Function
+
+Function CheckForError_E007()
+	DL.ResetReceiveCounter
+	CheckForError_E007 = False
+	
+	E007Received = DL.WaitForSequence ("E007 - empfangen",1,1000)
+	
+	If E007Received > 0 Then
+	'	DL.AddComment
+	'	DL.AddComment "E007 received - Test okay"
+	'	DL.AddComment
+		
+		CheckForError_E007 = True
+	End If
+			
+End Function
+
+Function CheckForError_E008()
+	DL.ResetReceiveCounter
+	CheckForError_E008 = False
+
+	E008Received = DL.WaitForSequence ("E008 - empfangen",1,1000)
+	
+	If E008Received > 0 Then
+	'	DL.AddComment
+	'	DL.AddComment "E008 received - Test okay"
+	'	DL.AddComment
+		
+		CheckForError_E008 = True
+	End If
+			
+End Function
+
+Function DisableRS232Communication
+	DL.AddComment
+	DL.SendSequence "DIS 0 1437226410 - DISable RS232-Kommunikation - Channel 0"
+	DL.Pause 200
+	DL.AddComment
+	DL.SendSequence "DIS 1 1437226410 - DISable RS232-Kommunikation - Channel 1"
+	DL.Pause 200
+End Function
+
+Function EnableRS232Communication
+	DL.AddComment
+	DL.SendSequence "ENA 0 1437226410 - ENAble RS232-Kommunikation - Channel 0"
+	DL.Pause 200
+	DL.AddComment
+	DL.SendSequence "ENA 1 1437226410 - ENAble RS232-Kommunikation - Channel 1"
+	DL.Pause 200	
+End Function
+
+Function SetFactorySettings
+	DL.AddComment "Set loadcell to factory settings"
+	DL.AddComment
+	DL.SendSequence "CEK - Clear Eepromidentification"
+	DL.AddComment
+	DL.Pause 2000
+End Function
+
+Function Restart
+	DL.ClearCommWindows
+	DL.AddComment "*********************************"
+	DL.AddComment "**  Restart loadcell, please!  **"
+	DL.AddComment "*********************************"
+	
+	DL.ResetReceiveCounter
+	
+	OKReceived = DL.WaitForSequence ("ISDL empfangen",1,20000)
+
+'DL.AddComment "OKReceived: " & OKReceived
+'DL.AddComment
+
+	If OKReceived = 0 Then
+		MyQuit
+	Else
+		DL.Pause 2000
+		DL.ClearCommWindows	
+	End If	
+End Function 
+
+Function MyQuit()
+	DL.AddComment	
+	DL.AddComment "Quit script"	
+	DL.AddComment	
+	FileOutput.CloseFile()
+	DL.Quit
+End Function	
+
+Sub DL_OnReceive()
+	Value = DL.OnReceive_GetData()
+	OK_Received = False
+	
+'DL.AddComment	
+'DL.AddComment	"Value received: " & Value
+'DL.AddComment	
+	
+	If Left(Value,5) = "<STX>" then
+		Value = Right(Value,Len(Value)-5)
+	End If
+	
+	If Right(Value,5) = "<ETX>" then
+		Value = Left(Value,Len(Value)-5)
+'		Value = Replace(Value ,".",",")
+		If IsNumeric(Value) = true Then
+			Weight = CDbl(Value)
+'DL.AddComment	
+'DL.AddComment	"Weight: " & Weight
+'DL.AddComment	
+			WeightReceived = True	
+		Else
+			WeightReceived = False
+			If Value = "OK" Then
+				OK_Received = True
+			End If	
+		End If
+	End If
+End Sub

@@ -1,0 +1,355 @@
+Docklight Log File (ASCII) - Started 
+ 
+ ***************************
+ **       ST12.1.0        **
+ ***************************
+ 
+ ** Test for RS232 command locking **
+ 
+DIS 0 1437226410 
+DIS 1 1437226410 
+ 
+RCW 0 No weight received
+ 
+ 
+RCW 1 No weight received
+ 
+ 
+RCW 0 No weight received
+ 
+ 
+RCW 1 No weight received
+ 
+ 
+RCW 0 No weight received
+ 
+ 
+RCW 1 No weight received
+ 
+ ** Test for RS232 command release **
+ 
+ENA 0 1437226410
+T0998 - Kanal 0: Die RS232-Befehlssperre wurde aufgehoben  
+ENA 1 1437226410
+T1998 - Kanal 1: Die RS232-Befehlssperre wurde aufgehoben  
+ 
+RCW 0
+T0010 - Aktueller Gewichtswert Kanal 0 : .......................................  -839.64 
+RCW 1
+T1010 - Aktueller Gewichtswert Kanal 1 : .......................................  -0.36 
+RCW 0
+T0010 - Aktueller Gewichtswert Kanal 0 : .......................................  -839.64 
+RCW 1
+T1010 - Aktueller Gewichtswert Kanal 1 : .......................................  -0.36 
+RCW 0
+T0010 - Aktueller Gewichtswert Kanal 0 : .......................................  -839.64 
+RCW 1
+T1010 - Aktueller Gewichtswert Kanal 1 : .......................................  -0.36 
+ 
+ ** Test for wrong codes **
+ 
+DIS 0 1437226411
+E005 
+
+Communication stopped by receive sequence "E005 - empfangen".  - Fehler bei der Befehlsausführung !!!
+ 
+DIS 1 1437226411
+E005 
+
+Communication stopped by receive sequence "E005 - empfangen".  - Fehler bei der Befehlsausführung !!!
+ 
+ENA 0 1437226411
+E005 
+
+Communication stopped by receive sequence "E005 - empfangen".  - Fehler bei der Befehlsausführung !!!
+ 
+ENA 1 1437226411
+E005 
+
+Communication stopped by receive sequence "E005 - empfangen".  - Fehler bei der Befehlsausführung !!!
+ 
+ ***************************************************
+ **  Result of Test ST12.1.0: Fault[ ]  Okay [X]  **
+ ***************************************************
+ 
+ -------------------------------------------------------------------------------------
+ 
+ ***************************
+ **       ST12.1.1        **
+ ***************************
+ 
+ ** Test for additional parameter **
+ 
+DIS 0 1437226410 0
+E008 
+
+Communication stopped by receive sequence "E008 - empfangen".  - Unerwartetes Zeichen im Kommandostring / überflüssiger Parameter !!!  
+DIS 1 1437226410 0
+E008 
+
+Communication stopped by receive sequence "E008 - empfangen".  - Unerwartetes Zeichen im Kommandostring / überflüssiger Parameter !!!  
+ENA 0 1437226410 0
+E008 
+
+Communication stopped by receive sequence "E008 - empfangen".  - Unerwartetes Zeichen im Kommandostring / überflüssiger Parameter !!!  
+ENA 1 1437226410 0
+E008 
+
+Communication stopped by receive sequence "E008 - empfangen".  - Unerwartetes Zeichen im Kommandostring / überflüssiger Parameter !!!  
+ 
+ ** Test for missing parameter **
+ 
+DIS 0
+E007 
+
+Communication stopped by receive sequence "E007 - empfangen".  - Parameter fehlt !!!  
+DIS 1
+E007 
+
+Communication stopped by receive sequence "E007 - empfangen".  - Parameter fehlt !!!  
+ENA 0
+E007 
+
+Communication stopped by receive sequence "E007 - empfangen".  - Parameter fehlt !!!  
+ENA 1
+E007 
+
+Communication stopped by receive sequence "E007 - empfangen".  - Parameter fehlt !!!  
+ ***************************************************
+ **  Result of Test ST12.1.1: Fault[ ]  Okay [X]  **
+ ***************************************************
+ 
+ -------------------------------------------------------------------------------------
+ 
+ ***************************
+ **       ST12.1.2        **
+ ***************************
+ 
+ ** Test for parameter retention **
+ 
+ 
+RCW 0
+T0010 - Aktueller Gewichtswert Kanal 0 : .......................................  -839.52 
+RCW 1
+T1010 - Aktueller Gewichtswert Kanal 1 : .......................................  -0.36 
+RCW 0
+T0010 - Aktueller Gewichtswert Kanal 0 : .......................................  -839.52 
+RCW 1
+T1010 - Aktueller Gewichtswert Kanal 1 : .......................................  -0.48 
+RCW 0
+T0010 - Aktueller Gewichtswert Kanal 0 : .......................................  -839.52 
+RCW 1
+T1010 - Aktueller Gewichtswert Kanal 1 : .......................................  -0.36 
+DIS 0 1437226410
+T0997 - Kanal 0: Die RS232-Befehlssperre wurde aktiviert  
+DIS 1 1437226410
+T1997 - Kanal 1: Die RS232-Befehlssperre wurde aktiviert  
+ 
+RCW 0 No weight received
+ 
+ 
+RCW 1 No weight received
+ 
+ 
+RCW 0 No weight received
+ 
+ 
+RCW 1 No weight received
+ 
+ 
+RCW 0 No weight received
+ 
+ 
+RCW 1 No weight received
+ 
+ *********************************
+ **  Restart loadcell, please!  **
+ *********************************
+NOKISDL  - Anfrage auf angeschlossenes Docklight-Terminal empfangen
+CDL 1
+T2370 - DockLight-Modus gesetzt 
+
+
+T9002 - MOBA Mobile Automation AG - Hardware : .................................  V1.2_,     02/2007
+
+T3010 - Software-Version : .....................................................  V2.000 24.02.2022
+T9030 - Software-Version 'ADC-Modul' : .........................................  V1.005, 18.11.2016
+T9040 - Software-Version 'DAC-Modul' : .........................................  V1.007, 12.08.2015
+T9100 - Software-Version 'External-Modul' : ....................................  V1.000, 21.11.2006
+T9090 - Software-Version 'Flash-Modul' : .......................................  V1.001, 24.04.2008
+T9060 - Software-Version 'RS232-Modul' : .......................................  V1.009, 21.02.2022
+T9050 - Software-Version 'SPI-Modul' : .........................................  V1.006, 24.02.2022
+T9080 - Software-Version 'Timer-Modul' : .......................................  V1.000, 21.11.2006
+T9070 - Software-Version 'Watchdog-Modul' : ....................................  V1.000, 21.11.2006
+T9110 - Software-Version 'Messwert-Modul' : ....................................  V1.009, 29.10.2008
+T9120 - Software-Version 'Mittelwertfilter-Modul' : ............................  V1.000, 08.11.2016
+T9140 - Software-Version 'Temperaturkompensations-Modul' : .....................  V1.009, 02.03.2017
+T9160 - Software-Version 'Statistik-Modul' : ...................................  V1.011, 30.05.2007
+T9170 - Software-Version 'Eeprom-Modul' : ......................................  V1.003, 05.07.2016
+
+T3660 - Typ der Wägezelle : ....................................................  Std-Wägezelle
+
+T2190 - Temperaturkompensation ausgeschaltet. 
+T2290 - E-Modul-Kompensation eingeschaltet. 
+T2490 - Die Strom-Rückführung ist ausgeschaltet.  
+ 
+RCW 0 No weight received
+ 
+ 
+RCW 1 No weight received
+ 
+ 
+RCW 0 No weight received
+ 
+ 
+RCW 1 No weight received
+ 
+ 
+RCW 0 No weight received
+ 
+ 
+RCW 1 No weight received
+ 
+ 
+ ***************************************************
+ **  Result of Test ST12.1.2: Fault[ ]  Okay [X]  **
+ ***************************************************
+ 
+ -------------------------------------------------------------------------------------
+ 
+ ***************************
+ **       ST12.1.3        **
+ ***************************
+ 
+ ** Test for RS232 command release by default settings **
+ 
+ENA 0 1437226410
+T0998 - Kanal 0: Die RS232-Befehlssperre wurde aufgehoben  
+ENA 1 1437226410
+T1998 - Kanal 1: Die RS232-Befehlssperre wurde aufgehoben  Set loadcell to factory settings
+ 
+CEK 
+
+T2000 - Hardware bitte neu starten !  
+DIS 0 1437226410
+T0997 - Kanal 0: Die RS232-Befehlssperre wurde aktiviert  
+DIS 1 1437226410
+T1997 - Kanal 1: Die RS232-Befehlssperre wurde aktiviert  
+ 
+RCW 0 No weight received
+ 
+ 
+RCW 1 No weight received
+ 
+ 
+RCW 0 No weight received
+ 
+ 
+RCW 1 No weight received
+ 
+ 
+RCW 0 No weight received
+ 
+ 
+RCW 1 No weight received
+ 
+ *********************************
+ **  Restart loadcell, please!  **
+ *********************************
+NOKISDL  - Anfrage auf angeschlossenes Docklight-Terminal empfangen
+CDL 1
+T2370 - DockLight-Modus gesetzt 
+
+
+T9002 - MOBA Mobile Automation AG - Hardware : .................................  V1.2_,     02/2007
+
+T3010 - Software-Version : .....................................................  V2.000 24.02.2022
+T9030 - Software-Version 'ADC-Modul' : .........................................  V1.005, 18.11.2016
+T9040 - Software-Version 'DAC-Modul' : .........................................  V1.007, 12.08.2015
+T9100 - Software-Version 'External-Modul' : ....................................  V1.000, 21.11.2006
+T9090 - Software-Version 'Flash-Modul' : .......................................  V1.001, 24.04.2008
+T9060 - Software-Version 'RS232-Modul' : .......................................  V1.009, 21.02.2022
+T9050 - Software-Version 'SPI-Modul' : .........................................  V1.006, 24.02.2022
+T9080 - Software-Version 'Timer-Modul' : .......................................  V1.000, 21.11.2006
+T9070 - Software-Version 'Watchdog-Modul' : ....................................  V1.000, 21.11.2006
+T9110 - Software-Version 'Messwert-Modul' : ....................................  V1.009, 29.10.2008
+T9120 - Software-Version 'Mittelwertfilter-Modul' : ............................  V1.000, 08.11.2016
+T9140 - Software-Version 'Temperaturkompensations-Modul' : .....................  V1.009, 02.03.2017
+T9160 - Software-Version 'Statistik-Modul' : ...................................  V1.011, 30.05.2007
+T9170 - Software-Version 'Eeprom-Modul' : ......................................  V1.003, 05.07.2016
+
+T3660 - Typ der Wägezelle : ....................................................  Std-Wägezelle
+
+T2190 - Temperaturkompensation ausgeschaltet. 
+T2290 - E-Modul-Kompensation eingeschaltet. 
+T2490 - Die Strom-Rückführung ist ausgeschaltet.  
+ 
+RCW 0
+T0010 - Aktueller Gewichtswert Kanal 0 : .......................................  49.32 
+RCW 1
+T1010 - Aktueller Gewichtswert Kanal 1 : .......................................  130.56 
+RCW 0
+T0010 - Aktueller Gewichtswert Kanal 0 : .......................................  49.44 
+RCW 1
+T1010 - Aktueller Gewichtswert Kanal 1 : .......................................  130.56 
+RCW 0
+T0010 - Aktueller Gewichtswert Kanal 0 : .......................................  49.44 
+RCW 1
+T1010 - Aktueller Gewichtswert Kanal 1 : .......................................  130.68 
+ ***************************************************
+ **  Result of Test ST12.1.3: Fault[ ]  Okay [X]  **
+ ***************************************************
+ 
+ -------------------------------------------------------------------------------------
+ 
+ ***************************
+ **       ST12.1.4        **
+ ***************************
+ 
+ ** Test for special RS232 commands release **
+ 
+DIS 0 1437226410
+T0997 - Kanal 0: Die RS232-Befehlssperre wurde aktiviert  
+DIS 1 1437226410
+T1997 - Kanal 1: Die RS232-Befehlssperre wurde aktiviert  
+ 
+RCW 0 No weight received
+ 
+ 
+RCW 1 No weight received
+ 
+ 
+RCW 0 No weight received
+ 
+ 
+RCW 1 No weight received
+ 
+ 
+RCW 0 No weight received
+ 
+ 
+RCW 1 No weight received
+ 
+CDL 0OK - OK empfangen
+ 
+ ***************************************************
+ **  Result of Test ST12.1.4: Fault[ ]  Okay [X]  **
+ ***************************************************
+ 
+ -------------------------------------------------------------------------------------
+ 
+ 
+ ***************************************************
+ **            Summary of the results             **
+ ***************************************************
+ **  Result of Test ST12.1.0: Fault[ ]  Okay [X]  **
+ **  Result of Test ST12.1.1: Fault[ ]  Okay [X]  **
+ **  Result of Test ST12.1.2: Fault[ ]  Okay [X]  **
+ **  Result of Test ST12.1.3: Fault[ ]  Okay [X]  **
+ **  Result of Test ST12.1.4: Fault[ ]  Okay [X]  **
+ ***************************************************
+ 
+
+
+Docklight Log File (ASCII) - Stopped 
+

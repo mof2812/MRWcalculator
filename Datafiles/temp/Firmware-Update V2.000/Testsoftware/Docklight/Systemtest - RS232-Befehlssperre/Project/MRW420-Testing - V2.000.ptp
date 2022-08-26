@@ -1,0 +1,10120 @@
+VERSION
+8
+
+COMMSETTINGS
+0
+COM12
+COM2
+9600
+2
+0
+4
+0
+0
+
+COMMDISPLAY
+0
+
+VERSATAP
+0
+
+CHANNELALIAS
+
+
+
+SEND
+0
+RCW 0 1B4C
+02 52 43 57 20 30 20 31 42 34 43 03
+0
+.2
+
+SEND
+1
+RCW 0 1B4C
+02 52 43 57 20 30 20 31 42 34 43 03
+0
+.2
+
+SEND
+2
+RCW 1 8B4D
+02 52 43 57 20 31 20 38 42 34 44 03
+1
+.4
+
+SEND
+3
+RST - Reset
+02 52 53 54 03
+0
+3
+
+SEND
+4
+RSS 0 - RS232Statistics - Channel 0 
+02 52 53 53 20 30 03
+1
+1
+
+SEND
+5
+CAS - ClearAlarmStatus
+02 43 41 53 20 31 33 39 39 03
+0
+2
+
+SEND
+6
+VAS - ViewAlarmStatus
+02 56 41 53 03
+0
+2
+
+SEND
+7
+INI 1 0 - Initialize
+02 49 4E 49 20 31 20 30 03
+1
+1
+
+SEND
+8
+NOP
+02 4E 4F 50 03
+1
+1
+
+SEND
+9
+NOP
+02 4E 4F 50 03
+0
+1
+
+SEND
+10
+Direkteingabe
+02 ?? ?? ?? 20 ## ## ## ## ## ## ## ## ## ## ## ## ## 20 ## ## ## ## ## ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+11
+Direkteingabe - interne Befehle
+02 69 ?? ?? ?? 20 ## ## ## ## ## ## ## ## 20 ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+12
+Direkteingabe - 4 Parameter
+02 ?? ?? ?? 20 ## ## ## ## ## ## ## ## 20 ## ## ## ## ## ## ## ## 20 ## ## ## ## ## ## ## ## 20 ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+13
+RST - Reset
+02 52 53 54 03
+1
+1
+
+SEND
+14
+GAT 0
+02 47 41 54 20 30 03
+0
+1
+
+SEND
+15
+GAT 1
+02 47 41 54 20 31 03
+0
+1
+
+SEND
+16
+GID
+02 47 49 44 03
+0
+1
+
+SEND
+17
+GEC
+02 47 45 43 03
+0
+.2
+
+SEND
+18
+SEC <0,1>
+02 53 45 43 20 ## 03
+0
+.2
+
+SEND
+19
+RMA 0 0 - ReadMeasurement from Adc Channel 0
+02 52 4D 41 20 30 20 30 03
+0
+.2
+
+SEND
+20
+RMA 1 0 - ReadMeasurement from Adc Channel 1
+02 52 4D 41 20 31 20 30 03
+0
+.5
+
+SEND
+21
+RDM 0 - ReadMeasurement Channel 0
+02 52 44 4D 20 30 03
+1
+1
+
+SEND
+22
+RDM 1 - ReadMeasurement Channel 1
+02 52 44 4D 20 31 03
+0
+.1
+
+SEND
+23
+RMM 0 <0,1,..,4> - ReadMeasureMent - Channel 0
+02 52 4D 4D 20 30 20 ## 03
+0
+.1
+
+SEND
+24
+RMM 0 0 - ReadMeasureMent - from ADC - Channel 0
+02 52 4D 4D 20 30 20 30 03
+1
+60
+
+SEND
+25
+RMM 0 1 - ReadMeasureMent - filtered - Channel 0
+02 52 4D 4D 20 30 20 31 03
+1
+60
+
+SEND
+26
+RMM 0 2 - ReadMeasureMent - filtered and zero corrected - Channel 0
+02 52 4D 4D 20 30 20 32 03
+1
+60
+
+SEND
+27
+RMM 0 3 - ReadMeasureMent - temperature corrected - Channel 0
+02 52 4D 4D 20 30 20 33 03
+1
+60
+
+SEND
+28
+RMM 0 4 - ReadMeasureMent - e-module corrected - Channel 0
+02 52 4D 4D 20 30 20 34 03
+1
+60
+
+SEND
+29
+RCW 0 
+02 52 43 57 20 30 03
+1
+.1
+
+SEND
+30
+RCW 1
+02 52 43 57 20 31 03
+0
+.5
+
+SEND
+31
+SFD 6
+02 53 46 44 20 36 03
+0
+3
+
+SEND
+32
+ESC
+02 1B 03
+0
+5
+
+SEND
+33
+AAA
+02 41 41 41 03
+0
+5
+
+SEND
+34
+ACR <0,1,3,5,7> - (Docklight) AutomaticCompensationResults - show characteristics
+02 41 43 52 20 30 20 ## 20 30 03
+0
+5
+
+SEND
+35
+ACR <Channel> 0 <Temparature> - AutomaticCompensationResults - show characteristics
+02 41 43 52 20 ## 20 30 20 ## ## 03
+0
+5
+
+SEND
+36
+ACR 0 0 <Temparature> - AutomaticCompensationResults - show characteristics
+02 41 43 52 20 30 20 30 20 ## ## ## 03
+0
+5
+
+SEND
+37
+ACR 1 0 <Temparature> - AutomaticCompensationResults - show characteristics
+02 41 43 52 20 31 20 30 20 ## ## ## 03
+0
+5
+
+SEND
+38
+ACR 0 0 70 - AutomaticCompensationResults - show characteristics
+02 41 43 52 20 30 20 30 20 37 30 03
+0
+5
+
+SEND
+39
+ACR 0 0 20 - AutomaticCompensationResults - show characteristics
+02 41 43 52 20 30 20 30 20 32 30 03
+0
+5
+
+SEND
+40
+ACR 0 0 -30 - AutomaticCompensationResults - show characteristics
+02 41 43 52 20 30 20 30 20 2D 33 30 03
+0
+5
+
+SEND
+41
+ACR <0,1> 0 <Temperature> - (MRW-Manager) AutomaticCompensationResults - show characteristics
+02 41 43 52 20 ## 20 30 20 ## ## ## 03
+0
+5
+
+SEND
+42
+ACR <0,1> <0,1,3,5,7,255> <Temperature> - (MRW-Manager) AutomaticCompensationResults
+02 41 43 52 20 ## 20 ## ## ## ## ## ## 20 ## ## ## 03
+0
+5
+
+SEND
+43
+ACR 1 1 0 - F O R  T E S T I N G
+02 41 43 52 20 31 20 31 20 30 03
+1
+1.5
+
+SEND
+44
+ACR 0 255 0 - (Docklight) AutomaticCompensationResults - show all
+02 41 43 52 20 30 20 32 35 35 20 30 03
+0
+5
+
+SEND
+45
+ACR0 0 255 0 - (Docklight) AutomaticCompensationResults - show all
+02 41 43 52 30 20 30 20 32 35 35 20 30 03
+0
+10
+
+SEND
+46
+ACR1 0 255 0 - (Docklight) AutomaticCompensationResults - show all
+02 41 43 52 31 20 30 20 32 35 35 20 30 03
+0
+10
+
+SEND
+47
+ACV <0,1> <0,1,...,16> - AutomaticCompensationValues
+02 41 43 56 20 ## 20 ## ## 03
+0
+5
+
+SEND
+48
+ACV 0 <0,1,...,16> - AutomaticCompensationValues - Channel 0
+02 41 43 56 20 30 20 ## ## 03
+0
+5
+
+SEND
+49
+ACV 1 <0,1,...,16> - AutomaticCompensationValues - Channel 1
+02 41 43 56 20 31 20 ## ## 03
+0
+5
+
+SEND
+50
+ART 0 0 - AutomaticRecTemperature stop
+02 41 52 54 20 30 20 30 03
+0
+2
+
+SEND
+51
+ART 0 0 0 - AutomaticRecTemperature stop
+02 41 52 54 20 30 20 30 20 30 03
+0
+2
+
+SEND
+52
+ART 1 0 - AutomaticRecTemperature start- no cycling Output
+02 41 52 54 20 31 20 30 03
+0
+2
+
+SEND
+53
+ART 1 0 0 - AutomaticRecTemperature start- no cycling Output - no CSV
+02 41 52 54 20 31 20 30 20 30 03
+0
+2
+
+SEND
+54
+ART 1 1 - AutomaticRecTemperature start- cycling Output
+02 41 52 54 20 31 20 31 03
+0
+2
+
+SEND
+55
+ART 1 1 0 - AutomaticRecTemperature start - cycling Output - no CSV
+02 41 52 54 20 31 20 31 20 30 03
+0
+5
+
+SEND
+56
+ART 5 - AutomaticRecTemperature start Test-Funktion
+02 41 52 54 20 35 03
+0
+5
+
+SEND
+57
+CAA - ClearActualAlarm
+02 43 41 41 03
+0
+5
+
+SEND
+58
+CAS - ClearAlarmStatus
+02 43 41 53 20 ## ## ## ## 03
+0
+5
+
+SEND
+59
+CDB 0 - ClearDeBug - Channel 0
+02 43 44 42 20 30 03
+0
+5
+
+SEND
+60
+CDB 1 - ClearDeBug - Channel 1
+02 43 44 42 20 31 03
+0
+5
+
+SEND
+61
+CDG - ClearDiaGnosis
+02 43 44 47 20 ## ## ## ## 03
+0
+5
+
+SEND
+62
+CDL 0 - Connect2DockLight - Disconnect
+02 43 44 4C 20 30 03
+0
+5
+
+SEND
+63
+CDL 1 - Connect2DockLight - Connect
+02 43 44 4C 20 31 03
+0
+5
+
+SEND
+64
+CEI - Clear EepromclearId
+02 43 45 49 03
+0
+5
+
+SEND
+65
+CEK - Clear Eepromidentification
+02 43 45 4B 03
+0
+5
+
+SEND
+66
+CIC  <0,1> <0,1,...,5> <Weight> - CurrentInterfaceCalibration
+02 43 49 43 20 ## 20 ## 20 ## ## ## ## ## ## ## ## ## ## ## 03
+0
+.5
+
+SEND
+67
+CIC  0 0 - CurrentInterfaceCalibration - Channel 0 - Initialization
+02 43 49 43 20 30 20 30 20 30 03
+0
+.5
+
+SEND
+68
+CIC  1 0 - CurrentInterfaceCalibration - Channel 1 - Initialization
+02 43 49 43 20 31 20 30 20 30 03
+0
+1.5
+
+SEND
+69
+CIC  0 1 - CurrentInterfaceCalibration - Channel 0 - PrepareSetPoint 0
+02 43 49 43 20 30 20 31 20 30 03
+0
+5
+
+SEND
+70
+CIC  1 1 - CurrentInterfaceCalibration - Channel 1 - PrepareSetPoint 0
+02 43 49 43 20 31 20 31 20 30 03
+0
+.25
+
+SEND
+71
+CIC  0 2 - CurrentInterfaceCalibration - Channel 0 - SetPoint 0
+02 43 49 43 20 30 20 32 20 ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+72
+CIC  1 2 - CurrentInterfaceCalibration - Channel 1 - SetPoint 0
+02 43 49 43 20 31 20 32 20 ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+73
+CIC 0 3 1000 - CurrentInterfaceCalibration - Channel 0 - PrepareSetPoint 1
+02 43 49 43 20 30 20 33 20 31 30 30 30 03
+0
+5
+
+SEND
+74
+CIC 0 3 500 - CurrentInterfaceCalibration - Channel 0 - PrepareSetPoint 1
+02 43 49 43 20 30 20 33 20 35 30 30 03
+0
+5
+
+SEND
+75
+CIC 0 3 100 - CurrentInterfaceCalibration - Channel 0 - PrepareSetPoint 1
+02 43 49 43 20 30 20 33 20 31 30 30 03
+0
+5
+
+SEND
+76
+CIC 1 3 1000 - CurrentInterfaceCalibration - Channel 1 - PrepareSetPoint 1
+02 43 49 43 20 31 20 33 20 31 30 30 30 03
+0
+5
+
+SEND
+77
+CIC 1 3 500 - CurrentInterfaceCalibration - Channel 1 - PrepareSetPoint 1
+02 43 49 43 20 31 20 33 20 35 30 30 03
+0
+5
+
+SEND
+78
+CIC 1 3 100 - CurrentInterfaceCalibration - Channel 1 - PrepareSetPoint 1
+02 43 49 43 20 31 20 33 20 31 30 30 03
+0
+5
+
+SEND
+79
+CIC 0 4 - CurrentInterfaceCalibration - Channel 0 - SetPoint 1
+02 43 49 43 20 30 20 34 20 ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+80
+CIC 1 4 - CurrentInterfaceCalibration - Channel 1 - SetPoint 1
+02 43 49 43 20 31 20 34 20 ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+81
+CIC  0 5 - CurrentInterfaceCalibration - Channel 0 - Calibration
+02 43 49 43 20 30 20 35 20 30 03
+0
+5
+
+SEND
+82
+CIC  1 5 - CurrentInterfaceCalibration - Channel 1 - Calibration
+02 43 49 43 20 31 20 35 20 30 03
+0
+.5
+
+SEND
+83
+CID  - ClearsystemID
+02 43 49 44 20 ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+84
+CIF <0/1> - CurrentInterfaceFeedback onoff
+02 43 49 46 20 ## 03
+0
+5
+
+SEND
+85
+CIF 0 - CurrentInterfaceFeedback off
+02 43 49 46 20 30 03
+0
+5
+
+SEND
+86
+CIF 1 - CurrentInterfaceFeedback on
+02 43 49 46 20 31 03
+0
+5
+
+SEND
+87
+CII <0...100> - CurrentInterfaceIntegralportion
+02 43 49 49 20 ## ## ## 03
+0
+5
+
+SEND
+88
+CIM <0/1> <RM-Wert>- CurrentInterfaceManualmode
+02 43 49 4D 20 ## 20 ## ## ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+89
+CIM 0 <RM-Wert>- CurrentInterfaceManualmode
+02 43 49 4D 20 30 20 ## ## ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+90
+CIM 1 <RM-Wert>- CurrentInterfaceManualmode
+02 43 49 4D 20 31 20 ## ## ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+91
+CIP <0...100> - CurrentInterfaceProportionalportion
+02 43 49 50 20 ## ## ## 03
+0
+5
+
+SEND
+92
+CIR 0 - CurrentInterfaceRestorecalibration Channel 0
+02 43 49 52 20 30 03
+0
+5
+
+SEND
+93
+CIR 1 - CurrentInterfaceRestorecalibration Channel 1
+02 43 49 52 20 31 03
+0
+5
+
+SEND
+94
+CIV 0 <0,1,...,4> - CurrentInterfaceVariousvalues Channel 0
+02 43 49 56 20 30 20 ## 03
+0
+5
+
+SEND
+95
+CIV 1 <0,1,...,4> - CurrentInterfaceVariousvalues Channel 1
+02 43 49 56 20 31 20 ## 03
+0
+5
+
+SEND
+96
+CLI - ClearLImit
+02 43 4C 49 03
+0
+5
+
+SEND
+97
+CRC 0 - ClearResetpepliesCounter (Counter and Flag)
+02 43 52 43 20 30 03
+0
+1
+
+SEND
+98
+CRC 1 - ClearResetpepliesCounter (Counter only)
+02 43 52 43 20 31 03
+0
+1
+
+SEND
+99
+CRE - ClearResetEnableflag
+02 43 52 45 03
+0
+1
+
+SEND
+100
+CSC - ClearSpicheckCounters
+02 43 53 43 03
+0
+1
+
+SEND
+101
+CSD 0 - ClearStatistics Channel 0
+02 43 53 44 20 30 20 ## ## ## 03
+0
+1
+
+SEND
+102
+CSD 0 15 - ClearStatistics completly Channel 0 (Abs. and Rel.)
+02 43 53 44 20 30 20 31 35 03
+0
+1
+
+SEND
+103
+CSD 0 240 - ClearStatistics completly Channel 0 (Rel.)
+02 43 53 44 20 30 20 32 34 30 03
+0
+1
+
+SEND
+104
+CSD 1 - ClearStatistics Channel 1
+02 43 53 44 20 31 20 ## ## ## 03
+0
+1
+
+SEND
+105
+CSD 1 15 - ClearStatistics completly Channel 1 (Abs. and Rel.)
+02 43 53 44 20 31 20 31 35 03
+0
+1
+
+SEND
+106
+CSD 1 240 - ClearStatistics completly Channel 1 (Rel.)
+02 43 53 44 20 31 20 32 34 30 03
+0
+1
+
+SEND
+107
+CSE 0 - ClearSpiErrorcounter Channel 0
+02 43 53 45 20 30 03
+1
+1
+
+SEND
+108
+CSE 1 - ClearSpiErrorcounter Channel 1
+02 43 53 45 20 31 03
+1
+1
+
+SEND
+109
+CTM 0 - Betriebsstundenzähler löschen
+02 43 54 4D 20 30 20 ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+110
+CTM 1 - Relativen Betriebsstundenzähler löschen
+02 43 54 4D 20 31 03
+0
+5
+
+SEND
+111
+CTR 0 - ClearTaRa - Channel 0
+02 43 54 52 20 30 03
+0
+5
+
+SEND
+112
+CTR 1 - ClearTaRa - Channel 1
+02 43 54 52 20 31 03
+0
+5
+
+SEND
+113
+CWD <0,1> - ClearWatchDogadress
+02 43 57 44 20 ## 03
+0
+5
+
+SEND
+114
+CWD 0 - ClearWatchDogadress - Channel 0
+02 43 57 44 20 30 03
+0
+5
+
+SEND
+115
+CWD 1 - ClearWatchDogadress - Channel 1
+02 43 57 44 20 31 03
+0
+5
+
+SEND
+116
+DIS 0 1437226410 - DISable RS232-Kommunikation - Channel 0
+02 44 49 53 20 30 20 31 34 33 37 32 32 36 34 31 30 03
+0
+5
+
+SEND
+117
+DIS 1 1437226410 - DISable RS232-Kommunikation - Channel 1
+02 44 49 53 20 31 20 31 34 33 37 32 32 36 34 31 30 03
+0
+5
+
+SEND
+118
+DIS 0 1437226411 - DISable RS232-Kommunikation - Channel 0 - Test 'Wrong code'
+02 44 49 53 20 30 20 31 34 33 37 32 32 36 34 31 31 03
+0
+5
+
+SEND
+119
+DIS 1 1437226411 - DISable RS232-Kommunikation - Channel 1 - Test 'Wrong code'
+02 44 49 53 20 31 20 31 34 33 37 32 32 36 34 31 31 03
+0
+5
+
+SEND
+120
+DIS 0 1437226410 0 - DISable RS232-Kommunikation - Channel 0 - Test E008
+02 44 49 53 20 30 20 31 34 33 37 32 32 36 34 31 30 20 30 03
+0
+5
+
+SEND
+121
+DIS 1 1437226410 0 - DISable RS232-Kommunikation - Channel 1 - Test E008
+02 44 49 53 20 31 20 31 34 33 37 32 32 36 34 31 30 20 30 03
+0
+5
+
+SEND
+122
+DIS 0 - DISable RS232-Kommunikation - Channel 0 - Test E007
+02 44 49 53 20 30 03
+0
+5
+
+SEND
+123
+DIS 1 - DISable RS232-Kommunikation - Channel 1 - Test E007
+02 44 49 53 20 31 03
+0
+5
+
+SEND
+124
+ENA 0 1437226410 - ENAble RS232-Kommunikation - Channel 0
+02 45 4E 41 20 30 20 31 34 33 37 32 32 36 34 31 30 03
+0
+5
+
+SEND
+125
+ENA 1 1437226410 - ENAble RS232-Kommunikation - Channel 1
+02 45 4E 41 20 31 20 31 34 33 37 32 32 36 34 31 30 03
+0
+5
+
+SEND
+126
+ENA 0 1437226411 - ENAble RS232-Kommunikation - Channel 0 - Test 'Wrong code'
+02 45 4E 41 20 30 20 31 34 33 37 32 32 36 34 31 31 03
+0
+5
+
+SEND
+127
+ENA 1 1437226411 - ENAble RS232-Kommunikation - Channel 1 - Test 'Wrong code'
+02 45 4E 41 20 31 20 31 34 33 37 32 32 36 34 31 31 03
+0
+5
+
+SEND
+128
+ENA 0 1437226410 0 - ENAble RS232-Kommunikation - Channel 0 - Test E008
+02 45 4E 41 20 30 20 31 34 33 37 32 32 36 34 31 30 20 30 03
+0
+5
+
+SEND
+129
+ENA 1 1437226410 0 - ENAble RS232-Kommunikation - Channel 1 - Test E008
+02 45 4E 41 20 31 20 31 34 33 37 32 32 36 34 31 30 20 30 03
+0
+5
+
+SEND
+130
+ENA 0 - ENAble RS232-Kommunikation - Channel 0 - Test E007
+02 45 4E 41 20 30 03
+0
+5
+
+SEND
+131
+ENA 1 - ENAble RS232-Kommunikation - Channel 1 - Test E007
+02 45 4E 41 20 31 03
+0
+5
+
+SEND
+132
+GAN - GetArticleNumber
+02 47 41 4E 03
+0
+1
+
+SEND
+133
+GAT 0 - GetActualTemperature - Channel 0
+02 47 41 54 20 30 03
+1
+1
+
+SEND
+134
+GAT 1 - GetActualTemperature - Channel 1
+02 47 41 54 20 31 03
+1
+.2
+
+SEND
+135
+GAL 0 - GetAlarmLimit - Channel 0
+02 47 41 4C 20 30 03
+1
+1
+
+SEND
+136
+GAL 1 - GetAlarmLimit - Channel 1
+02 47 41 4C 20 31 03
+1
+1
+
+SEND
+137
+GAP - GetAPplication
+02 47 41 50 03
+0
+1
+
+SEND
+138
+GBR - Getrs232BaudRate
+02 47 42 52 03
+0
+1
+
+SEND
+139
+GCD - GetmaxCurrentDeviation
+02 47 43 44 03
+0
+5
+
+SEND
+140
+GCF <0,1> - GetCalibrationFactor
+02 47 43 46 20 ## 03
+0
+5
+
+SEND
+141
+GCF 0 - GetCalibrationFactor - Channel 0
+02 47 43 46 20 30 03
+0
+5
+
+SEND
+142
+GCF 1 - GetCalibrationFactor - Channel 1
+02 47 43 46 20 31 03
+0
+.5
+
+SEND
+143
+GCG <0,1> 0 - GetCurrentinterfaceGain - RMW
+02 47 43 47 20 ## 20 30 03
+0
+5
+
+SEND
+144
+GCG 0 0 - GetCurrentinterfaceGain - RMW - Channel 0
+02 47 43 47 20 30 20 30 03
+0
+5
+
+SEND
+145
+GCG 1 0 - GetCurrentinterfaceGain - RMW - Channel 1
+02 47 43 47 20 31 20 30 03
+0
+5
+
+SEND
+146
+GCG <0,1> 1 - GetCurrentinterfaceGain - Norm
+02 47 43 47 20 ## 20 31 03
+0
+5
+
+SEND
+147
+GCG 0 1 - GetCurrentinterfaceGain - Norm - Channel 0
+02 47 43 47 20 30 20 31 03
+0
+5
+
+SEND
+148
+GCG 1 1 - GetCurrentinterfaceGain - Norm - Channel 1
+02 47 43 47 20 31 20 31 03
+0
+5
+
+SEND
+149
+GCL 0 - GetCheckLimits - Zeropointcheck
+02 47 43 4C 20 30 03
+1
+.5
+
+SEND
+150
+GCL 1 - GetCheckLimits - MaxDeviation
+02 47 43 4C 20 31 03
+0
+5
+
+SEND
+151
+GCL 2 - GetCheckLimits - MaxDrift
+02 47 43 4C 20 32 03
+0
+5
+
+SEND
+152
+GCO <0,1> 0 - GetCurrentinterfaceOffset - RMW
+02 47 43 4F 20 ## 20 30 03
+0
+5
+
+SEND
+153
+GCO 0 0 - GetCurrentinterfaceOffset - RMW - Channel 0
+02 47 43 4F 20 30 20 30 03
+0
+5
+
+SEND
+154
+GCO 1 0 - GetCurrentinterfaceOffset - RMW - Channel 1
+02 47 43 4F 20 31 20 30 03
+0
+5
+
+SEND
+155
+GCO <0,1> 1 - GetCurrentinterfaceOffset - Norm
+02 47 43 4F 20 ## 20 31 03
+0
+5
+
+SEND
+156
+GCO 0 1 - GetCurrentinterfaceOffset - Norm - Channel 0
+02 47 43 4F 20 30 20 31 03
+0
+5
+
+SEND
+157
+GCO 1 1 - GetCurrentinterfaceOffset - Norm - Channel 1
+02 47 43 4F 20 31 20 31 03
+0
+5
+
+SEND
+158
+GCR 0 - GetConversionRate - Channel 0
+02 47 43 52 20 30 03
+0
+5
+
+SEND
+159
+GCR 1 - GetConversionRate - Channel 1
+02 47 43 52 20 31 03
+0
+5
+
+SEND
+160
+GCR 0 <0...3> - GetConversionRate - Channel 0
+02 47 43 52 20 30 20 ## 03
+0
+5
+
+SEND
+161
+GCR 1 <0...3> - GetConversionRate - Channel 1
+02 47 43 52 20 31 20 ## 03
+0
+5
+
+SEND
+162
+GCS - TemperatureCompensationState
+02 47 43 53 03
+0
+5
+
+SEND
+163
+GCT 0 - GetConversionTime - Channel 0
+02 47 43 54 20 30 03
+0
+5
+
+SEND
+164
+GCT 1 - GetConversionTime - Channel 1
+02 47 43 54 20 31 03
+0
+5
+
+SEND
+165
+GCT 0 <0...3> - GetConversionTime - Channel 0
+02 47 43 54 20 30 20 ## 03
+0
+5
+
+SEND
+166
+GCT 1 <0...3> - GetConversionTime - Channel 1
+02 47 43 54 20 31 20 ## 03
+0
+5
+
+SEND
+167
+GCU <0,1> <0,1,2> - GetCUrrent
+02 47 43 55 20 ## 20 ## 03
+1
+1
+
+SEND
+168
+GCU 0 0 - GetCUrrent - Channel 0 - Rated
+02 47 43 55 20 30 20 30 03
+1
+.2
+
+SEND
+169
+GCU 0 1 - GetCUrrent - Channel 0 - Measured
+02 47 43 55 20 30 20 31 03
+1
+.2
+
+SEND
+170
+GCU 0 2 - GetCUrrent - Channel 0 - Deviation
+02 47 43 55 20 30 20 32 03
+0
+1
+
+SEND
+171
+GCU 1 0 - GetCUrrent - Channel 1 - Rated
+02 47 43 55 20 31 20 30 03
+1
+.2
+
+SEND
+172
+GCU 1 1 - GetCUrrent - Channel 1 - Measured
+02 47 43 55 20 31 20 31 03
+1
+.2
+
+SEND
+173
+GCU 1 2 - GetCUrrent - Channel 1 - Deviation
+02 47 43 55 20 31 20 32 03
+0
+1
+
+SEND
+174
+GCV <0,1> <Temperature> - GetCompensationValue
+02 47 43 56 20 ## 20 ## ## ## 03
+0
+1
+
+SEND
+175
+GCV 0 <Temperature> - GetCompensationValue - Channel 0
+02 47 43 56 20 30 20 ## ## ## 03
+0
+1
+
+SEND
+176
+GCV 1 <Temperature> - GetCompensationValue - Channel 1
+02 47 43 56 20 31 20 ## ## ## 03
+0
+1
+
+SEND
+177
+GDB 0 - GetDeBugvariable - Channel 0
+02 47 44 42 20 30 20 ## ## ## 03
+0
+5
+
+SEND
+178
+GDB 1 - GetDeBugvariable - Channel 1
+02 47 44 42 20 31 20 ## ## ## 03
+0
+5
+
+SEND
+179
+GEC - E-module compensation state
+02 47 45 43 03
+0
+5
+
+SEND
+180
+GFB - GetFeedBackstate
+02 47 46 42 03
+0
+5
+
+SEND
+181
+GFD - GetFilterDepth
+02 47 46 44 03
+0
+1
+
+SEND
+182
+GFW - GetFilterWidth
+02 47 46 57 03
+1
+.5
+
+SEND
+183
+GID - GetsystemID
+02 47 49 44 03
+0
+5
+
+SEND
+184
+GIP - GetIntegralPortion
+02 47 49 50 03
+0
+5
+
+SEND
+185
+GLC - GetLoadCell
+02 47 4C 43 03
+0
+5
+
+SEND
+186
+GMF 0 - GetMotionFilter - Channel 0
+02 47 4D 46 20 30 03
+0
+5
+
+SEND
+187
+GMF 1 - GetMotionFilter - Channel 1
+02 47 4D 46 20 31 03
+0
+5
+
+SEND
+188
+GML - GetMaxLoad
+02 47 4D 4C 03
+0
+5
+
+SEND
+189
+GNM 0 - GetNumberMeasurements - Weight
+02 47 4E 4D 20 30 03
+0
+5
+
+SEND
+190
+GNM 1 - GetNumberMeasurements - Feedback
+02 47 4E 4D 20 31 03
+0
+5
+
+SEND
+191
+GPP - GetProportionalPortion
+02 47 50 50 03
+0
+5
+
+SEND
+192
+GSD 0 - GetStatisticsData - Channel 0 - Absolute Statistics
+02 47 53 44 20 30 20 ## ## 03
+0
+1
+
+SEND
+193
+GSD 1 - GetStatisticsData - Channel 1 - Absolute Statistics
+02 47 53 44 20 31 20 ## ## 03
+0
+1
+
+SEND
+194
+GSD 2 - GetStatisticsData - Channel 0 - Relative Statistics
+02 47 53 44 20 32 20 ## ## 03
+0
+1
+
+SEND
+195
+GSD 3 - GetStatisticsData - Channel 1 - Relative Statistics
+02 47 53 44 20 33 20 ## ## 03
+0
+1
+
+SEND
+196
+GSD 0 255- GetStatisticsData - Channel 0 - complete
+02 47 53 44 20 30 20 32 35 35 03
+1
+5
+
+SEND
+197
+GSD 1 255- GetStatisticsData - Channel 1 - complete
+02 47 53 44 20 31 20 32 35 35 03
+1
+5
+
+SEND
+198
+GSD 0 1 - GetStatisticsData - Channel 0 - Absolute Statistics - Min. Temperature
+02 47 53 44 20 30 20 31 03
+0
+3
+
+SEND
+199
+GSD 1 1 - GetStatisticsData - Channel 1 - Absolute Statistics - Min. Temperature
+02 47 53 44 20 31 20 31 03
+0
+1
+
+SEND
+200
+GSD 2 1 - GetStatisticsData - Channel 0 - Relative Statistics - Min. Temperature
+02 47 53 44 20 32 20 31 03
+0
+1
+
+SEND
+201
+GSD 3 1 - GetStatisticsData - Channel 1 - Relative Statistics - Min. Temperature
+02 47 53 44 20 33 20 31 03
+0
+1
+
+SEND
+202
+GSD 0 2 - GetStatisticsData - Channel 0 - Absolute Statistics - Max. Temperature
+02 47 53 44 20 30 20 32 03
+0
+1
+
+SEND
+203
+GSD 1 2 - GetStatisticsData - Channel 1 - Absolute Statistics - Max. Temperature
+02 47 53 44 20 31 20 32 03
+0
+1
+
+SEND
+204
+GSD 2 2 - GetStatisticsData - Channel 0 - Relative Statistics - Max. Temperature
+02 47 53 44 20 32 20 32 03
+0
+1
+
+SEND
+205
+GSD 3 2 - GetStatisticsData - Channel 1 - Relative Statistics - Max. Temperature
+02 47 53 44 20 33 20 32 03
+0
+1
+
+SEND
+206
+GSD 0 3 - GetStatisticsData - Channel 0 - Absolute Statistics - Max. Weight
+02 47 53 44 20 30 20 33 03
+0
+1
+
+SEND
+207
+GSD 1 3 - GetStatisticsData - Channel 1 - Absolute Statistics - Max. Weight
+02 47 53 44 20 31 20 33 03
+0
+1
+
+SEND
+208
+GSD 2 3 - GetStatisticsData - Channel 0 - Relative Statistics - Max. Weight
+02 47 53 44 20 32 20 33 03
+0
+1
+
+SEND
+209
+GSD 3 3 - GetStatisticsData - Channel 1 - Relative Statistics - Max. Weight
+02 47 53 44 20 33 20 33 03
+1
+.5
+
+SEND
+210
+GSD 0 4 - GetStatisticsData - Channel 0 - Absolute Statistics - Number of Overloads
+02 47 53 44 20 30 20 34 03
+0
+1
+
+SEND
+211
+GSD 1 4 - GetStatisticsData - Channel 1 - Absolute Statistics - Number of Overloads
+02 47 53 44 20 31 20 34 03
+0
+1
+
+SEND
+212
+GSD 2 4 - GetStatisticsData - Channel 0 - Relative Statistics - Number of Overloads
+02 47 53 44 20 32 20 34 03
+0
+1
+
+SEND
+213
+GSD 3 4 - GetStatisticsData - Channel 1 - Relative Statistics - Number of Overloads
+02 47 53 44 20 33 20 34 03
+0
+1
+
+SEND
+214
+GSD 0 8 - GetStatisticsData - Channel 0 - Absolute Statistics - Max. RMW
+02 47 53 44 20 30 20 38 03
+0
+1
+
+SEND
+215
+GSD 1 8 - GetStatisticsData - Channel 1 - Absolute Statistics - Max. RMW
+02 47 53 44 20 31 20 38 03
+0
+1
+
+SEND
+216
+GSD 2 8 - GetStatisticsData - Channel 0 - Relative Statistics - Max. RMW
+02 47 53 44 20 32 20 38 03
+0
+1
+
+SEND
+217
+GSD 3 8 - GetStatisticsData - Channel 1 - Relative Statistics - Max. RMW
+02 47 53 44 20 33 20 38 03
+0
+1
+
+SEND
+218
+GSD 0 9 - GetStatisticsData - Channel 0 - Absolute Statistics - Max. Current
+02 47 53 44 20 30 20 39 03
+0
+1
+
+SEND
+219
+GSD 1 9 - GetStatisticsData - Channel 1 - Absolute Statistics - Max. Current
+02 47 53 44 20 31 20 39 03
+0
+1
+
+SEND
+220
+GSD 2 9 - GetStatisticsData - Channel 0 - Relative Statistics - Max. Current
+02 47 53 44 20 32 20 39 03
+0
+1
+
+SEND
+221
+GSD 3 9 - GetStatisticsData - Channel 1 - Relative Statistics - Max. Current
+02 47 53 44 20 33 20 39 03
+0
+1
+
+SEND
+222
+GSD 0 10 - GetStatisticsData - Channel 0 - Absolute Statistics - Number of Overlimits
+02 47 53 44 20 30 20 31 30 03
+0
+1
+
+SEND
+223
+GSD 1 10 - GetStatisticsData - Channel 1 - Absolute Statistics - Number of Overlimits
+02 47 53 44 20 31 20 31 30 03
+0
+1
+
+SEND
+224
+GSD 2 10 - GetStatisticsData - Channel 0 - Relative Statistics - Number of Overlimits
+02 47 53 44 20 32 20 31 30 03
+0
+1
+
+SEND
+225
+GSD 3 10 - GetStatisticsData - Channel 1 - Relative Statistics - Number of Overlimits
+02 47 53 44 20 33 20 31 30 03
+0
+1
+
+SEND
+226
+GSE 0 - GetSpiErrorcounter - Channel 0
+02 47 53 45 20 30 03
+1
+10
+
+SEND
+227
+GSE 1 - GetSpiErrorcounter - Channel 1
+02 47 53 45 20 31 03
+1
+10
+
+SEND
+228
+GSN - GetSeriaNumber
+02 47 53 4E 03
+0
+1
+
+SEND
+229
+GSP 0 - GetStatisticsParameter - Channel 0
+02 47 53 50 20 30 20 ## 03
+0
+1
+
+SEND
+230
+GSP 1 - GetStatisticsParameter - Channel 1
+02 47 53 50 20 31 20 ## 03
+0
+1
+
+SEND
+231
+GSP 0 0 - GetStatisticsParameter - Channel 0 - Filter Check Temperature
+02 47 53 50 20 30 20 30 03
+0
+1
+
+SEND
+232
+GSP 1 0 - GetStatisticsParameter - Channel 1 - Filter Check Temperature
+02 47 53 50 20 31 20 30 03
+0
+1
+
+SEND
+233
+GSP 0 1 - GetStatisticsParameter - Channel 0 - Filter Check Weight
+02 47 53 50 20 30 20 31 03
+0
+1
+
+SEND
+234
+GSP 1 1 - GetStatisticsParameter - Channel 1 - Filter Check Weight
+02 47 53 50 20 31 20 31 03
+0
+1
+
+SEND
+235
+GSP 0 2 - GetStatisticsParameter - Channel 0 - Motion-Limit Check Weight
+02 47 53 50 20 30 20 32 03
+0
+1
+
+SEND
+236
+GSP 1 2 - GetStatisticsParameter - Channel 1 - Motion-Limit Check Weight
+02 47 53 50 20 31 20 32 03
+0
+1
+
+SEND
+237
+GSP 0 3 - GetStatisticsParameter - Channel 0 - Filter Overlimit and Overload
+02 47 53 50 20 30 20 33 03
+0
+1
+
+SEND
+238
+GSP 1 3 - GetStatisticsParameter - Channel 1 - Filter Overlimit and Overload
+02 47 53 50 20 31 20 33 03
+0
+1
+
+SEND
+239
+GSP 0 4 - GetStatisticsParameter - Channel 0 - Limit Overlimit and Overload
+02 47 53 50 20 30 20 34 03
+0
+1
+
+SEND
+240
+GSP 1 4 - GetStatisticsParameter - Channel 1 - Limit Overlimit and Overload
+02 47 53 50 20 31 20 34 03
+0
+1
+
+SEND
+241
+GSS 0 - GetSystemState - Channel 0
+02 47 53 53 20 30 03
+0
+.2
+
+SEND
+242
+GSS 1 - GetSystemState - Channel 1
+02 47 53 53 20 31 03
+1
+1
+
+SEND
+243
+GSU 0 - GetpowerSUpply - Channel 0
+02 47 53 55 20 30 03
+1
+1
+
+SEND
+244
+GSU 1 - GetpowerSUpply - Channel 1
+02 47 53 55 20 31 03
+1
+1
+
+SEND
+245
+GTH - GetTimeHysteresis
+02 47 54 48 03
+0
+5
+
+SEND
+246
+GTM 0 - GetTimer - absolute
+02 47 54 4D 20 30 03
+0
+5
+
+SEND
+247
+GTM 1 - GetTimer - relative
+02 47 54 4D 20 31 03
+0
+5
+
+SEND
+248
+GTM 255 - GetTimer (only in MRWmanager mode)
+02 47 54 4D 20 32 35 35 03
+0
+5
+
+SEND
+249
+GTO 0 - GetTemperatureOffset - Channel 0
+02 47 54 4F 20 30 03
+0
+5
+
+SEND
+250
+GTO 1 - GetTemperatureOffset - Channel 1
+02 47 54 4F 20 31 03
+0
+5
+
+SEND
+251
+GTR 0 - GetTara - Channel 0
+02 47 54 52 20 30 03
+0
+5
+
+SEND
+252
+GTR 1 - GetTara - Channel 1
+02 47 54 52 20 31 03
+0
+5
+
+SEND
+253
+GVR <0,1,...> - GetVeRsion
+02 47 56 52 20 ## 03
+0
+5
+
+SEND
+254
+GVR 0 - GetVeRsion of the hardware 
+02 47 56 52 20 30 03
+0
+5
+
+SEND
+255
+GVR 1 - GetVeRsion of the software 
+02 47 56 52 20 31 03
+0
+5
+
+SEND
+256
+GWD <0,1> - GetWatchDogadress
+02 47 57 44 20 ## 03
+0
+5
+
+SEND
+257
+GWD 0 - GetWatchDogadress - Channel 0
+02 47 57 44 20 30 03
+0
+5
+
+SEND
+258
+GWD 1 - GetWatchDogadress - Channel 1
+02 47 57 44 20 31 03
+0
+5
+
+SEND
+259
+GZP <0,1> - GetZeroPoint
+02 47 5A 50 20 ## 03
+0
+5
+
+SEND
+260
+GZP 0 - GetZeroPoint - Channel 0
+02 47 5A 50 20 30 03
+0
+5
+
+SEND
+261
+GZP 1 - GetZeroPoint - Channel 1
+02 47 5A 50 20 31 03
+0
+5
+
+SEND
+262
+INI - Initialize
+02 49 4E 49 20 ## 20 ## 03
+0
+5
+
+SEND
+263
+INI 1 0 - Initialize
+02 49 4E 49 20 31 20 30 03
+0
+1
+
+SEND
+264
+LED 0 0 - LED-Testmode löschen
+02 4C 45 44 20 30 20 30 03
+0
+5
+
+SEND
+265
+LED 1 <0,1,...,255> - LED-Testmode setzen
+02 4C 45 44 20 31 20 ## ## ## 03
+0
+5
+
+SEND
+266
+NOP - NoOperation
+02 4E 4F 50 03
+1
+.1
+
+SEND
+267
+OK - Okay
+02 4F 4B 03
+0
+.2
+
+SEND
+268
+PCC - PCConnected
+02 50 43 43 03
+0
+.2
+
+SEND
+269
+RCW <0,1> - ReadChannelWeight
+02 52 43 57 20 ## 03
+1
+1
+
+SEND
+270
+RCW 0 - ReadChannelWeight Channel 0
+02 52 43 57 20 30 03
+0
+.5
+
+SEND
+271
+RCW 1 - ReadChannelWeight Channel 1
+02 52 43 57 20 31 03
+0
+.1
+
+SEND
+272
+RDM <0,1> - ReadMeasurement
+02 52 44 4D 20 ## 03
+0
+.25
+
+SEND
+273
+RDM 0 - ReadMeasurement Channel 0
+02 52 44 4D 20 30 03
+1
+.1
+
+SEND
+274
+RDM 1 - ReadMeasurement Channel 1
+02 52 44 4D 20 31 03
+1
+.1
+
+SEND
+275
+RDI 0 - ReadDacInput Channel 0
+02 52 44 49 20 30 03
+1
+1
+
+SEND
+276
+RDI 1 - ReadDacInput Channel 1
+02 52 44 49 20 31 03
+1
+1
+
+SEND
+277
+RMA 0 0 - ReadMeasurement from Adc Channel 0
+02 52 4D 41 20 30 20 30 03
+1
+.2
+
+SEND
+278
+RMA 1 0 - ReadMeasurement from Adc Channel 1
+02 52 4D 41 20 31 20 30 03
+1
+.5
+
+SEND
+279
+RMA 0 3 - ReadfeedbackMeasurement from Adc Channel 0
+02 52 4D 41 20 30 20 33 03
+1
+.25
+
+SEND
+280
+RMA 1 3 - ReadfeedbackMeasurement from Adc Channel 1
+02 52 4D 41 20 31 20 33 03
+1
+.25
+
+SEND
+281
+RMA 0 <0,1,2,3> - ReadMeasurement from Adc Channel 0
+02 52 4D 41 20 30 20 ## 03
+0
+1
+
+SEND
+282
+RMA 1 <0,1,2,3> - ReadMeasurement from Adc Channel 1
+02 52 4D 41 20 31 20 ## 03
+0
+1
+
+SEND
+283
+RMF 0 - ReadMotionFilter - Motion
+02 52 4D 46 20 30 03
+1
+1
+
+SEND
+284
+RMF 1 - ReadMotionFilter - NoMotion
+02 52 4D 46 20 31 03
+1
+1
+
+SEND
+285
+RML - ReadMotionLimit
+02 52 4D 4C 03
+0
+1
+
+SEND
+286
+RMM <0,1> <0,1,..,4> - ReadMeasureMent - Channel 0
+02 52 4D 4D 20 ## 20 ## 03
+0
+.1
+
+SEND
+287
+RMM 0 0 - ReadMeasureMent - from ADC - Channel 0
+02 52 4D 4D 20 30 20 30 03
+0
+.1
+
+SEND
+288
+RMM 0 1 - ReadMeasureMent - filtered - Channel 0
+02 52 4D 4D 20 30 20 31 03
+0
+.1
+
+SEND
+289
+RMM 0 2 - ReadMeasureMent - filtered and zero corrected - Channel 0
+02 52 4D 4D 20 30 20 32 03
+0
+.1
+
+SEND
+290
+RMM 0 3 - ReadMeasureMent - temperature corrected - Channel 0
+02 52 4D 4D 20 30 20 33 03
+0
+.1
+
+SEND
+291
+RMM 0 4 - ReadMeasureMent - e-module corrected - Channel 0
+02 52 4D 4D 20 30 20 34 03
+0
+.1
+
+SEND
+292
+RMM 1 0 - ReadMeasureMent - from ADC - Channel 1
+02 52 4D 4D 20 31 20 30 03
+0
+.1
+
+SEND
+293
+RMM 1 1 - ReadMeasureMent - filtered - Channel 1
+02 52 4D 4D 20 31 20 31 03
+0
+.1
+
+SEND
+294
+RMM 1 2 - ReadMeasureMent - filtered and zero corrected - Channel 1
+02 52 4D 4D 20 31 20 32 03
+0
+.1
+
+SEND
+295
+RMM 1 3 - ReadMeasureMent - temperature corrected - Channel 1
+02 52 4D 4D 20 31 20 33 03
+0
+.1
+
+SEND
+296
+RMM 1 4 - ReadMeasureMent - e-module corrected - Channel 1
+02 52 4D 4D 20 31 20 34 03
+0
+.1
+
+SEND
+297
+RMT - ReadMotionFilter
+02 52 4D 54 03
+0
+1
+
+SEND
+298
+RSS <0,1> - RS232Statistics 
+02 52 53 53 20 ## 03
+0
+1
+
+SEND
+299
+RSS 0 - RS232Statistics - Channel 0 
+02 52 53 53 20 30 03
+0
+1
+
+SEND
+300
+RSS 1 - RS232Statistics - Channel 1 
+02 52 53 53 20 31 03
+0
+1
+
+SEND
+301
+RST - Reset
+02 52 53 54 03
+1
+3
+
+SEND
+302
+SAN - SetArticleNumber
+02 53 41 4E 20 ## ## ## ## ## ## ## ## ## ## ## 03
+0
+1
+
+SEND
+303
+SAL <Grenzwert> - SetAlarmLimit
+02 53 41 4C 20 ## ## ## ## ## ## ## ## ## ## ## 03
+0
+1
+
+SEND
+304
+SBO <0,1> <0,1> - SetBurnOutmode
+02 53 42 4F 20 ## 20 ## 03
+0
+5
+
+SEND
+305
+SBO 0 <0,1> - SetBurnOutmode - Channel 0
+02 53 42 4F 20 30 20 ## 03
+0
+5
+
+SEND
+306
+SBO 1 <0,1> - SetBurnOutmode - Channel 1
+02 53 42 4F 20 31 20 ## 03
+0
+5
+
+SEND
+307
+SBO 1 0 - ClearBurnOutmode - Channel 1
+02 53 42 4F 20 31 20 30 03
+0
+5
+
+SEND
+308
+SBO 1 1 - SetBurnOutmode - Channel 1
+02 53 42 4F 20 31 20 31 03
+0
+5
+
+SEND
+309
+SBR <Baudrate> - Setrs232BaudRate
+02 53 42 52 20 ## ## ## ## ## ## ## ## ## ## ## 03
+0
+1
+
+SEND
+310
+SBR <9600> - Setrs232BaudRate to 9600baud
+02 53 42 52 20 39 36 30 30 03
+0
+1
+
+SEND
+311
+SBR <57600> - Setrs232BaudRate to 57600baud
+02 53 42 52 20 35 37 36 30 30 03
+0
+1
+
+SEND
+312
+SCA <Rated Weight> - SetCalibrationfactortoActualweight
+02 53 43 41 20 ## ## ## ## ## ## ## ## ## ## ## ## 03
+0
+.25
+
+SEND
+313
+SCA 1000 - SetCalibrationfactortoActualweight - 1000kg
+02 53 43 41 20 31 30 30 30 03
+0
+.25
+
+SEND
+314
+SCD <Grenzwert> - SetmaxCurrentDeviation
+02 53 43 44 20 ## ## ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+315
+SCE - SetCompEnsation on
+02 53 43 45 03
+0
+5
+
+SEND
+316
+SCF <0,1> <Gain> - SetCalibrationFactor
+02 53 43 46 20 ## 20 ## ## ## ## ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+317
+SCF 0 <Gain> - SetCalibrationFactor Channel 0
+02 53 43 46 20 30 20 ## ## ## ## ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+318
+SCF 1 <Gain> - SetCalibrationFactor Channel 1
+02 53 43 46 20 31 20 ## ## ## ## ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+319
+SCL <0,1,2> <Wert> - SetCheckLimits
+02 53 43 4C 20 ## 20 ## ## ## ## ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+320
+SCO <0,1> - SetCompensationOnOff
+02 53 43 4F 20 ## 03
+0
+5
+
+SEND
+321
+SCO 0 - SetCompensationOff
+02 53 43 4F 20 30 03
+0
+5
+
+SEND
+322
+SCO 1 - SetCompensationOn
+02 53 43 4F 20 31 03
+0
+5
+
+SEND
+323
+SCR <Rate>  - SetConversionRate
+02 53 43 52 20 ## ## ## ## ## ## 03
+0
+5
+
+SEND
+324
+SCR 5.35  - SetConversionRate 5.35Hz
+02 53 43 52 20 35 2E 33 35 03
+0
+5
+
+SEND
+325
+SCR 19.79  - SetConversionRate 19.79Hz
+02 53 43 52 20 31 39 2E 37 39 03
+0
+5
+
+SEND
+326
+SCR 26.325  - SetConversionRate 26.325Hz
+02 53 43 52 20 32 36 2E 33 32 35 03
+0
+5
+
+SEND
+327
+SCU <0,1> <Current> - SetCurrent
+02 53 43 55 20 ## 20 ## ## ## ## ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+328
+SCU 0 <Current> - SetCurrent - Channel 0
+02 53 43 55 20 30 20 ## ## ## ## ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+329
+SCU 1 <Current> - SetCurrent - Channel 1
+02 53 43 55 20 31 20 ## ## ## ## ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+330
+SCV <0,1> <Temperatur> <Korrekturwert> - SetCompensationValue
+02 53 43 56 20 ## 20 ## ## 20 ## ## ## ## ## 03
+0
+5
+
+SEND
+331
+SCV 0 <Temperatur> <Korrekturwert> - SetCompensationValue - Channel 0
+02 53 43 56 20 30 20 ## ## ## 20 ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+332
+SCV 1 <Temperatur> <Korrekturwert> - SetCompensationValue - Channel 1
+02 53 43 56 20 31 20 ## ## ## 20 ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+333
+SEC 0 - SetEmodulCompensation off
+02 53 45 43 20 30 03
+0
+5
+
+SEND
+334
+SEC 1 - SetEmodulCompensation on
+02 53 45 43 20 31 03
+0
+5
+
+SEND
+335
+SES <0,1> - SetEnableSPI_onoff
+02 53 45 53 20 ## 03
+0
+5
+
+SEND
+336
+SES 0 - SetEnableLeds_onoff - Disable
+02 53 45 53 20 30 03
+0
+5
+
+SEND
+337
+SES 1 - SetEnableSPI_onoff - Enable
+02 53 45 53 20 31 03
+0
+5
+
+SEND
+338
+SFD - SetFilterDepth
+02 53 46 44 20 ## ## 03
+0
+5
+
+SEND
+339
+SFE - SetFeedbackDeviationError
+02 53 46 45 20 ## ## ## ## ## ## ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+340
+SFW - SetFilterWidth
+02 53 46 57 20 ## ## ## 03
+0
+5
+
+SEND
+341
+SID - SetsystemID
+02 53 49 44 20 ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+342
+SLC <1,2> - SetLoadCell
+02 53 4C 43 20 ## 03
+0
+5
+
+SEND
+343
+SLC 1 - SetLoadCell - Standard Loadcell
+02 53 4C 43 20 31 03
+0
+.3
+
+SEND
+344
+SLC 2 - SetLoadCell - XL Loadcell
+02 53 4C 43 20 32 03
+0
+.3
+
+SEND
+345
+SLS 0 0 0 - SetLimitStatus - Channel 0 - StopCheckLowerLimit  
+02 53 4C 53 20 30 20 30 20 30 03
+0
+5
+
+SEND
+346
+SLS 0 0 1 - SetLimitStatus - Channel 0 - StartCheckLowerLimit  
+02 53 4C 53 20 30 20 30 20 31 03
+0
+5
+
+SEND
+347
+SLS 0 1 0 - SetLimitStatus - Channel 0 - StopCheckUppererLimit  
+02 53 4C 53 20 30 20 31 20 30 03
+0
+5
+
+SEND
+348
+SLS 0 1 1 - SetLimitStatus - Channel 0 - StartCheckUppererLimit  
+02 53 4C 53 20 30 20 31 20 31 03
+0
+5
+
+SEND
+349
+SLS 1 0 0 - SetLimitStatus - Channel 1 - StopCheckLowerLimit  
+02 53 4C 53 20 31 20 30 20 30 03
+0
+5
+
+SEND
+350
+SLS 1 0 1 - SetLimitStatus - Channel 1 - StartCheckLowerLimit  
+02 53 4C 53 20 31 20 30 20 31 03
+0
+5
+
+SEND
+351
+SLS 1 1 0 - SetLimitStatus - Channel 1 - StopCheckUppererLimit  
+02 53 4C 53 20 31 20 31 20 30 03
+0
+5
+
+SEND
+352
+SLS 1 1 1 - SetLimitStatus - Channel 1- StartCheckUppererLimit  
+02 53 4C 53 20 31 20 31 20 31 03
+0
+5
+
+SEND
+353
+SMF - SetMotionFilter
+02 53 4D 46 20 ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+354
+SML - SetMotionLimit
+02 53 4D 4C 20 ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+355
+SMT - SetMotionFilter
+02 53 4D 54 20 ## ## ## 03
+0
+5
+
+SEND
+356
+SNM 0 - SetNumberMeasurements - Weight
+02 53 4E 4D 20 30 20 ## ## ## 03
+0
+5
+
+SEND
+357
+SNM 1 - SetNumberMeasurements - Feedback
+02 53 4E 4D 20 31 20 ## ## ## 03
+0
+5
+
+SEND
+358
+SIT 0 - SImulate Temperature - Channel 0
+02 53 49 54 20 30 20 ## ## ## 03
+0
+5
+
+SEND
+359
+SIT 1 - SImulate Temperature - Channel 1
+02 53 49 54 20 31 20 ## ## ## 03
+0
+5
+
+SEND
+360
+SSC <0,1> - SetSpiCheck on/off
+02 53 53 43 20 ## 03
+0
+1
+
+SEND
+361
+SSC 0 - SetSpiCheck off
+02 53 53 43 20 30 03
+0
+1
+
+SEND
+362
+SSC 1 - SetSpiCheck on
+02 53 53 43 20 31 03
+0
+1
+
+SEND
+363
+SSN - SetSerialNumber
+02 53 53 4E 20 ## ## ## ## ## ## ## ## ## ## ## ## ## 03
+0
+1
+
+SEND
+364
+SSP - SetStatisticsParameter
+02 53 53 50 20 ## 20 ## ## ## ## ## ## ## ## 03
+0
+1
+
+SEND
+365
+SSP 0 - SetStatisticsParameter - Filter Temperaturecheck
+02 53 53 50 20 30 20 ## ## ## 03
+0
+1
+
+SEND
+366
+SSP 1 - SetStatisticsParameter - Filter Weightcheck
+02 53 53 50 20 31 20 ## ## ## 03
+0
+1
+
+SEND
+367
+SSP 2 - SetStatisticsParameter - MotionLimit Weightcheck
+02 53 53 50 20 32 20 ## ## ## ## ## ## ## ## 03
+0
+1
+
+SEND
+368
+SSP 3 - SetStatisticsParameter - Filter Overlimit Check
+02 53 53 50 20 33 20 ## ## ## 03
+0
+1
+
+SEND
+369
+SSP 4 - SetStatisticsParameter - Limit Overlimit Check
+02 53 53 50 20 34 20 ## ## ## ## ## 03
+0
+1
+
+SEND
+370
+SSS - SetSystemState
+02 53 53 53 20 ## ## ## 03
+0
+5
+
+SEND
+371
+SST <0,1> - SetSimulatedTemperature
+02 53 53 54 20 ## 20 ## ## ## ## ## ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+372
+STH - SetTimeHysteresis
+02 53 54 48 20 ## ## 03
+0
+5
+
+SEND
+373
+STO 0 - SetTemperatureOffset Channel 0
+02 53 54 4F 20 30 20 ## ## ## 03
+0
+5
+
+SEND
+374
+STO 1 - SetTemperatureOffset Channel 1
+02 53 54 4F 20 31 20 ## ## ## 03
+0
+5
+
+SEND
+375
+STO 255 - SetTemperatureOffset automaticly (both chanels)
+02 53 54 4F 20 32 35 35 20 ## ## ## 03
+0
+5
+
+SEND
+376
+STR - SetTara
+02 53 54 52 20 ## 20 ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+377
+STR 0 - SetTara Channel 0
+02 53 54 52 20 30 20 ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+378
+STR 1 - SetTara Channel 1
+02 53 54 52 20 31 20 ## ## ## ## ## ## ## ## 03
+0
+5
+
+SEND
+379
+STR 1 0 - SetTara Channel 1
+02 53 54 52 20 31 20 30 03
+1
+.5
+
+SEND
+380
+SZA - SetZerotoActual
+02 53 5A 41 03
+0
+1
+
+SEND
+381
+SZP <0,1> - SetZeroPoint 
+02 53 5A 50 20 ## 20 ## ## ## ## 03
+0
+5
+
+SEND
+382
+SZP 0 - SetZeroPoint - Channel 0
+02 53 5A 50 20 30 20 ## ## ## ## 03
+0
+5
+
+SEND
+383
+SZP 1 - SetZeroPoint - Channel 1
+02 53 5A 50 20 31 20 ## ## ## ## 03
+0
+5
+
+SEND
+384
+TEC - TEaCh alarmlimit
+02 54 45 43 03
+0
+5
+
+SEND
+385
+TET - TEach Tare
+02 54 45 54 03
+0
+5
+
+SEND
+386
+TSL <0,1> - TeSt Limit
+02 54 53 4C 20 ## 03
+0
+5
+
+SEND
+387
+TST 0 - alle TeST ausgeschalten
+02 54 53 54 20 30 03
+0
+5
+
+SEND
+388
+TST 1 - TeST UART Channel 0 
+02 54 53 54 20 31 03
+0
+5
+
+SEND
+389
+TST 2 - TeST UART Channel 1 
+02 54 53 54 20 32 03
+0
+5
+
+SEND
+390
+TST 3 - TeST SPI
+02 54 53 54 20 33 03
+0
+5
+
+SEND
+391
+TST 4 - TeST LED eingeschaltet
+02 54 53 54 20 34 03
+0
+5
+
+SEND
+392
+TST 5 - TeST ADC 0mV/V Kanal 0 eingeschaltet
+02 54 53 54 20 35 03
+0
+5
+
+SEND
+393
+TST 6 - TeST ADC 2mV/V Kanal 0 eingeschaltet
+02 54 53 54 20 36 03
+0
+5
+
+SEND
+394
+TST 7 - TeST ADC 0mV/V Kanal 1 eingeschaltet
+02 54 53 54 20 37 03
+0
+5
+
+SEND
+395
+TST 8 - TeST ADC 2mV/V Kanal 1 eingeschaltet
+02 54 53 54 20 38 03
+0
+5
+
+SEND
+396
+TST 9 - TeST DAC 0digit Kanal 0 eingeschaltet
+02 54 53 54 20 39 03
+0
+2
+
+SEND
+397
+TST 10 - TeST DAC 4095digit Kanal 0 eingeschaltet
+02 54 53 54 20 31 30 03
+0
+5
+
+SEND
+398
+TST 11 - TeST DAC 0digit Kanal 1 eingeschaltet
+02 54 53 54 20 31 31 03
+0
+5
+
+SEND
+399
+TST 12 - TeST DAC 4095digit Kanal 1 eingeschaltet
+02 54 53 54 20 31 32 03
+0
+5
+
+SEND
+400
+TST 13 - TeST Eeprom eingeschaltet
+02 54 53 54 20 31 33 03
+0
+5
+
+SEND
+401
+TST 14 - TeST Netzteil Kanal 0
+02 54 53 54 20 31 34 03
+0
+5
+
+SEND
+402
+TST 15 - TeST Netzteil Kanal 1
+02 54 53 54 20 31 35 03
+0
+5
+
+SEND
+403
+VAS - ViewAlarmStatus
+02 56 41 53 03
+0
+5
+
+SEND
+404
+VAS 0 - ViewAlarmStatus Kanal 0 (nur für MRW-Manager !)
+02 56 41 53 20 30 03
+1
+.5
+
+SEND
+405
+VAS 1 - ViewAlarmStatus Kanal 1 (nur für MRW-Manager !)
+02 56 41 53 20 31 03
+1
+.5
+
+SEND
+406
+VAS 3 - ViewAlarmStatus Kanal 1 (nur für MRW-Manager !)
+02 56 41 53 20 33 03
+1
+1
+
+SEND
+407
+VDG - ViewDiaGnosis
+02 56 44 47 03
+0
+5
+
+SEND
+408
+Ungültiger Befehl
+02 58 58 58 03
+0
+5
+
+SEND
+409
+_GBO <0,1> - GetBridgeOffset - <for simulator only>
+02 5F 47 42 4F 20 ## 03
+0
+5
+
+SEND
+410
+_GBO 0 - GetBridgeOffset - Channel 0 - <for simulator only>
+02 5F 47 42 4F 20 30 03
+0
+5
+
+SEND
+411
+_GBO 1 - GetBridgeOffset - Channel 1 - <for simulator only>
+02 5F 47 42 4F 20 31 03
+0
+5
+
+SEND
+412
+_GBS <0,1> - GetBridgeSignal - <for simulator only>
+02 5F 47 42 53 20 ## 03
+0
+5
+
+SEND
+413
+_GBS 0 - GetBridgeSignal - Channel 0 - <for simulator only>
+02 5F 47 42 53 20 30 03
+0
+5
+
+SEND
+414
+_GBS 1 - GetBridgeSignal - Channel 1 - <for simulator only>
+02 5F 47 42 53 20 31 03
+0
+5
+
+SEND
+415
+_SAT <0,1> <Temperature> - SetActualTemperature - <for simulator only>
+02 5F 53 41 54 20 ## 20 ## ## ## 03
+0
+5
+
+SEND
+416
+_SAT 0 <Temperature> - SetActualTemperature - Channel 0 - <for simulator only>
+02 5F 53 41 54 20 30 20 ## ## ## 03
+0
+5
+
+SEND
+417
+_SAT 1 <Temperature> - SetActualTemperature - Channel 1 - <for simulator only>
+02 5F 53 41 54 20 31 20 ## ## ## 03
+0
+5
+
+SEND
+418
+_SBO <0,1> <Signal> - SetBridgeOffset - <for simulator only>
+02 5F 53 42 4F 20 ## 20 ## ## ## ## ## ## 03
+0
+5
+
+SEND
+419
+_SBO 0 <Signal> - SetBridgeOffset - Channel 0 - <for simulator only>
+02 5F 53 42 4F 20 30 20 ## ## ## ## ## ## 03
+0
+5
+
+SEND
+420
+_SBO 1 <Signal> - SetBridgeOffset - Channel 1 - <for simulator only>
+02 5F 53 42 4F 20 31 20 ## ## ## ## ## ## 03
+0
+5
+
+SEND
+421
+_SBS <0,1> <Signal> - SetBridgeSignal - <for simulator only>
+02 5F 53 42 53 20 ## 20 ## ## ## ## ## ## 03
+0
+5
+
+SEND
+422
+_SBS 0 <Signal> - SetBridgeSignal - Channel 0 - <for simulator only>
+02 5F 53 42 53 20 30 20 ## ## ## ## ## ## 03
+0
+5
+
+SEND
+423
+_SBS 1 <Signal> - SetBridgeSignal - Channel 1 - <for simulator only>
+02 5F 53 42 53 20 31 20 ## ## ## ## ## ## 03
+0
+5
+
+RECEIVE
+0
+E0 - empfangen
+02 45 30 03
+-1
+1
+COMMENT Rückantwort von Kanal 1 (Slave) konnte nicht empfangen werden
+1
+1
+1
+1
+
+RECEIVE
+1
+E005 - empfangen
+02 45 30 30 35 03
+-1
+1
+COMMENT 
+1
+1
+1
+1
+
+RECEIVE
+2
+E007 - empfangen
+02 45 30 30 37 03
+-1
+1
+COMMENT 
+1
+1
+1
+1
+
+RECEIVE
+3
+E008 - empfangen
+02 45 30 30 38 03
+-1
+1
+COMMENT 
+1
+1
+1
+1
+
+RECEIVE
+4
+M:E1 - empfangen
+02 4D 3A 45 31 03
+-1
+0
+COMMENT Rückantwort von Kanal 1 (Slave) konnte nicht empfangen werden
+1
+1
+1
+1
+
+RECEIVE
+5
+M:E2 - empfangen
+02 4D 3A 45 32 03
+-1
+1
+COMMENT Rückantwort von Kanal 1 (Slave) konnte nicht empfangen werden
+1
+1
+1
+1
+
+RECEIVE
+6
+HALT_0 - empfangen
+02 48 41 4C 54 5F 30 03
+-1
+1
+COMMENT Rückantwort von Kanal 1 (Slave) konnte nicht empfangen werden
+1
+1
+1
+1
+
+RECEIVE
+7
+HALT_1 - empfangen
+02 48 41 4C 54 5F 31 03
+-1
+1
+COMMENT <ETX>-Empfangsfehler bei Kanal 1 (Slave)
+1
+1
+1
+1
+
+RECEIVE
+8
+ETX - empfangen
+## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## 03
+-1
+1
+COMMENT 
+0
+1
+0
+0
+
+RECEIVE
+9
+STX - empfangen
+02
+-1
+1
+COMMENT 
+0
+1
+0
+0
+
+RECEIVE
+10
+Frame - empfangen
+02 ## ## ## ## ## ## ## ## ## ## ## ## 03
+-1
+1
+COMMENT 
+0
+1
+0
+0
+
+RECEIVE
+11
+OK - empfangen
+02 4F 4B 03
+-1
+1
+COMMENT - OK empfangen
+1
+1
+0
+0
+
+RECEIVE
+12
+ISDL empfangen
+02 49 53 44 4C 03
+63
+1
+COMMENT  - Anfrage auf angeschlossenes Docklight-Terminal empfangen
+1
+1
+0
+0
+
+RECEIVE
+13
+Text 0005 - Kanal 0
+02 54 30 30 30 35 03
+-1
+1
+COMMENT - Kanal 0 : 
+0
+1
+0
+0
+
+RECEIVE
+14
+Text 0006 - Überprüfung der Kompensation Kanal 0
+02 54 30 30 30 36 03
+-1
+1
+COMMENT - Überprüfung der Kompensation Kanal 0 : 
+0
+1
+0
+0
+
+RECEIVE
+15
+Text 0007 - Driftermittlung Kanal 0
+02 54 30 30 30 37 03
+-1
+1
+COMMENT - Driftermittlung Kanal 0 : 
+0
+1
+0
+0
+
+RECEIVE
+16
+Text 0010 - Aktueller Gewichtswert Kanal 0
+02 54 30 30 31 30 03
+-1
+1
+COMMENT - Aktueller Gewichtswert Kanal 0 : ....................................... 
+0
+1
+0
+0
+
+RECEIVE
+17
+Text 0020 - Aktuelle Filtertiefe Kanal 0
+02 54 30 30 32 30 03
+-1
+1
+COMMENT - Aktuelle Filtertiefe Kanal 0 : ......................................... 
+0
+1
+0
+0
+
+RECEIVE
+18
+Text 0030 - Aktueller Kalibrierfaktor Kanal 0
+02 54 30 30 33 30 03
+-1
+1
+COMMENT - Aktueller Kalibrierfaktor Kanal 0 : .................................... 
+0
+1
+0
+0
+
+RECEIVE
+19
+Text 0040 - Aktueller Nullpunkt Kanal 0
+02 54 30 30 34 30 03
+-1
+1
+COMMENT - Aktueller Nullpunkt Kanal 0 : .......................................... 
+0
+1
+0
+0
+
+RECEIVE
+20
+Text 0050 - Grenzwertstatus Kanal 0 gelöscht
+02 54 30 30 35 30 03
+-1
+1
+COMMENT - Grenzwertstatus Kanal 0 gelöscht
+0
+1
+0
+0
+
+RECEIVE
+21
+Text 0060 - Aktuelle Filterbandbreite Kanal 0
+02 54 30 30 36 30 03
+-1
+1
+COMMENT - Aktuelle Filterbandbreite Kanal 0 [Digit] : ............................ 
+0
+1
+0
+0
+
+RECEIVE
+22
+Text 0061 - Kalibrierungsoffset RMW nach DAC-Eingang Kanal 0
+02 54 30 30 36 31 03
+-1
+1
+COMMENT - Kalibrierungsoffset Rohmesswert nach DAC-Eingangswert Kanal 0 : ........ 
+0
+1
+0
+0
+
+RECEIVE
+23
+Text 0062 - Kalibrierungsfaktor RMW nach DAC-Eingang Kanal 0
+02 54 30 30 36 32 03
+-1
+1
+COMMENT - Kalibrierungsfaktor Rohmesswert nach DAC-Eingangswert Kanal 0 : ........ 
+0
+1
+0
+0
+
+RECEIVE
+24
+Text 0063 - Kalibrierungsoffset DAC-Eingang nach Ausgangsstrom Kanal 0
+02 54 30 30 36 33 03
+-1
+1
+COMMENT - Kalibrierungsoffset DAC-Eingangswert nach Ausgangsstrom Kanal 0 : ...... 
+0
+1
+0
+0
+
+RECEIVE
+25
+Text 0064 - Kalibrierungsfaktor DAC-Eingang nach Ausgangsstrom Kanal 0
+02 54 30 30 36 34 03
+-1
+1
+COMMENT - Kalibrierungsfaktor DAC-Eingangswert nach Ausgangsstrom Kanal 0 : ...... 
+0
+1
+0
+0
+
+RECEIVE
+26
+Text 0065 - DAC-Eingangswert Kanal 0
+02 54 30 30 36 35 03
+-1
+1
+COMMENT - DAC-Eingangswert Kanal 0 [Digit] : ..................................... 
+0
+1
+0
+0
+
+RECEIVE
+27
+Text 0070 - Kalibrierpunkt 1 - Kanal 0
+02 54 30 30 37 30 03
+-1
+1
+COMMENT - 1.Kalibrierpunkt Kanal 0 gesetzt 
+0
+1
+0
+0
+
+RECEIVE
+28
+Text 0080 - Kalibrierpunkt 2 - Kanal 0
+02 54 30 30 38 30 03
+-1
+1
+COMMENT - 2.Kalibrierpunkt Kanal 0 gesetzt 
+0
+1
+0
+0
+
+RECEIVE
+29
+Text 0090 - Kalibrierung - Kanal 0
+02 54 30 30 39 30 03
+-1
+1
+COMMENT - Kalibrierung des Kanal 0 durchgeführt.
+0
+1
+0
+0
+
+RECEIVE
+30
+Text 0100 - Initialsierung der DAC-Kalibrierung Kanal 0
+02 54 30 31 30 30 03
+-1
+1
+COMMENT - Initialisierung der DAC-Kalibrierung des Kanal 0 durchgeführt.
+0
+1
+0
+0
+
+RECEIVE
+31
+Text 0103 - Vorbereitung zum Setzen des 1.Referenzpunktes getroffen - Kanal 0
+02 54 30 31 30 33 03
+-1
+1
+COMMENT - Kanal 0: Vorbereitung zum Setzen des 1.Referenzpunktes getroffen.
+0
+1
+0
+0
+
+RECEIVE
+32
+Text 0106 - Vorbereitung zum Setzen des 2.Referenzpunktes getroffen - Kanal 0
+02 54 30 31 30 36 03
+-1
+1
+COMMENT - Kanal 0: Vorbereitung zum Setzen des 2.Referenzpunktes getroffen.
+0
+1
+0
+0
+
+RECEIVE
+33
+Text 0110 - Offset inkrementell verändert Kanal 0
+02 54 30 31 31 30 03
+-1
+1
+COMMENT - Offset des Kanal 0 inkrementell verändert.
+0
+1
+0
+0
+
+RECEIVE
+34
+Text 0120 - Verstärkung inkrementell verändert Kanal 0
+02 54 30 31 32 30 03
+-1
+1
+COMMENT - DAC-Verstärkung des Kanal 0 inkrementell verändert.
+0
+1
+0
+0
+
+RECEIVE
+35
+Text 0125 - Aktueller gefilterter Rohmesswert Kanal 0
+02 54 30 31 32 35 03
+-1
+1
+COMMENT - Aktueller gefilterter Rohmesswert Kanal 0 : ............................ 
+0
+1
+0
+0
+
+RECEIVE
+36
+Text 0130 - Aktueller gefilterter und nullpunktbereinigter Rohmesswert Kanal 0
+02 54 30 31 33 30 03
+-1
+1
+COMMENT - Aktueller gefilterter und Nullpunkt bereinigter Rohmesswert Kanal 0 : .. 
+0
+1
+0
+0
+
+RECEIVE
+37
+Text 0133 - Aktueller Temparetur bereinigter Rohmesswert Kanal 0
+02 54 30 31 33 33 03
+-1
+1
+COMMENT - Aktueller Temperatur bereinigter Rohmesswert Kanal 0 : ................. 
+0
+1
+0
+0
+
+RECEIVE
+38
+Text 0136 - Aktueller E-Modul bereinigter Rohmesswert Kanal 1
+02 54 30 31 33 36 03
+-1
+1
+COMMENT - Aktueller E-Modul bereinigter Rohmesswert Kanal 0 : .................... 
+0
+1
+0
+0
+
+RECEIVE
+39
+Text 0140 - Aktueller DAC-Eingangswert Kanal 0
+02 54 30 31 34 30 03
+-1
+1
+COMMENT - Aktueller DAC-Eingangswert Kanal 0 : ................................... 
+0
+1
+0
+0
+
+RECEIVE
+40
+Text 0150 - Aktuelles Tara Kanal 0
+02 54 30 31 35 30 03
+-1
+1
+COMMENT - Aktuelles Tara Kanal 0 : ............................................... 
+0
+1
+0
+0
+
+RECEIVE
+41
+Text 0155 - Alarmgrenzwert (20mA) - Kanal 0
+02 54 30 31 35 35 03
+-1
+1
+COMMENT - Alarm-Grenzwert bei 20mA,Kanal 0 [kg] : ................................ 
+0
+1
+0
+0
+
+RECEIVE
+42
+Text 0160 - Nullpunkt Kanal 0 auf aktuelles Gewicht gesetzt
+02 54 30 31 36 30 03
+-1
+1
+COMMENT - Nullpunkt Kanal 0 auf aktuelles Gewicht gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+43
+Text 0170 - Kalibrierfaktor Kanal 0 gesetzt.
+02 54 30 31 37 30 03
+-1
+1
+COMMENT - Kalibrierfaktor Kanal 0 gesetzt.
+1
+1
+0
+0
+
+RECEIVE
+44
+Text 0180 - Kalibrierfaktor Kanal 0 auf festen Wert gesetzt.
+02 54 30 31 38 30 03
+-1
+1
+COMMENT - Kalibrierfaktor Kanal 0 auf festen Wert gesetzt.
+1
+1
+0
+0
+
+RECEIVE
+45
+Text 0190 - Tara Kanal 0 gelöscht.
+02 54 30 31 39 30 03
+-1
+1
+COMMENT - Tara Kanal 0 gelöscht.
+0
+1
+0
+0
+
+RECEIVE
+46
+Text 0200 - Tara Kanal 0 auf festen Wert gesetzt.
+02 54 30 32 30 30 03
+-1
+1
+COMMENT - Tara Kanal 0 auf festen Wert gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+47
+Text 0210 - DAC Kanal 0 - manueller Modus eingeschaltet.
+02 54 30 32 31 30 03
+-1
+1
+COMMENT - DAC Kanal 0 in den manuellen Mode gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+48
+Text 0220 - DAC Kanal 0 - manueller Modus ausgeschaltet.
+02 54 30 32 32 30 03
+-1
+1
+COMMENT - DAC Kanal 0 - manueller Modus ausgeschaltet.
+0
+1
+0
+0
+
+RECEIVE
+49
+Text 0230 - DAC Kanal 0 - Kalibrierung auf Werkseinstellung gesetzt.
+02 54 30 32 33 30 03
+-1
+1
+COMMENT - DAC Kanal 0 - Kalibrierung auf Werkseinstellung gesetzt.
+1
+1
+0
+0
+
+RECEIVE
+50
+Text 0240 - DAC Kanal 0 - Kalibrierung gespeichert.
+02 54 30 32 34 30 03
+-1
+1
+COMMENT - DAC Kanal 0 - Kalibrierung gespeichert.
+0
+1
+0
+0
+
+RECEIVE
+51
+Text 0242 - ADC Kanal 0 - Burnout-Modus gesetzt.
+02 54 30 32 34 32 03
+-1
+1
+COMMENT - DAC Kanal 0 - Kalibrierung gespeichert.
+0
+1
+0
+0
+
+RECEIVE
+52
+Text 0244 - ADC Kanal 0 - Burnout-Modus gelöscht.
+02 54 30 32 34 34 03
+-1
+1
+COMMENT - ADC Kanal 0 - Burnout-Modus gelöscht.
+0
+1
+0
+0
+
+RECEIVE
+53
+Text 0250 - Aktuelle Temperatur Kanal 0
+02 54 30 32 35 30 03
+-1
+1
+COMMENT - Aktuelle Temperatur Kanal 0 : .......................................... 
+0
+1
+0
+0
+
+RECEIVE
+54
+Text 0260 - Aktueller Systemstatus Kanal 0
+02 54 30 32 36 30 03
+-1
+1
+COMMENT - Aktueller Systemstatus Kanal 0 : ....................................... 
+0
+1
+0
+0
+
+RECEIVE
+55
+Text 0270 - Freier dynamischer Speicher Kanal 0
+02 54 30 32 37 30 03
+-1
+1
+COMMENT - Freier dynamischer Speicher Kanal 0 : 
+0
+1
+0
+0
+
+RECEIVE
+56
+Text 0280 - Aktueller Rohmesswert vom ADC Kanal 0
+02 54 30 32 38 30 03
+-1
+1
+COMMENT - Aktueller Rohmesswert vom ADC Kanal 0 : ................................ 
+0
+1
+0
+0
+
+RECEIVE
+57
+Text 0282 - Gespeicherter Rohmesswert vom ADC Kanal 0
+02 54 30 32 38 32 03
+-1
+1
+COMMENT - Gespeicherter Rohmesswert vom ADC Kanal 0 : ............................ 
+0
+1
+0
+0
+
+RECEIVE
+58
+Text 0285 - Aktueller Feedback-Rohmesswert vom ADC Kanal 0
+02 54 30 32 38 35 03
+-1
+1
+COMMENT - Aktueller Feedback-Rohmesswert vom ADC Kanal 0 : ....................... 
+0
+1
+0
+0
+
+RECEIVE
+59
+Text 0290 - Aktueller gefilterter Rohmesswert Kanal 0
+02 54 30 32 39 30 03
+-1
+1
+COMMENT - Aktueller gefilterter Rohmesswert Kanal 0 : ............................ 
+0
+1
+0
+0
+
+RECEIVE
+60
+Text 0300 - Nullpunkt Kanal 0 auf übergebenen Wert gesetzt.
+02 54 30 33 30 30 03
+-1
+1
+COMMENT - Nullpunkt Kanal 0 auf übergebenen Wert gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+61
+Text 0310 - Zeitintervall 'Gewichtsermittlung' Kanal 0
+02 54 30 33 31 30 03
+-1
+1
+COMMENT - Zeitintervall 'Gewichtsermittlung' Kanal 0 [ms] : ...................... 
+0
+1
+0
+1
+
+RECEIVE
+62
+Text 0315 - Wiederholungen 'Gewichtsermittlung' Kanal 0
+02 54 30 33 31 35 03
+-1
+1
+COMMENT - Wiederholungen 'Gewichtsermittlung' Kanal 0 [Hz] : ..................... 
+0
+1
+0
+1
+
+RECEIVE
+63
+Text 0320 - Zeitintervall 'Strom-Rückkopplung' Kanal 0
+02 54 30 33 32 30 03
+-1
+1
+COMMENT - Zeitintervall 'Strom-Rückkopplung' Kanal 0 [ms] : ...................... 
+0
+1
+0
+1
+
+RECEIVE
+64
+Text 0325 - Wiederholungen 'Strom-Rückkopplung' Kanal 0
+02 54 30 33 32 35 03
+-1
+1
+COMMENT - Wiederholungen 'Strom-Rückkopplung' Kanal 0 [Hz] : ..................... 
+0
+1
+0
+1
+
+RECEIVE
+65
+Text 0330 - Zeitintervall 'Temperaturmessung' Kanal 0
+02 54 30 33 33 30 03
+-1
+1
+COMMENT - Zeitintervall 'Temperaturmessung' Kanal 0 [ms] : ....................... 
+0
+1
+0
+1
+
+RECEIVE
+66
+Text 0335 - Wiederholungen 'Temperaturmessung' Kanal 0
+02 54 30 33 33 35 03
+-1
+1
+COMMENT - Wiederholungen 'Temperaturmessung' Kanal 0 [Hz] : ...................... 
+0
+1
+0
+1
+
+RECEIVE
+67
+Text 0340 - Zeitintervall 'Spannungsmessung' Kanal 0
+02 54 30 33 34 30 03
+-1
+1
+COMMENT - Zeitintervall 'Spannungsmessung' Kanal 0 [ms] : ........................ 
+0
+1
+0
+1
+
+RECEIVE
+68
+Text 0345 - Wiederholungen 'Spannungsmessung' Kanal 0
+02 54 30 33 34 35 03
+-1
+1
+COMMENT - Wiederholungen 'Spannungsmessung' Kanal 0 [Hz] : ....................... 
+0
+1
+0
+1
+
+RECEIVE
+69
+Text 0350 - 'DAC-Test unterer Bereich' in Ordnung Kanal 0
+02 54 30 33 35 30 03
+-1
+1
+COMMENT - 'DAC-Test' bei 0 digit am DAC-Eingang Kanal 0 erfolgreich abgeschlossen
+0
+1
+0
+0
+
+RECEIVE
+70
+Text 0352 - Fehler 'DAC-Test unterer Bereich' Kanal 0
+02 54 30 33 35 32 03
+-1
+1
+COMMENT - Fehler 'DAC-Test' bei 0 digit am DAC-Eingang Kanal 0 : ................. 
+0
+1
+0
+0
+
+RECEIVE
+71
+Text 0354 - 'DAC-Test oberer Bereich' in Ordnung Kanal 0
+02 54 30 33 35 34 03
+-1
+1
+COMMENT - 'DAC-Test' bei 4095 digit am DAC-Eingang Kanal 0 erfolgreich abgeschlossen
+0
+1
+0
+0
+
+RECEIVE
+72
+Text 0356 - Fehler 'DAC-Test oberer Bereich' Kanal 0
+02 54 30 33 35 36 03
+-1
+1
+COMMENT - Fehler 'DAC-Test' bei 4095 digit am DAC-Eingang Kanal 0 : .............. 
+0
+1
+0
+0
+
+RECEIVE
+73
+Text 0358 - 'DAC-Test unterer Bereich' in Ordnung Kanal 1
+02 54 30 33 35 38 03
+-1
+1
+COMMENT - 'DAC-Test' bei 0 digit am DAC-Eingang Kanal 1 erfolgreich abgeschlossen
+0
+1
+0
+0
+
+RECEIVE
+74
+Text 0360 - Fehler 'DAC-Test unterer Bereich' Kanal 1
+02 54 30 33 36 30 03
+-1
+1
+COMMENT - Fehler 'DAC-Test' bei 0 digit am DAC-Eingang Kanal 1 : ................. 
+0
+1
+0
+0
+
+RECEIVE
+75
+Text 0362 - 'DAC-Test oberer Bereich' in Ordnung Kanal 1
+02 54 30 33 36 32 03
+-1
+1
+COMMENT - 'DAC-Test' bei 4095 digit am DAC-Eingang Kanal 1 erfolgreich abgeschlossen
+0
+1
+0
+0
+
+RECEIVE
+76
+Text 0364 - Fehler 'DAC-Test oberer Bereich' Kanal 1
+02 54 30 33 36 34 03
+-1
+1
+COMMENT - Fehler 'DAC-Test' bei 4095 digit am DAC-Eingang Kanal 1 : .............. 
+0
+1
+0
+0
+
+RECEIVE
+77
+Text 0385 - Kennlinienpunkt Kanal 0
+02 54 30 33 38 35 03
+-1
+1
+COMMENT - Kennlinienpunkt Kanal 0 : .............................................. 
+0
+1
+0
+0
+
+RECEIVE
+78
+Text 0390 - Messwert bei 20°C während der Kennlinienaufnahme Kanal 0
+02 54 30 33 39 30 03
+-1
+1
+COMMENT - Messwert bei 20°C während der Kennlinienaufnahme Kanal 0 : ............. 
+0
+1
+0
+0
+
+RECEIVE
+79
+Text 0395 - Kennlinienpunkt manuell Kanal 0
+02 54 30 33 39 35 03
+-1
+1
+COMMENT - Kennlinienpunkt der Temperaturkompensation von Kanal 0 manuell gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+80
+Text 0400 - Aktueller Status der Kennlinienaufnahme Kanal 0
+02 54 30 34 30 30 03
+-1
+1
+COMMENT - Aktueller Status der Kennlinienaufnahme Kanal 0 : ...................... 
+0
+1
+0
+0
+
+RECEIVE
+81
+Text 0410 - Letzter Korrekturwert Kanal 0
+02 54 30 34 31 30 03
+-1
+1
+COMMENT - Letzter Korrekturwert  Kanal 0 : ....................................... 
+0
+1
+0
+0
+
+RECEIVE
+82
+Text 0420 - Anzahl der aufgenommenen Kennlinienpunkte Kanal 0
+02 54 30 34 32 30 03
+-1
+1
+COMMENT - Anzahl der aufgenommenen Kennlinienpunkte Kanal 0 : .................... 
+0
+1
+0
+0
+
+RECEIVE
+83
+Text 0430 - Maximale Abweichung Kanal 0
+02 54 30 34 33 30 03
+-1
+1
+COMMENT - Maximale Abweichung Kanal 0 : .......................................... 
+0
+1
+0
+0
+
+RECEIVE
+84
+Text 0435 - Maximale Abweichung bei Temperatur Kanal 0
+02 54 30 34 33 35 03
+-1
+1
+COMMENT - Maximale Abweichung Kanal 0 bei [°C]: .................................. 
+0
+1
+0
+0
+
+RECEIVE
+85
+Text 0440 - Minimale Abweichung Kanal 0
+02 54 30 34 34 30 03
+-1
+1
+COMMENT - Minimale Abweichung Kanal 0 : .......................................... 
+0
+1
+0
+0
+
+RECEIVE
+86
+Text 0445 - Maximale Abweichung bei Temperatur Kanal 0
+02 54 30 34 34 35 03
+-1
+1
+COMMENT - Maximale Abweichung Kanal 0 bei [°C]: .................................. 
+0
+1
+0
+0
+
+RECEIVE
+87
+Text 0450 - Aktuelle Abweichung Kanal 0
+02 54 30 34 35 30 03
+-1
+1
+COMMENT - Aktuelle Abweichung Kanal 0 : .......................................... 
+0
+1
+0
+0
+
+RECEIVE
+88
+Text 0460 - Kennlinienpunkt Kanal 0
+02 54 30 34 36 30 03
+-1
+1
+COMMENT - Kennlinienpunkt  Kanal 0 : 
+0
+1
+0
+0
+
+RECEIVE
+89
+Text 0470 - Kennlinienpunkt mit Offset Kanal 0
+02 54 30 34 37 30 03
+-1
+1
+COMMENT - Kennlinienpunkt  mit Offset Kanal 0 : 
+0
+1
+0
+0
+
+RECEIVE
+90
+Text 0480 - Temperatur bei Maximalwert Kanal 0
+02 54 30 34 38 30 03
+-1
+1
+COMMENT - Temperatur bei Maximalwert Kanal 0 : 
+0
+1
+0
+0
+
+RECEIVE
+91
+Text 0490 - Maximalwert Kanal 0
+02 54 30 34 39 30 03
+-1
+1
+COMMENT - Maximalwert Kanal 0 : 
+0
+1
+0
+0
+
+RECEIVE
+92
+Text 0500 - Temperatur bei Minimalwert Kanal 0
+02 54 30 35 30 30 03
+-1
+1
+COMMENT - Temperatur bei Minimalwert Kanal 0 : 
+0
+1
+0
+0
+
+RECEIVE
+93
+Text 0510 - Minimalwert Kanal 0
+02 54 30 35 31 30 03
+-1
+1
+COMMENT - Minimalwert Kanal 0 : 
+0
+1
+0
+0
+
+RECEIVE
+94
+Text 0520 - Erster RMW bei Nenntemperatur Kanal 0
+02 54 30 35 32 30 03
+-1
+1
+COMMENT - Erster RMW bei Nenntemperatur Kanal 0 : 
+0
+1
+0
+0
+
+RECEIVE
+95
+Text 0530 - Zweiter RMW bei Nenntemperatur Kanal 0
+02 54 30 35 33 30 03
+-1
+1
+COMMENT - Zweiter RMW bei Nenntemperatur Kanal 0 : 
+0
+1
+0
+0
+
+RECEIVE
+96
+Text 0540 - Resultierender Drift Kanal 0
+02 54 30 35 34 30 03
+-1
+1
+COMMENT - Resultierender Drift Kanal 0 : 
+0
+1
+0
+0
+
+RECEIVE
+97
+Text 0550 - Temperaturoffset Kanal 0
+02 54 30 35 35 30 03
+-1
+1
+COMMENT - Temperaturoffset Kanal 0 : 
+0
+1
+0
+0
+
+RECEIVE
+98
+Text 0560 - Kanal 0 : Letzter abgearbeiteter Status der Kennlinienaufnahme
+02 54 30 35 36 30 03
+-1
+1
+COMMENT - Kanal 0 : Letzter abgearbeiteter Status der Kennlinienaufnahme 
+0
+1
+0
+0
+
+RECEIVE
+99
+Text 0565 - Kanal 0 : Kennlinienaufnahme komplett abgeschlossen
+02 54 30 35 36 35 03
+-1
+1
+COMMENT - Kanal 0 : Kennlinienaufnahme komplett abgeschlossen 
+0
+1
+0
+0
+
+RECEIVE
+100
+Text 0570 - Fehlerstatus der Kennlinienaufnahme Kanal 0
+02 54 30 35 37 30 03
+-1
+1
+COMMENT - Fehlerstatus der Kennlinienaufnahme Kanal 0 : 
+0
+1
+0
+0
+
+RECEIVE
+101
+Text 0580 - Kanal 0 : Drift-Fehler
+02 54 30 35 38 30 03
+-1
+1
+COMMENT - Kanal 0 : Drift-Fehler 
+0
+1
+0
+0
+
+RECEIVE
+102
+Text 0590 - Kanal 0 : Abweichung bei der Kompensationsprüfung im Minimum zu gross
+02 54 30 35 39 30 03
+-1
+1
+COMMENT - Kanal 0 : Abweichung bei der Kompensationsprüfung im Minimum zu gross
+0
+1
+0
+0
+
+RECEIVE
+103
+Text 0600 - Kanal 0 : Abweichung bei der Kompensationsprüfung im Maximum zu gross
+02 54 30 36 30 30 03
+-1
+1
+COMMENT - Kanal 0 : Abweichung bei der Kompensationsprüfung im Maximum zu gross
+0
+1
+0
+0
+
+RECEIVE
+104
+Text 0610 - Kanal 0 : Driftermittlung wurde nicht durchgeführt
+02 54 30 36 31 30 03
+-1
+1
+COMMENT - Kanal 0 : Driftermittlung wurde nicht durchgeführt
+0
+1
+0
+0
+
+RECEIVE
+105
+Text 0620 - Kanal 0 : Kennlinien wurde nicht aufgenommen
+02 54 30 36 32 30 03
+-1
+1
+COMMENT - Kanal 0 : Kennlinien wurde nicht aufgenommen
+0
+1
+0
+0
+
+RECEIVE
+106
+Text 0630 - Kanal 0 : Extrema wurden nicht ermittelt
+02 54 30 36 33 30 03
+-1
+1
+COMMENT - Kanal 0 : Extrema wurden nicht ermittelt
+0
+1
+0
+0
+
+RECEIVE
+107
+Text 0640 - Kanal 0 : Kennlinienaufnahme und Überprüfung erfolgreich abgeschlossen !
+02 54 30 36 34 30 03
+-1
+1
+COMMENT - Kanal 0 : Kennlinienaufnahme und Überprüfung erfolgreich abgeschlossen !
+0
+1
+0
+0
+
+RECEIVE
+108
+Text 0645 - Kanal 0 : Kennlinienaufnahme oder Überprüfung fehlerhaft !
+02 54 30 36 34 35 03
+-1
+1
+COMMENT - Kanal 0 : Kennlinienaufnahme oder Überprüfung fehlerhaft !
+0
+1
+0
+0
+
+RECEIVE
+109
+Text 0650 - Kanal 0 : Letzte Watchdogadresse gelöscht !
+02 54 30 36 35 30 03
+-1
+1
+COMMENT - Kanal 0 : Letzte Watchdogadresse gelöscht !
+0
+1
+0
+0
+
+RECEIVE
+110
+Text 0660 - Letzer Watchdog Kanal 0
+02 54 30 36 36 30 03
+-1
+1
+COMMENT - Letzer Watchdog des Kanal 0 bei Adresse : 
+0
+1
+0
+0
+
+RECEIVE
+111
+Text 0670 - Kanal 0 : Temperaturoffset gesetzt !
+02 54 30 36 37 30 03
+-1
+1
+COMMENT - Kanal 0 : Temperaturoffset gesetzt !
+0
+1
+0
+0
+
+RECEIVE
+112
+Text 0680 - Aktueller Ausgangsstrom Kanal 0
+02 54 30 36 38 30 03
+-1
+1
+COMMENT - Sollwert des Ausgangsstrom Kanal 0 [mA] : .............................. 
+0
+1
+0
+0
+
+RECEIVE
+113
+Text 0685 - Aktueller gemessener Ausgangsstrom Kanal 0
+02 54 30 36 38 35 03
+-1
+1
+COMMENT - Istwert des Ausgangsstrom Kanal 0 [mA] : ............................... 
+0
+1
+0
+0
+
+RECEIVE
+114
+Text 0690 - Motion-Grenzwert
+02 54 30 36 39 30 03
+-1
+1
+COMMENT - Motion-Limit Kanal [kg] : .............................................. 
+0
+1
+0
+0
+
+RECEIVE
+115
+Text 0700 - Motion-Filter
+02 54 30 37 30 30 03
+-1
+1
+COMMENT - Motion-Filter : ........................................................ 
+0
+1
+0
+0
+
+RECEIVE
+116
+Text 0705 - No-Motion-Filter Kanal 0
+02 54 30 37 30 35 03
+-1
+1
+COMMENT - No-Motion-Filter : ..................................................... 
+0
+1
+0
+0
+
+RECEIVE
+117
+Text 0707 - Messwerttiefe 'Gewichtsermittlung' Kanal 0
+02 54 30 37 30 37 03
+-1
+1
+COMMENT - Messwerttiefe der Gewichtsermittlung Kanal 0 : ......................... 
+0
+1
+0
+0
+
+RECEIVE
+118
+Text 0708 - Messwerttiefe 'Stromrückführung' Kanal 0
+02 54 30 37 30 38 03
+-1
+1
+COMMENT - Messwerttiefe der Stromrückführung Kanal 0 : ........................... 
+0
+1
+0
+0
+
+RECEIVE
+119
+Text 0710 - Vergangene Zeit seit Start Kennlinienaufnahme  Kanal 0
+02 54 30 37 31 30 03
+-1
+1
+COMMENT - Vergangene Zeit seit dem Start der Kennlinienaufnahme Kanal 0 : ........ 
+0
+1
+0
+0
+
+RECEIVE
+120
+Text 0712 - Rohmesswert zur Gewichtssimulation gesetzt Kanal 0
+02 54 30 37 31 32 03
+-1
+1
+COMMENT - Kanal 0 : Rohmesswert zur Gewichtssimulation gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+121
+Text 0714 - Wert zur Temperatursimulation gesetzt Kanal 0
+02 54 30 37 31 34 03
+-1
+1
+COMMENT - Kanal 0 : Wert zur Temperatursimulation gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+122
+Text 0716 - Gewichtsssimulation beendet Kanal 0
+02 54 30 37 31 36 03
+-1
+1
+COMMENT - Kanal 0 : Die Gewichtssimulation wurde beendet.
+0
+1
+0
+0
+
+RECEIVE
+123
+Text 0718 - Temperatursimulation beendet Kanal 0
+02 54 30 37 31 38 03
+-1
+1
+COMMENT - Kanal 0 : Die Temperatursimulation wurde beendet.
+0
+1
+0
+0
+
+RECEIVE
+124
+Text 0720 - Summe der SPI-Kommunikationsfehler  Kanal 0
+02 54 30 37 32 30 03
+-1
+1
+COMMENT - Summe der SPI-Kommunikationsfehler  Kanal 0 : .......................... 
+0
+1
+0
+0
+
+RECEIVE
+125
+Text 0730 - SPI-Fehler-Zähler gelöscht  Kanal 0
+02 54 30 37 33 30 03
+-1
+1
+COMMENT - SPI-Fehler-Zähler des Kanal 0 gelöscht
+0
+1
+0
+0
+
+RECEIVE
+126
+Text 0735 - Rohmesswert der Versorgungsspannung  Kanal 0
+02 54 30 37 33 35 03
+-1
+1
+COMMENT - Rohmesswert der Versorgungsspannung Kanal 0 : .......................... 
+0
+1
+0
+0
+
+RECEIVE
+127
+Text 0740 - Statistikdaten gelöscht  Kanal 0
+02 54 30 37 34 30 03
+-1
+1
+COMMENT - Statistikdaten des Kanal 0 gelöscht
+0
+1
+0
+0
+
+RECEIVE
+128
+Text 0750 - Statistik Kanal 0: Filter der Temperaturauswertung
+02 54 30 37 35 30 03
+-1
+1
+COMMENT - Statistik Kanal 0: Filter der Temperaturauswertung : ................... 
+0
+1
+0
+0
+
+RECEIVE
+129
+Text 0760 - Statistik Kanal 0: Filter der Gewichtsauswertung
+02 54 30 37 36 30 03
+-1
+1
+COMMENT - Statistik Kanal 0: Filter der Gewichtsauswertung : ..................... 
+0
+1
+0
+0
+
+RECEIVE
+130
+Text 0770 - Statistik Kanal 0: Motion-Limit der Gewichtsauswertung
+02 54 30 37 37 30 03
+-1
+1
+COMMENT - Statistik Kanal 0: Motion-Limit der Gewichtsauswertung : ............... 
+0
+1
+0
+0
+
+RECEIVE
+131
+Text 0780 - Statistik Kanal 0: Filter der Grenzwertüberwachung
+02 54 30 37 38 30 03
+-1
+1
+COMMENT - Statistik Kanal 0: Filter der Grenzwertüberwachung : ................... 
+0
+1
+0
+0
+
+RECEIVE
+132
+Text 0790 - Statistik Kanal 0: Grenzwert der Grenzwertüberwachung
+02 54 30 37 39 30 03
+-1
+1
+COMMENT - Statistik Kanal 0: Grenzwert der Grenzwertüberwachung : ................ 
+0
+1
+0
+0
+
+RECEIVE
+133
+Text 0800 - Kanal 0: Parameter nicht eingebunden
+02 54 30 38 30 30 03
+-1
+1
+COMMENT - Kanal 0: Parameter nicht eingebunden : ................................. 
+0
+1
+0
+0
+
+RECEIVE
+134
+Text 0802 - RS232-Statistik Kanal 0: Empfangene Frames
+02 54 30 38 30 32 03
+-1
+1
+COMMENT - RS232-Statistik Kanal 0: Empfangene Frames : ...........................
+0
+1
+0
+0
+
+RECEIVE
+135
+Text 0804 - RS232-Statistik Kanal 0: Fehlerhafte Frames
+02 54 30 38 30 34 03
+-1
+1
+COMMENT - RS232-Statistik Kanal 0: Fehlerhafte Frames : ..........................
+0
+1
+0
+0
+
+RECEIVE
+136
+Text 0808 - RS232-Statistik Kanal 0gelöscht
+02 54 30 38 30 38 03
+-1
+1
+COMMENT - RS232-Statistik Kanal 0 gelöscht
+0
+1
+0
+0
+
+RECEIVE
+137
+Text 0810 - Absolut-Statistik Kanal 0: Minimale Temperatur
+02 54 30 38 31 30 03
+-1
+1
+COMMENT - Absolut-Statistik Kanal 0: Minimale Temperatur : .......................
+0
+1
+0
+0
+
+RECEIVE
+138
+Text 0820 - Relativ-Statistik Kanal 0: Minimale Temperatur
+02 54 30 38 32 30 03
+-1
+1
+COMMENT - Relativ-Statistik Kanal 0: Minimale Temperatur : .......................
+0
+1
+0
+0
+
+RECEIVE
+139
+Text 0830 - Absolut-Statistik Kanal 0: Maximale Temperatur
+02 54 30 38 33 30 03
+-1
+1
+COMMENT - Absolut-Statistik Kanal 0: Maximale Temperatur : .......................
+0
+1
+0
+0
+
+RECEIVE
+140
+Text 0840 - Relativ-Statistik Kanal 0: Maximale Temperatur
+02 54 30 38 34 30 03
+-1
+1
+COMMENT - Relativ-Statistik Kanal 0: Maximale Temperatur : .......................
+0
+1
+0
+0
+
+RECEIVE
+141
+Text 0850 - Absolut-Statistik Kanal 0: Maximale Belastung
+02 54 30 38 35 30 03
+-1
+1
+COMMENT - Absolut-Statistik Kanal 0: Maximale Belastung : ........................
+0
+1
+0
+0
+
+RECEIVE
+142
+Text 0855 - Absolut-Statistik Kanal 0: Zeitpunkt bei maximalster Belastung
+02 54 30 38 35 35 03
+-1
+1
+COMMENT - Absolut-Statistik Kanal 0: Zeitpunkt bei maximalster Belastung : ....... 
+0
+1
+0
+0
+
+RECEIVE
+143
+Text 0860 - Relativ-Statistik Kanal 0: Maximale Belastung
+02 54 30 38 36 30 03
+-1
+1
+COMMENT - Relativ-Statistik Kanal 0: Maximale Belastung : ........................
+0
+1
+0
+0
+
+RECEIVE
+144
+Text 0865 - Relativ-Statistik Kanal 0: Zeitpunkt bei maximalster Belastung
+02 54 30 38 36 35 03
+-1
+1
+COMMENT - Relativ-Statistik Kanal 0: Zeitpunkt bei maximalster Belastung : ....... 
+0
+1
+0
+0
+
+RECEIVE
+145
+Text 0870 - Absolut-Statistik Kanal 0: Maximaler Rohmesswert
+02 54 30 38 37 30 03
+-1
+1
+COMMENT - Absolut-Statistik Kanal 0: Maximaler Rohmesswert : .....................
+0
+1
+0
+0
+
+RECEIVE
+146
+Text 0880 - Relativ-Statistik Kanal 0: Maximaler Rohmesswert
+02 54 30 38 38 30 03
+-1
+1
+COMMENT - Relativ-Statistik Kanal 0: Maximaler Rohmesswert : .....................
+0
+1
+0
+0
+
+RECEIVE
+147
+Text 0890 - Absolut-Statistik Kanal 0: Maximaler Ausgangsstrom
+02 54 30 38 39 30 03
+-1
+1
+COMMENT - Absolut-Statistik Kanal 0: Maximaler Ausgangsstrom (ca.) : .............
+0
+1
+0
+0
+
+RECEIVE
+148
+Text 0900 - Relativ-Statistik Kanal 0: Maximaler Ausgangsstrom
+02 54 30 39 30 30 03
+-1
+1
+COMMENT - Relativ-Statistik Kanal 0: Maximaler Ausgangsstrom (ca.) : .............
+0
+1
+0
+0
+
+RECEIVE
+149
+Text 0910 - Absolut-Statistik Kanal 0: Anzahl der Überlastungen
+02 54 30 39 31 30 03
+-1
+1
+COMMENT - Absolut-Statistik Kanal 0: Anzahl der Überlastungen : ..................
+0
+1
+0
+0
+
+RECEIVE
+150
+Text 0920 - Relativ-Statistik Kanal 0: Anzahl der Überlastungen
+02 54 30 39 32 30 03
+-1
+1
+COMMENT - Relativ-Statistik Kanal 0: Anzahl der Überlastungen : ..................
+0
+1
+0
+0
+
+RECEIVE
+151
+Text 0930 - Absolut-Statistik Kanal 0: Anzahl der Grenzwertüberschreitungen
+02 54 30 39 33 30 03
+-1
+1
+COMMENT - Absolut-Statistik Kanal 0: Anzahl der Grenzwertüberschreitungen: .......
+0
+1
+0
+0
+
+RECEIVE
+152
+Text 0940 - Relativ-Statistik Kanal 0: Anzahl der Grenzwertüberschreitungen
+02 54 30 39 34 30 03
+-1
+1
+COMMENT - Relativ-Statistik Kanal 0: Anzahl der Grenzwertüberschreitungen: .......
+0
+1
+0
+0
+
+RECEIVE
+153
+Text 0942 - Fehler Netzteilprüfung Kanal 0
+02 54 30 39 34 32 03
+-1
+1
+COMMENT - Die Überprüfung des Netzteil - Kanal 0 ergab einen Fehler !!!
+0
+1
+0
+0
+
+RECEIVE
+154
+Text 0943 - Simulierter Temperaturwert gesetzt Kanal 0
+02 54 30 39 34 33 03
+-1
+1
+COMMENT - Simulierter Temperaturwert für Kanal 0 gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+155
+Text 0944 - Netzteilprüfung i.O. Kanal 0
+02 54 30 39 34 34 03
+-1
+0
+COMMENT - Die Überprüfung des Netzteil - Kanal 0 erfolgreich abgeschlossen.
+0
+1
+0
+0
+
+RECEIVE
+156
+Text 0944 - Fehlerzähler 'Diverses 1' Kanal 0
+02 54 30 39 34 34 03
+-1
+1
+COMMENT - Fehlerzähler 'Diverses 1' Kanal 0 : .................................... 
+0
+1
+0
+0
+
+RECEIVE
+157
+Text 0945 - Fehlerzähler 'Diverses 2' Kanal 0
+02 54 30 39 34 35 03
+-1
+1
+COMMENT - Fehlerzähler 'Diverses 2' Kanal 0 : .................................... 
+0
+1
+0
+0
+
+RECEIVE
+158
+Text 0946 - Temperatursimulation beendet Kanal 0
+02 54 30 39 34 36 03
+-1
+1
+COMMENT - Temperatursimulation auf Kanal 0 beendet.
+0
+1
+0
+0
+
+RECEIVE
+159
+Text 0947 - Fehlerzähler 'Zeichen-Empfang' Kanal 0
+02 54 30 39 34 37 03
+-1
+1
+COMMENT - Fehlerzähler 'Zeichen-Empfang' Kanal 0 : ............................... 
+0
+1
+0
+0
+
+RECEIVE
+160
+Text 0948 - Fehlerzähler 'Zeichen-Senden' Kanal 0
+02 54 30 39 34 38 03
+-1
+1
+COMMENT - Fehlerzähler 'Zeichen-Senden' Kanal 0 : ................................ 
+0
+1
+0
+0
+
+RECEIVE
+161
+Text 0949 - Fehlerzähler 'Warte auf Frame' Kanal 0
+02 54 30 39 34 39 03
+-1
+1
+COMMENT - Fehlerzähler 'Warte auf Frame' Kanal 0 : ............................... 
+0
+1
+0
+0
+
+RECEIVE
+162
+Text 0950 - Kanal 0: Inhalt der Debug-Variablen
+02 54 30 39 35 30 03
+-1
+1
+COMMENT - Kanal 0: Inhalt der Debug-Variablen 
+0
+1
+0
+0
+
+RECEIVE
+163
+Text 0960 - Kanal 0: Inhalt aller Debug-Variablen gelöscht !
+02 54 30 39 36 30 03
+-1
+1
+COMMENT - Kanal 0: Inhalt aller Debug-Variablen gelöscht !
+0
+1
+0
+0
+
+RECEIVE
+164
+Text 0962 - Kanal 0: Fehler ADC-Test (Messbereich 0mV/V) !
+02 54 30 39 36 32 03
+-1
+1
+COMMENT - Fehler beim ADC-Test (Messbereich 0mV/V) Kanal 0 - Messwert : .......... 
+0
+1
+0
+0
+
+RECEIVE
+165
+Text 0964 - Kanal 0: Fehler ADC-Test (Messbereich 2mV/V) !
+02 54 30 39 36 34 03
+-1
+1
+COMMENT - Fehler beim ADC-Test (Messbereich 2mV/V) Kanal 0 - Messwert : .......... 
+0
+1
+0
+0
+
+RECEIVE
+166
+Text 0966 - Kanal 0: ADC-Test (Messbereich 0mV/V) erfolgreich !
+02 54 30 39 36 36 03
+-1
+1
+COMMENT - ADC-Test (Messbereich 0mV/V) des Kanal 0 erfolgreich abgeschlossen !
+0
+1
+0
+0
+
+RECEIVE
+167
+Text 0968 - Kanal 0: ADC-Test (Messbereich 2mV/V) erfolgreich !
+02 54 30 39 36 38 03
+-1
+1
+COMMENT - ADC-Test (Messbereich 0.8mV/V) des Kanal 0 erfolgreich abgeschlossen !
+0
+1
+0
+0
+
+RECEIVE
+168
+Text 0970 - Kanal 0: Löschbestätigung der Debug-Variablen :
+02 54 30 39 37 30 03
+-1
+1
+COMMENT - Kanal 0: Löschbestätigung der Debug-Variablen : 
+0
+1
+0
+0
+
+RECEIVE
+169
+Text 0973 - Gewichtswert über Ist-Ausgangsstrom Kanal 0:
+02 54 30 39 37 33 03
+-1
+1
+COMMENT - Gewichtswert über Ist-Ausgangsstrom Kanal 0 [kg] : ..................... 
+0
+1
+0
+0
+
+RECEIVE
+170
+Text 0976 - Gewichtswert über Soll-Ausgangsstrom Kanal 0:
+02 54 30 39 37 36 03
+-1
+1
+COMMENT - Gewichtswert über Soll-Ausgangsstrom Kanal 0 [kg] : .................... 
+0
+1
+0
+0
+
+RECEIVE
+171
+Text 0980 - Aktueller Ausgangsstrom Kanal 0
+02 54 30 39 38 30 03
+-1
+1
+COMMENT - Aktueller Ausgangsstrom Kanal 0 : ...................................... 
+0
+1
+0
+0
+
+RECEIVE
+172
+Text 0982 - Verstärkungsfaktor RMW -> DAC-Input
+02 54 30 39 38 32 03
+-1
+1
+COMMENT - Verstärkung Rohmesswert nach DAC-Digitaleingang Kanal 0 : .............. 
+0
+1
+0
+0
+
+RECEIVE
+173
+Text 0984 - Verstärkungsfaktor RMW -> Ausgangsstrom
+02 54 30 39 38 34 03
+-1
+1
+COMMENT - Verstärkung Rohmesswert nach Ausgangsstrom Kanal 0 : ................... 
+0
+1
+0
+0
+
+RECEIVE
+174
+Text 0986 - Offset RMW -> DAC-Input
+02 54 30 39 38 36 03
+-1
+1
+COMMENT - Offset Rohmesswert nach DAC-Digitaleingang Kanal 0 : ................... 
+0
+1
+0
+0
+
+RECEIVE
+175
+Text 0988 - Offset RMW -> Ausgangsstrom
+02 54 30 39 38 38 03
+-1
+1
+COMMENT - Offset Rohmesswert nach Ausgangsstrom Kanal 0 : ........................ 
+0
+1
+0
+0
+
+RECEIVE
+176
+Text 0990 - Rückkoppelspannung Kanal 0
+02 54 30 39 39 30 03
+-1
+1
+COMMENT - Aktuelle Rückkoppelspannung Kanal 0 [digit] : .......................... 
+0
+1
+0
+0
+
+RECEIVE
+177
+Text 0995 - Soll-Istwert-Abweichung Kanal 0
+02 54 30 39 39 35 03
+-1
+1
+COMMENT - Soll-Istwert-Abweichung der Stromrückführung Kanal 0 [mA] : ............ 
+0
+1
+0
+0
+
+RECEIVE
+178
+Text 0997 - Kanal 0: Die RS232-Befehlssperre wurde aktiviert
+02 54 30 39 39 37 03
+-1
+1
+COMMENT - Kanal 0: Die RS232-Befehlssperre wurde aktiviert
+0
+1
+0
+0
+
+RECEIVE
+179
+Text 0998 - Kanal 0: Die RS232-Befehlssperre wurde aufgehoben
+02 54 30 39 39 38 03
+-1
+1
+COMMENT - Kanal 0: Die RS232-Befehlssperre wurde aufgehoben
+0
+1
+0
+0
+
+RECEIVE
+180
+Text 1005 - Kanal 1
+02 54 31 30 30 35 03
+-1
+1
+COMMENT - Kanal 1 : 
+0
+1
+0
+0
+
+RECEIVE
+181
+Text 1006 - Überprüfung der Kompensation Kanal 1
+02 54 31 30 30 36 03
+-1
+1
+COMMENT - Überprüfung der Kompensation Kanal 1 : 
+0
+1
+0
+0
+
+RECEIVE
+182
+Text 1007 - Driftermittlung Kanal 1
+02 54 31 30 30 37 03
+-1
+1
+COMMENT - Driftermittlung Kanal 1 : 
+0
+1
+0
+0
+
+RECEIVE
+183
+Text 1010 - Aktueller Gewichtswert Kanal 1
+02 54 31 30 31 30 03
+-1
+1
+COMMENT - Aktueller Gewichtswert Kanal 1 : ....................................... 
+0
+1
+0
+0
+
+RECEIVE
+184
+Text 1020 - Aktuelle Filtertiefe Kanal 1
+02 54 31 30 32 30 03
+-1
+1
+COMMENT - Aktuelle Filtertiefe Kanal 1 : ......................................... 
+0
+1
+0
+0
+
+RECEIVE
+185
+Text 1030 - Aktueller Kalibrierfaktor Kanal 1
+02 54 31 30 33 30 03
+-1
+1
+COMMENT - Aktueller Kalibrierfaktor Kanal 1 : .................................... 
+0
+1
+0
+0
+
+RECEIVE
+186
+Text 1040 - Aktueller Nullpunkt Kanal 1
+02 54 31 30 34 30 03
+-1
+1
+COMMENT - Aktueller Nullpunkt Kanal 1 : .......................................... 
+0
+1
+0
+0
+
+RECEIVE
+187
+Text 1050 - Grenzwertstatus Kanal 1 gelöscht
+02 54 31 30 35 30 03
+-1
+1
+COMMENT - Grenzwertstatus Kanal 1 gelöscht
+0
+1
+0
+0
+
+RECEIVE
+188
+Text 1060 - Aktuelle Filterbandbreite Kanal 1.
+02 54 31 30 36 30 03
+-1
+1
+COMMENT - Aktuelle Filterbandbreite Kanal 1 [Digit] : ............................ 
+0
+1
+0
+0
+
+RECEIVE
+189
+Text 1061 - Kalibrierungsoffset RMW nach DAC-Eingang Kanal 1
+02 54 31 30 36 31 03
+-1
+1
+COMMENT - Kalibrierungsoffset Rohmesswert nach DAC-Eingangswert Kanal 1 : ........ 
+0
+1
+0
+0
+
+RECEIVE
+190
+Text 1062 - Kalibrierungsfaktor RMW nach DAC-Eingang Kanal 0
+02 54 31 30 36 32 03
+-1
+1
+COMMENT - Kalibrierungsfaktor Rohmesswert nach DAC-Eingangswert Kanal 1 : ........ 
+0
+1
+0
+0
+
+RECEIVE
+191
+Text 1063 - Kalibrierungsoffset DAC-Eingang nach Ausgangsstrom Kanal 1
+02 54 31 30 36 33 03
+-1
+1
+COMMENT - Kalibrierungsoffset DAC-Eingangswert nach Ausgangsstrom Kanal 1 : ...... 
+0
+1
+0
+0
+
+RECEIVE
+192
+Text 1064 - Kalibrierungsfaktor DAC-Eingang nach Ausgangsstrom Kanal 1
+02 54 31 30 36 34 03
+-1
+1
+COMMENT - Kalibrierungsfaktor DAC-Eingangswert nach Ausgangsstrom Kanal 1 : ...... 
+0
+1
+0
+0
+
+RECEIVE
+193
+Text 1065 - DAC-Eingangswert Kanal 1
+02 54 31 30 36 35 03
+-1
+1
+COMMENT - DAC-Eingangswert Kanal 1 [Digit] : ..................................... 
+0
+1
+0
+0
+
+RECEIVE
+194
+Text 1070 - Kalibrierpunkt 1 - Kanal 1
+02 54 31 30 37 30 03
+-1
+1
+COMMENT - 1.Kalibrierpunkt Kanal 1 gesetzt 
+0
+1
+0
+0
+
+RECEIVE
+195
+Text 1080 - Kalibrierpunkt 2 - Kanal 1
+02 54 31 30 38 30 03
+-1
+1
+COMMENT - 2.Kalibrierpunkt Kanal 1 gesetzt 
+0
+1
+0
+0
+
+RECEIVE
+196
+Text 1090 - Kalibrierung - Kanal 1
+02 54 31 30 39 30 03
+-1
+1
+COMMENT - Kalibrierung des Kanal 1 durchgeführt.
+0
+1
+0
+0
+
+RECEIVE
+197
+Text 1100 - Initialsierung der DAC-Kalibrierung Kanal 1
+02 54 31 31 30 30 03
+-1
+1
+COMMENT - Initialisierung der DAC-Kalibrierung des Kanal 1 durchgeführt
+0
+1
+0
+0
+
+RECEIVE
+198
+Text 1103 - Vorbereitung zum Setzen des 1.Referenzpunktes getroffen - Kanal 1
+02 54 31 31 30 33 03
+-1
+1
+COMMENT - Kanal 1: Vorbereitung zum Setzen des 1.Referenzpunktes getroffen.
+0
+1
+0
+0
+
+RECEIVE
+199
+Text 1106 - Vorbereitung zum Setzen des 2.Referenzpunktes getroffen - Kanal 1
+02 54 31 31 30 36 03
+-1
+1
+COMMENT - Kanal 1: Vorbereitung zum Setzen des 2.Referenzpunktes getroffen.
+0
+1
+0
+0
+
+RECEIVE
+200
+Text 1110 - Offset inkrementell verändert Kanal 1
+02 54 31 31 31 30 03
+-1
+1
+COMMENT - DAC-Offset des Kanal 1 inkrementell verändert.
+0
+1
+0
+0
+
+RECEIVE
+201
+Text 1120 - Verstärkung inkrementell verändert Kanal 1
+02 54 31 31 32 30 03
+-1
+1
+COMMENT - DAC-Verstärkung des Kanal 1 inkrementell verändert.
+0
+1
+0
+0
+
+RECEIVE
+202
+Text 0125 - Aktueller gefilterter Rohmesswert Kanal 1
+02 54 31 31 32 35 03
+-1
+1
+COMMENT - Aktueller gefilterter Rohmesswert Kanal 0 : ............................ 
+0
+1
+0
+0
+
+RECEIVE
+203
+Text 1130 - Aktueller gefilterter und nullpunktbereinigter Rohmesswert Kanal 1
+02 54 31 31 33 30 03
+-1
+1
+COMMENT - Aktueller gefilterter und Nullpunkt bereinigter Rohmesswert Kanal 1 : .. 
+0
+1
+0
+0
+
+RECEIVE
+204
+Text 1133 - Aktueller Temparetur bereinigter Rohmesswert Kanal 1
+02 54 31 31 33 33 03
+-1
+1
+COMMENT - Aktueller Temperatur bereinigter Rohmesswert Kanal 1 : ................. 
+0
+1
+0
+0
+
+RECEIVE
+205
+Text 1136 - Aktueller E-Modul bereinigter Rohmesswert Kanal 1
+02 54 31 31 33 36 03
+-1
+1
+COMMENT - Aktueller E-Modul bereinigter Rohmesswert Kanal 1 : .................... 
+0
+1
+0
+0
+
+RECEIVE
+206
+Text 1140 - Aktueller DAC-Eingangswert Kanal 1
+02 54 31 31 34 30 03
+-1
+1
+COMMENT - Aktueller DAC-Eingangswert Kanal 1 : ................................... 
+0
+1
+0
+0
+
+RECEIVE
+207
+Text 1150 - Aktuelles Tara Kanal 1
+02 54 31 31 35 30 03
+-1
+1
+COMMENT - Aktuelles Tara Kanal 1 : ............................................... 
+0
+1
+0
+0
+
+RECEIVE
+208
+Text 1155 - Alarmgrenzwert (20mA) - Kanal 1
+02 54 31 31 35 35 03
+-1
+1
+COMMENT - Alarm-Grenzwert bei 20mA,Kanal 1 [kg] : ................................ 
+0
+1
+0
+0
+
+RECEIVE
+209
+Text 1160 - Nullpunkt Kanal 1 auf aktuelles Gewicht gesetzt.
+02 54 31 31 36 30 03
+-1
+1
+COMMENT - Nullpunkt Kanal 1 auf aktuelles Gewicht gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+210
+Text 1170 - Kalibrierfaktor Kanal 1 gesetzt.
+02 54 31 31 37 30 03
+-1
+1
+COMMENT - Kalibrierfaktor Kanal 1 gesetzt.
+1
+1
+0
+0
+
+RECEIVE
+211
+Text 1180 - Kalibrierfaktor Kanal 1 auf festen Wert gesetzt.
+02 54 31 31 38 30 03
+-1
+1
+COMMENT - Kalibrierfaktor Kanal 1 auf festen Wert gesetzt.
+1
+1
+0
+0
+
+RECEIVE
+212
+Text 1190 - Tara Kanal 1 gelöscht.
+02 54 31 31 39 30 03
+-1
+1
+COMMENT - Tara Kanal 1 gelöscht.
+0
+1
+0
+0
+
+RECEIVE
+213
+Text 1200 - Tara Kanal 1 auf festen Wert gesetzt.
+02 54 31 32 30 30 03
+-1
+1
+COMMENT - Tara Kanal 1 auf festen Wert gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+214
+Text 1210 - DAC Kanal 1 - manueller Modus eingeschaltet.
+02 54 31 32 31 30 03
+-1
+1
+COMMENT - DAC Kanal 1 in den manuellen Mode gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+215
+Text 1220 - DAC Kanal 1 - manueller Modus ausgeschaltet.
+02 54 31 32 32 30 03
+-1
+1
+COMMENT - DAC Kanal 1 - manueller Modus ausgeschaltet.
+0
+1
+0
+0
+
+RECEIVE
+216
+Text 1230 - DAC Kanal 1 - Kalibrierung auf Werkseinstellung gesetzt.
+02 54 31 32 33 30 03
+-1
+1
+COMMENT - DAC Kanal 1 - Kalibrierung auf Werkseinstellung gesetzt.
+1
+1
+0
+0
+
+RECEIVE
+217
+Text 1240 - DAC Kanal 1 - Kalibrierung gespeichert.
+02 54 31 32 34 30 03
+-1
+1
+COMMENT - DAC Kanal 1 - Kalibrierung gespeichert.
+0
+1
+0
+0
+
+RECEIVE
+218
+Text 1242 - ADC Kanal 1 - Burnout-Modus gesetzt.
+02 54 31 32 34 32 03
+-1
+1
+COMMENT - ADC Kanal 1 - Burnout-Modus gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+219
+Text 1244 - ADC Kanal 1 - Burnout-Modus gelöscht.
+02 54 31 32 34 34 03
+-1
+1
+COMMENT - ADC Kanal 1 - Burnout-Modus gelöscht.
+0
+1
+0
+0
+
+RECEIVE
+220
+Text 1250 - Aktuelle Temperatur Kanal 1
+02 54 31 32 35 30 03
+-1
+1
+COMMENT - Aktuelle Temperatur Kanal 1 : .......................................... 
+0
+1
+0
+0
+
+RECEIVE
+221
+Text 1260 - Aktueller Systemstatus Kanal 1
+02 54 31 32 36 30 03
+-1
+1
+COMMENT - Aktueller Systemstatus Kanal 1 : ....................................... 
+0
+1
+0
+0
+
+RECEIVE
+222
+Text 1270 - Freier dynamischer Speicher Kanal 1
+02 54 31 32 37 30 03
+-1
+1
+COMMENT - Freier dynamischer Speicher Kanal 1 : 
+0
+1
+0
+0
+
+RECEIVE
+223
+Text 1280 - Aktueller Rohmesswert vom ADC Kanal 1
+02 54 31 32 38 30 03
+-1
+1
+COMMENT - Aktueller Rohmesswert vom ADC Kanal 1 : ................................ 
+0
+1
+0
+0
+
+RECEIVE
+224
+Text 1282 - Gespeicherter Rohmesswert vom ADC Kanal 1
+02 54 31 32 38 32 03
+-1
+1
+COMMENT - Gespeicherter Rohmesswert vom ADC Kanal 1 : ............................ 
+0
+1
+0
+0
+
+RECEIVE
+225
+Text 1285 - Aktueller Feedback-Rohmesswert vom ADC Kanal 1
+02 54 31 32 38 35 03
+-1
+1
+COMMENT - Aktueller Feedback-Rohmesswert vom ADC Kanal 1 : ....................... 
+0
+1
+0
+0
+
+RECEIVE
+226
+Text 1290 - Aktueller gefilterter Rohmesswert Kanal 1
+02 54 31 32 39 30 03
+-1
+1
+COMMENT - Aktueller gefilterter Rohmesswert Kanal 1 : ............................ 
+0
+1
+0
+0
+
+RECEIVE
+227
+Text 1300 - Nullpunkt Kanal 1 auf übergebenen Wert gesetzt.
+02 54 31 33 30 30 03
+-1
+1
+COMMENT - Nullpunkt Kanal 1 auf übergebenen Wert gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+228
+Text 1310 - Zeitintervall 'Gewichtsermittlung' Kanal 1
+02 54 31 33 31 30 03
+-1
+1
+COMMENT - Zeitintervall 'Gewichtsermittlung' Kanal 1 [ms] : ...................... 
+0
+1
+0
+1
+
+RECEIVE
+229
+Text 1315 - Wiederholungen 'Gewichtsermittlung' Kanal 1
+02 54 31 33 31 35 03
+-1
+1
+COMMENT - Wiederholungen 'Gewichtsermittlung' Kanal 1 [Hz] : ..................... 
+0
+1
+0
+1
+
+RECEIVE
+230
+Text 1320 - Zeitintervall 'Strom-Rückkopplung' Kanal 1
+02 54 31 33 32 30 03
+-1
+1
+COMMENT - Zeitintervall 'Strom-Rückkopplung' Kanal 1 [ms] : ...................... 
+0
+1
+0
+1
+
+RECEIVE
+231
+Text 1325 - Wiederholungen 'Strom-Rückkopplung' Kanal 1
+02 54 31 33 32 35 03
+-1
+1
+COMMENT - Wiederholungen 'Strom-Rückkopplung' Kanal 1 [Hz] : ..................... 
+0
+1
+0
+1
+
+RECEIVE
+232
+Text 1330 - Zeitintervall 'Temperaturmessung' Kanal 1
+02 54 31 33 33 30 03
+-1
+1
+COMMENT - Zeitintervall 'Temperaturmessung' Kanal 1 [ms] : ....................... 
+0
+1
+0
+1
+
+RECEIVE
+233
+Text 1340 - Zeitintervall 'Spannungsmessung' Kanal 1
+02 54 31 33 34 30 03
+-1
+1
+COMMENT - Zeitintervall 'Spannungsmessung' Kanal 1 [ms] : ........................ 
+0
+1
+0
+1
+
+RECEIVE
+234
+Text 1345 - Wiederholungen 'Spannungsmessung' Kanal 1
+02 54 31 33 34 35 03
+-1
+1
+COMMENT - Wiederholungen 'Spannungsmessung' Kanal 1 [Hz] : ....................... 
+0
+1
+0
+1
+
+RECEIVE
+235
+Text 1385 - Kennlinienpunkt Kanal 1
+02 54 31 33 38 35 03
+-1
+1
+COMMENT - Kennlinienpunkt Kanal 1 : .............................................. 
+0
+1
+0
+0
+
+RECEIVE
+236
+Text 1390 - Messwert bei 20°C während der Kennlinienaufnahme Kanal 1
+02 54 31 33 39 30 03
+-1
+1
+COMMENT - Messwert bei 20°C während der Kennlinienaufnahme Kanal 1 : ............. 
+0
+1
+0
+0
+
+RECEIVE
+237
+Text 1395 - Kennlinienpunkt manuell Kanal 1
+02 54 31 33 39 35 03
+-1
+1
+COMMENT - Kennlinienpunkt der Temperaturkompensation von Kanal 1 manuell gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+238
+Text 1400 - Aktueller Status der Kennlinienaufnahme Kanal 1
+02 54 31 34 30 30 03
+-1
+1
+COMMENT - Aktueller Status der Kennlinienaufnahme Kanal 1 : ...................... 
+0
+1
+0
+0
+
+RECEIVE
+239
+Text 1410 - Letzter Korrekturwert Kanal 1
+02 54 31 34 31 30 03
+-1
+1
+COMMENT - Letzter Korrekturwert  Kanal 1 : ....................................... 
+0
+1
+0
+0
+
+RECEIVE
+240
+Text 1420 - Anzahl der aufgenommenen Kennlinienpunkte Kanal 1
+02 54 31 34 32 30 03
+-1
+1
+COMMENT - Anzahl der aufgenommenen Kennlinienpunkte Kanal 1 : .................... 
+0
+1
+0
+0
+
+RECEIVE
+241
+Text 1430 - Maximale Abweichung Kanal 1
+02 54 31 34 33 30 03
+-1
+1
+COMMENT - Maximale Abweichung Kanal 1 : .......................................... 
+0
+1
+0
+0
+
+RECEIVE
+242
+Text 1435 - Maximale Abweichung bei Temperatur Kanal 1
+02 54 31 34 33 35 03
+-1
+1
+COMMENT - Maximale Abweichung Kanal 1 bei [°C]: .................................. 
+0
+1
+0
+0
+
+RECEIVE
+243
+Text 1440 - Minimale Abweichung Kanal 1
+02 54 31 34 34 30 03
+-1
+1
+COMMENT - Minimale Abweichung Kanal 1 : .......................................... 
+0
+1
+0
+0
+
+RECEIVE
+244
+Text 1445 - Maximale Abweichung bei Temperatur Kanal 1
+02 54 31 34 34 35 03
+-1
+1
+COMMENT - Maximale Abweichung Kanal 1 bei [°C]: .................................. 
+0
+1
+0
+0
+
+RECEIVE
+245
+Text 1450 - Aktuelle Abweichung Kanal 1
+02 54 31 34 35 30 03
+-1
+1
+COMMENT - Aktuelle Abweichung Kanal 1 : .......................................... 
+0
+1
+0
+0
+
+RECEIVE
+246
+Text 1460 - Kennlinienpunkt Kanal 1
+02 54 31 34 36 30 03
+-1
+1
+COMMENT - Kennlinienpunkt  Kanal 1 : 
+0
+1
+0
+0
+
+RECEIVE
+247
+Text 1470 - Kennlinienpunkt mit Offset Kanal 1
+02 54 31 34 37 30 03
+-1
+1
+COMMENT - Kennlinienpunkt  mit Offset Kanal 1 : 
+0
+1
+0
+0
+
+RECEIVE
+248
+Text 1480 - Temperatur bei Maximalwert Kanal 1
+02 54 31 34 38 30 03
+-1
+1
+COMMENT - Temperatur bei Maximalwert Kanal 1 : 
+0
+1
+0
+0
+
+RECEIVE
+249
+Text 1490 - Maximalwert Kanal 1
+02 54 31 34 39 30 03
+-1
+1
+COMMENT - Maximalwert Kanal 1 : 
+0
+1
+0
+0
+
+RECEIVE
+250
+Text 1500 - Temperatur bei Minimalwert Kanal 1
+02 54 31 35 30 30 03
+-1
+1
+COMMENT - Temperatur bei Minimalwert Kanal 1 : 
+0
+1
+0
+0
+
+RECEIVE
+251
+Text 1510 - Minimalwert Kanal 1
+02 54 31 35 31 30 03
+-1
+1
+COMMENT - Minimalwert Kanal 1 : 
+0
+1
+0
+0
+
+RECEIVE
+252
+Text 1520 - Erster RMW bei Nenntemperatur Kanal 1
+02 54 31 35 32 30 03
+-1
+1
+COMMENT - Erster RMW bei Nenntemperatur Kanal 1 : 
+0
+1
+0
+0
+
+RECEIVE
+253
+Text 1530 - Zweiter RMW bei Nenntemperatur Kanal 1
+02 54 31 35 33 30 03
+-1
+1
+COMMENT - Zweiter RMW bei Nenntemperatur Kanal 1 : 
+0
+1
+0
+0
+
+RECEIVE
+254
+Text 1540 - Resultierender Drift Kanal 1
+02 54 31 35 34 30 03
+-1
+1
+COMMENT - Resultierender Drift Kanal 1 : 
+0
+1
+0
+0
+
+RECEIVE
+255
+Text 1550 - Temperaturoffset Kanal 1
+02 54 31 35 35 30 03
+-1
+1
+COMMENT - Temperaturoffset Kanal 1 : 
+0
+1
+0
+0
+
+RECEIVE
+256
+Text 1560 - Kanal 1 : Letzter abgearbeiteter Status der Kennlinienaufnahme
+02 54 31 35 36 30 03
+-1
+1
+COMMENT - Kanal 1 : Letzter abgearbeiteter Status der Kennlinienaufnahme 
+0
+1
+0
+0
+
+RECEIVE
+257
+Text 1565 - Kanal 1 : Kennlinienaufnahme komplett abgeschlossen
+02 54 31 35 36 35 03
+-1
+1
+COMMENT - Kanal 1 : Kennlinienaufnahme komplett abgeschlossen 
+0
+1
+0
+0
+
+RECEIVE
+258
+Text 1570 - Fehlerstatus der Kennlinienaufnahme Kanal 1
+02 54 31 35 37 30 03
+-1
+1
+COMMENT - Fehlerstatus der Kennlinienaufnahme Kanal 1 : 
+0
+1
+0
+0
+
+RECEIVE
+259
+Text 1580 - Kanal 1 : Drift-Fehler
+02 54 31 35 38 30 03
+-1
+1
+COMMENT - Kanal 1 : Drift-Fehler 
+0
+1
+0
+0
+
+RECEIVE
+260
+Text 1590 - Kanal 1 : Abweichung bei der Kompensationsprüfung im Minimum zu gross
+02 54 31 35 39 30 03
+-1
+1
+COMMENT - Kanal 1 : Abweichung bei der Kompensationsprüfung im Minimum zu gross
+0
+1
+0
+0
+
+RECEIVE
+261
+Text 1600 - Kanal 1 : Abweichung bei der Kompensationsprüfung im Maximum zu gross
+02 54 31 36 30 30 03
+-1
+1
+COMMENT - Kanal 1 : Abweichung bei der Kompensationsprüfung im Maximum zu gross
+0
+1
+0
+0
+
+RECEIVE
+262
+Text 1610 - Kanal 1 : Driftermittlung wurde nicht durchgeführt
+02 54 31 36 31 30 03
+-1
+1
+COMMENT - Kanal 1 : Driftermittlung wurde nicht durchgeführt
+0
+1
+0
+0
+
+RECEIVE
+263
+Text 1620 - Kanal 1 : Kennlinien wurde nicht aufgenommen
+02 54 31 36 32 30 03
+-1
+1
+COMMENT - Kanal 1 : Kennlinien wurde nicht aufgenommen
+0
+1
+0
+0
+
+RECEIVE
+264
+Text 1630 - Kanal 1 : Extrema wurden nicht ermittelt
+02 54 31 36 33 30 03
+-1
+1
+COMMENT - Kanal 1 : Extrema wurden nicht ermittelt
+0
+1
+0
+0
+
+RECEIVE
+265
+Text 1640 - Kanal 1 : Kennlinienaufnahme und Überprüfung erfolgreich abgeschlossen !
+02 54 31 36 34 30 03
+-1
+1
+COMMENT - Kanal 1 : Kennlinienaufnahme und Überprüfung erfolgreich abgeschlossen !
+0
+1
+0
+0
+
+RECEIVE
+266
+Text 1645 - Kanal 1 : Kennlinienaufnahme oder Überprüfung fehlerhaft !
+02 54 31 36 34 35 03
+-1
+1
+COMMENT - Kanal 1 : Kennlinienaufnahme oder Überprüfung fehlerhaft !
+0
+1
+0
+0
+
+RECEIVE
+267
+Text 1650 - Kanal 1 : Letzte Watchdogadresse gelöscht !
+02 54 31 36 35 30 03
+-1
+1
+COMMENT - Kanal 1 : Letzte Watchdogadresse gelöscht !
+0
+1
+0
+0
+
+RECEIVE
+268
+Text 1660 - Letzer Watchdog Kanal 1
+02 54 31 36 36 30 03
+-1
+1
+COMMENT - Letzer Watchdog des Kanal 1 bei Adresse : 
+0
+1
+0
+0
+
+RECEIVE
+269
+Text 1670 - Kanal 1 : Temperaturoffset gesetzt !
+02 54 31 36 37 30 03
+-1
+1
+COMMENT - Kanal 1 : Temperaturoffset gesetzt !
+0
+1
+0
+0
+
+RECEIVE
+270
+Text 1680 - Aktueller Ausgangsstrom Kanal 1
+02 54 31 36 38 30 03
+-1
+1
+COMMENT - Sollwert des Ausgangsstrom Kanal 1 [mA] : .............................. 
+0
+1
+0
+0
+
+RECEIVE
+271
+Text 1685 - Aktueller gemessener Ausgangsstrom Kanal 1
+02 54 31 36 38 35 03
+-1
+1
+COMMENT - Istwert des Ausgangsstrom Kanal 1 [mA] : ............................... 
+0
+1
+0
+0
+
+RECEIVE
+272
+Text 1690 - Motion-Grenzwert Kanal 1
+02 54 31 36 39 30 03
+-1
+1
+COMMENT - Motion-Limit Kanal 1 : 
+0
+1
+0
+0
+
+RECEIVE
+273
+Text 1700 - Motion-Filter Kanal 1
+02 54 31 37 30 30 03
+-1
+1
+COMMENT - Motion-Filter Kanal 1 : ................................................ 
+0
+1
+0
+0
+
+RECEIVE
+274
+Text 1705 - No-Motion-Filter Kanal 1
+02 54 31 37 30 35 03
+-1
+1
+COMMENT - No-Motion-Filter Kanal 1 : ............................................. 
+0
+1
+0
+0
+
+RECEIVE
+275
+Text 1707 - Messwerttiefe 'Gewichtsermittlung' Kanal 1
+02 54 31 37 30 37 03
+-1
+1
+COMMENT - Messwerttiefe der Gewichtsermittlung Kanal 1 : ......................... 
+0
+1
+0
+0
+
+RECEIVE
+276
+Text 1708 - Messwerttiefe 'Stromrückführung' Kanal 1
+02 54 31 37 30 38 03
+-1
+1
+COMMENT - Messwerttiefe der Stromrückführung Kanal 1 : ........................... 
+0
+1
+0
+0
+
+RECEIVE
+277
+Text 1710 - Vergangene Zeit seit Start Kennlinienaufnahme  Kanal 1
+02 54 31 37 31 30 03
+-1
+1
+COMMENT - Vergangene Zeit seit dem Start der Kennlinienaufnahme Kanal 1 : ........ 
+0
+1
+0
+0
+
+RECEIVE
+278
+Text 1712 - Rohmesswert zur Gewichtssimulation gesetzt Kanal 1
+02 54 31 37 31 32 03
+-1
+1
+COMMENT - Kanal 1 : Rohmesswert zur Gewichtssimulation gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+279
+Text 1714 - Wert zur Temperatursimulation gesetzt Kanal 1
+02 54 31 37 31 34 03
+-1
+1
+COMMENT - Kanal 1 : Wert zur Temperatursimulation gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+280
+Text 1716 - Gewichtssimulation beendet Kanal 1
+02 54 31 37 31 36 03
+-1
+1
+COMMENT - Kanal 1 : Die Gewichtssimulation wurde beendet.
+0
+1
+0
+0
+
+RECEIVE
+281
+Text 1718 - Temperatursimulation beendet Kanal 1
+02 54 31 37 31 38 03
+-1
+1
+COMMENT - Kanal 1 : Die Temperatursimulation wurde beendet.
+0
+1
+0
+0
+
+RECEIVE
+282
+Text 1720 - Summe der SPI-Kommunikationsfehler  Kanal 1
+02 54 31 37 32 30 03
+-1
+1
+COMMENT - Summe der SPI-Kommunikationsfehler  Kanal 1 : .......................... 
+0
+1
+0
+0
+
+RECEIVE
+283
+Text 1730 - SPI-Fehler-Zähler gelöscht  Kanal 1
+02 54 31 37 33 30 03
+-1
+1
+COMMENT - SPI-Fehler-Zähler des Kanal 1 gelöscht
+0
+1
+0
+0
+
+RECEIVE
+284
+Text 1735 - Rohmesswert der Versorgungsspannung  Kanal 1
+02 54 31 37 33 35 03
+-1
+1
+COMMENT - Rohmesswert der Versorgungsspannung Kanal 1 : .......................... 
+0
+1
+0
+0
+
+RECEIVE
+285
+Text 1740 - Statistikdaten gelöscht  Kanal 1
+02 54 31 37 34 30 03
+-1
+1
+COMMENT - Statistikdaten des Kanal 1 gelöscht
+0
+1
+0
+0
+
+RECEIVE
+286
+Text 1750 - Statistik Kanal 1: Filter der Temperaturauswertung
+02 54 31 37 35 30 03
+-1
+1
+COMMENT - Statistik Kanal 1: Filter der Temperaturauswertung : ................... 
+0
+1
+0
+0
+
+RECEIVE
+287
+Text 1760 - Statistik Kanal 1: Filter der Gewichtsauswertung
+02 54 31 37 36 30 03
+-1
+1
+COMMENT - Statistik Kanal 1: Filter der Gewichtsauswertung : ..................... 
+0
+1
+0
+0
+
+RECEIVE
+288
+Text 1770 - Statistik Kanal 1: Motion-Limit der Gewichtsauswertung
+02 54 31 37 37 30 03
+-1
+1
+COMMENT - Statistik Kanal 1: Motion-Limit der Gewichtsauswertung : ............... 
+0
+1
+0
+0
+
+RECEIVE
+289
+Text 1780 - Statistik Kanal 1: Filter der Grenzwertüberwachung
+02 54 31 37 38 30 03
+-1
+1
+COMMENT - Statistik Kanal 1: Filter der Grenzwertüberwachung : ................... 
+0
+1
+0
+0
+
+RECEIVE
+290
+Text 1790 - Statistik Kanal 1: Grenzwert der Grenzwertüberwachung
+02 54 31 37 39 30 03
+-1
+1
+COMMENT - Statistik Kanal 1: Grenzwert der Grenzwertüberwachung : ................ 
+0
+1
+0
+0
+
+RECEIVE
+291
+Text 1800 - Kanal 1: Parameter nicht eingebunden
+02 54 31 38 30 30 03
+-1
+1
+COMMENT - Kanal 1: Parameter nicht eingebunden : ................................. 
+0
+1
+0
+0
+
+RECEIVE
+292
+Text 1802 - RS232-Statistik Kanal 1: Empfangene Frames
+02 54 31 38 30 32 03
+-1
+1
+COMMENT - RS232-Statistik Kanal 1: Empfangene Frames : ...........................
+0
+1
+0
+0
+
+RECEIVE
+293
+Text 1804 - RS232-Statistik Kanal 1: Fehlerhafte Frames
+02 54 31 38 30 34 03
+-1
+1
+COMMENT - RS232-Statistik Kanal 1: Fehlerhafte Frames : ..........................
+0
+1
+0
+0
+
+RECEIVE
+294
+Text 1808 - RS232-Statistik Kanal 1gelöscht
+02 54 31 38 30 38 03
+-1
+1
+COMMENT - RS232-Statistik Kanal 1 gelöscht
+0
+1
+0
+0
+
+RECEIVE
+295
+Text 1810 - Absolut-Statistik Kanal 1: Minimale Temperatur
+02 54 31 38 31 30 03
+-1
+1
+COMMENT - Absolut-Statistik Kanal 1: Minimale Temperatur : .......................
+0
+1
+0
+0
+
+RECEIVE
+296
+Text 1820 - Relativ-Statistik Kanal 1: Minimale Temperatur
+02 54 31 38 32 30 03
+-1
+1
+COMMENT - Relativ-Statistik Kanal 1: Minimale Temperatur : .......................
+0
+1
+0
+0
+
+RECEIVE
+297
+Text 1830 - Absolut-Statistik Kanal 1: Maximale Temperatur
+02 54 31 38 33 30 03
+-1
+1
+COMMENT - Absolut-Statistik Kanal 1: Maximale Temperatur : .......................
+0
+1
+0
+0
+
+RECEIVE
+298
+Text 1840 - Relativ-Statistik Kanal 1: Maximale Temperatur
+02 54 31 38 34 30 03
+-1
+1
+COMMENT - Relativ-Statistik Kanal 1: Maximale Temperatur : .......................
+0
+1
+0
+0
+
+RECEIVE
+299
+Text 1850 - Absolut-Statistik Kanal 1: Maximale Belastung
+02 54 31 38 35 30 03
+-1
+1
+COMMENT - Absolut-Statistik Kanal 1: Maximale Belastung : ........................
+0
+1
+0
+0
+
+RECEIVE
+300
+Text 1855 - Absolut-Statistik Kanal 1: Zeitpunkt bei maximalster Belastung
+02 54 31 38 35 35 03
+-1
+1
+COMMENT - Absolut-Statistik Kanal 1: Zeitpunkt bei maximalster Belastung : ....... 
+0
+1
+0
+0
+
+RECEIVE
+301
+Text 1860 - Relativ-Statistik Kanal 1: Maximale Belastung
+02 54 31 38 36 30 03
+-1
+1
+COMMENT - Relativ-Statistik Kanal 1: Maximale Belastung : ........................
+0
+1
+0
+0
+
+RECEIVE
+302
+Text 1865 - Relativ-Statistik Kanal 1: Zeitpunkt bei maximalster Belastung
+02 54 31 38 36 35 03
+-1
+1
+COMMENT - Relativ-Statistik Kanal 1: Zeitpunkt bei maximalster Belastung : ....... 
+0
+1
+0
+0
+
+RECEIVE
+303
+Text 1870 - Absolut-Statistik Kanal 1: Maximaler Rohmesswert
+02 54 31 38 37 30 03
+-1
+1
+COMMENT - Absolut-Statistik Kanal 1: Maximaler Rohmesswert : .....................
+0
+1
+0
+0
+
+RECEIVE
+304
+Text 1880 - Relativ-Statistik Kanal 1: Maximaler Rohmesswert
+02 54 31 38 38 30 03
+-1
+1
+COMMENT - Relativ-Statistik Kanal 1: Maximaler Rohmesswert : .....................
+0
+1
+0
+0
+
+RECEIVE
+305
+Text 1890 - Absolut-Statistik Kanal 1: Maximaler Ausgangsstrom
+02 54 31 38 39 30 03
+-1
+1
+COMMENT - Absolut-Statistik Kanal 1: Maximaler Ausgangsstrom (ca.) : .............
+0
+1
+0
+0
+
+RECEIVE
+306
+Text 1900 - Relativ-Statistik Kanal 1: Maximaler Ausgangsstrom
+02 54 31 39 30 30 03
+-1
+1
+COMMENT - Relativ-Statistik Kanal 1: Maximaler Ausgangsstrom (ca.) : .............
+0
+1
+0
+0
+
+RECEIVE
+307
+Text 1910 - Absolut-Statistik Kanal 1: Anzahl der Überlastungen
+02 54 31 39 31 30 03
+-1
+1
+COMMENT - Absolut-Statistik Kanal 1: Anzahl der Überlastungen : ..................
+0
+1
+0
+0
+
+RECEIVE
+308
+Text 1920 - Relativ-Statistik Kanal 1: Anzahl der Überlastungen
+02 54 31 39 32 30 03
+-1
+1
+COMMENT - Relativ-Statistik Kanal 1: Anzahl der Überlastungen : ..................
+0
+1
+0
+0
+
+RECEIVE
+309
+Text 1930 - Absolut-Statistik Kanal 1: Anzahl der Grenzwertüberschreitungen
+02 54 31 39 33 30 03
+-1
+1
+COMMENT - Absolut-Statistik Kanal 1: Anzahl der Grenzwertüberschreitungen: .......
+0
+1
+0
+0
+
+RECEIVE
+310
+Text 1940 - Relativ-Statistik Kanal 1: Anzahl der Grenzwertüberschreitungen
+02 54 31 39 34 30 03
+-1
+1
+COMMENT - Relativ-Statistik Kanal 1: Anzahl der Grenzwertüberschreitungen: .......
+0
+1
+0
+0
+
+RECEIVE
+311
+Text 1942 - Fehler Netzteilprüfung Kanal 1
+02 54 31 39 34 32 03
+-1
+1
+COMMENT - Die Überprüfung des Netzteil - Kanal 1 ergab einen Fehler !!!
+0
+1
+0
+0
+
+RECEIVE
+312
+Text 1943 - Simulierter Temperaturwert gesetzt Kanal 1
+02 54 31 39 34 33 03
+-1
+1
+COMMENT - Simulierter Temperaturwert für Kanal 1 gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+313
+Text 1944 - Netzteilprüfung i.O. Kanal 1
+02 54 31 39 34 34 03
+-1
+0
+COMMENT - Die Überprüfung des Netzteil - Kanal 1 erfolgreich abgeschlossen.
+0
+1
+0
+0
+
+RECEIVE
+314
+Text 1944 - Fehlerzähler 'Diverses 1' Kanal 1
+02 54 31 39 34 34 03
+-1
+1
+COMMENT - Fehlerzähler 'Diverses 1' Kanal 1 : .................................... 
+0
+1
+0
+0
+
+RECEIVE
+315
+Text 1945 - Fehlerzähler 'Diverses 2' Kanal 1
+02 54 31 39 34 35 03
+-1
+1
+COMMENT - Fehlerzähler 'Diverses 2' Kanal 1 : .................................... 
+0
+1
+0
+0
+
+RECEIVE
+316
+Text 1946 - Temperatursimulation beendet Kanal 1
+02 54 31 39 34 36 03
+-1
+1
+COMMENT - Temperatursimulation auf Kanal 1 beendet.
+0
+1
+0
+0
+
+RECEIVE
+317
+Text 1947 - Fehlerzähler 'Zeichen-Empfang' Kanal 1
+02 54 31 39 34 37 03
+-1
+1
+COMMENT - Fehlerzähler 'Zeichen-Empfang' Kanal 1 : ............................... 
+0
+1
+0
+0
+
+RECEIVE
+318
+Text 1948 - Fehlerzähler 'Zeichen-Senden' Kanal 1
+02 54 31 39 34 38 03
+-1
+1
+COMMENT - Fehlerzähler 'Zeichen-Senden' Kanal 1 : ................................ 
+0
+1
+0
+0
+
+RECEIVE
+319
+Text 1949 - Fehlerzähler 'Warte auf Frame' Kanal 1
+02 54 31 39 34 39 03
+-1
+1
+COMMENT - Fehlerzähler 'Warte auf Frame' Kanal 1 : ............................... 
+0
+1
+0
+0
+
+RECEIVE
+320
+Text 1950 - Kanal 1: Inhalt der Debug-Variablen
+02 54 31 39 35 30 03
+-1
+1
+COMMENT - Kanal 1: Inhalt der Debug-Variablen 
+0
+1
+0
+0
+
+RECEIVE
+321
+Text 1960 - Kanal 1: Inhalt aller Debug-Variablen gelöscht !
+02 54 31 39 36 30 03
+-1
+1
+COMMENT - Kanal 1: Inhalt aller Debug-Variablen gelöscht !
+0
+1
+0
+0
+
+RECEIVE
+322
+Text 1962 - Kanal 1: Fehler ADC-Test (Messbereich 0mV/V) !
+02 54 31 39 36 32 03
+-1
+1
+COMMENT - Fehler beim ADC-Test (Messbereich 0mV/V) Kanal 1 - Messwert : .......... 
+0
+1
+0
+0
+
+RECEIVE
+323
+Text 1964 - Kanal 1: Fehler ADC-Test (Messbereich 2mV/V) !
+02 54 31 39 36 34 03
+-1
+1
+COMMENT - Fehler beim ADC-Test (Messbereich 2mV/V) Kanal 1 - Messwert : .......... 
+0
+1
+0
+0
+
+RECEIVE
+324
+Text 1966 - Kanal 1: ADC-Test (Messbereich 0mV/V) erfolgreich !
+02 54 31 39 36 36 03
+-1
+1
+COMMENT - ADC-Test (Messbereich 0mV/V) des Kanal 1 erfolgreich abgeschlossen !
+0
+1
+0
+0
+
+RECEIVE
+325
+Text 1968 - Kanal 1: ADC-Test (Messbereich 2mV/V) erfolgreich !
+02 54 31 39 36 38 03
+-1
+1
+COMMENT - ADC-Test (Messbereich 0.8mV/V) des Kanal 1 erfolgreich abgeschlossen !
+0
+1
+0
+0
+
+RECEIVE
+326
+Text 1970 - Kanal 1: Löschbestätigung der Debug-Variablen :
+02 54 31 39 37 30 03
+-1
+1
+COMMENT - Kanal 1: Löschbestätigung der Debug-Variablen : 
+0
+1
+0
+0
+
+RECEIVE
+327
+Text 1973 - Gewichtswert über Ist-Ausgangsstrom Kanal 1:
+02 54 31 39 37 33 03
+-1
+1
+COMMENT - Gewichtswert über Ist-Ausgangsstrom Kanal 1 [kg] : ..................... 
+0
+1
+0
+0
+
+RECEIVE
+328
+Text 1976 - Gewichtswert über Soll-Ausgangsstrom Kanal 1:
+02 54 31 39 37 36 03
+-1
+1
+COMMENT - Gewichtswert über Soll-Ausgangsstrom Kanal 1 [kg] : .................... 
+0
+1
+0
+0
+
+RECEIVE
+329
+Text 1980 - Aktueller Ausgangsstrom Kanal 1
+02 54 31 39 38 30 03
+-1
+1
+COMMENT - Aktueller Ausgangsstrom Kanal 1 : ...................................... 
+0
+1
+0
+0
+
+RECEIVE
+330
+Text 1982 - Verstärkungsfaktor RMW -> DAC-Input
+02 54 31 39 38 32 03
+-1
+1
+COMMENT - Verstärkung Rohmesswert nach DAC-Digitaleingang Kanal 1 : .............. 
+0
+1
+0
+0
+
+RECEIVE
+331
+Text 1984 - Verstärkungsfaktor RMW -> Ausgangsstrom
+02 54 31 39 38 34 03
+-1
+1
+COMMENT - Verstärkung Rohmesswert nach Ausgangsstrom Kanal 1 : ................... 
+0
+1
+0
+0
+
+RECEIVE
+332
+Text 1986 - Offset RMW -> DAC-Input
+02 54 31 39 38 36 03
+-1
+1
+COMMENT - Offset Rohmesswert nach DAC-Digitaleingang Kanal 1 : ................... 
+0
+1
+0
+0
+
+RECEIVE
+333
+Text 1988 - Offset RMW -> Ausgangsstrom
+02 54 31 39 38 38 03
+-1
+1
+COMMENT - Offset Rohmesswert nach Ausgangsstrom Kanal 1 : ........................ 
+0
+1
+0
+0
+
+RECEIVE
+334
+Text 1990 - Rückkoppelspannung Kanal 1
+02 54 31 39 39 30 03
+-1
+1
+COMMENT - Aktuelle Rückkoppelspannung Kanal 1 [digit] : .......................... 
+0
+1
+0
+0
+
+RECEIVE
+335
+Text 1995 - Soll-Istwert-Abweichung Kanal 1
+02 54 31 39 39 35 03
+-1
+1
+COMMENT - Soll-Istwert-Abweichung der Stromrückführung Kanal 1 [mA] : ............ 
+0
+1
+0
+0
+
+RECEIVE
+336
+Text 1997 - Kanal 1: Die RS232-Befehlssperre wurde aktiviert
+02 54 31 39 39 37 03
+-1
+1
+COMMENT - Kanal 1: Die RS232-Befehlssperre wurde aktiviert
+0
+1
+0
+0
+
+RECEIVE
+337
+Text 1998 - Kanal 1: Die RS232-Befehlssperre wurde aufgehoben
+02 54 31 39 39 38 03
+-1
+1
+COMMENT - Kanal 1: Die RS232-Befehlssperre wurde aufgehoben
+0
+1
+0
+0
+
+RECEIVE
+338
+Text 2000 - Hardware neu starten
+02 54 32 30 30 30 03
+-1
+1
+COMMENT - Hardware bitte neu starten !
+0
+1
+0
+0
+
+RECEIVE
+339
+Text 2010 - Filtertiefe des Mittelwertfilters gesetzt
+02 54 32 30 31 30 03
+-1
+1
+COMMENT - Filtertiefe des Mittelwertfilters gesetzt
+0
+1
+0
+0
+
+RECEIVE
+340
+Text 2020 - Bandbreite des Totbandfilters gesetzt
+02 54 32 30 32 30 03
+-1
+1
+COMMENT - Bandbreite des Totbandfilters gesetzt
+0
+1
+0
+0
+
+RECEIVE
+341
+Text 2030 - Nullpunkt auf aktuelles Gewicht gesetzt gesetzt
+02 54 32 30 33 30 03
+-1
+1
+COMMENT - Nullpunkt auf aktuelles Gewicht gesetzt 
+0
+1
+0
+0
+
+RECEIVE
+342
+Text 2040 - Kalibrierfaktor neu berechnet
+02 54 32 30 34 30 03
+-1
+1
+COMMENT - Kalibrierfaktor neu berechnet
+0
+1
+0
+0
+
+RECEIVE
+343
+Text 2050 - Grenzwert neu gesetzt.
+02 54 32 30 35 30 03
+-1
+1
+COMMENT - Grenzwert wurde neu gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+344
+Text 2060 - Tara-Teach ausgeführt.
+02 54 32 30 36 30 03
+-1
+1
+COMMENT - Tara-Teach ausgeführt.
+0
+1
+0
+0
+
+RECEIVE
+345
+Text 2070 - Initialisierung abgeschlossen.
+02 54 32 30 37 30 03
+-1
+1
+COMMENT - Initialisierung abgeschlossen.
+0
+1
+0
+0
+
+RECEIVE
+346
+Text 2080 - Alarm-Grenzwert auf Werkseinstellung gesetzt.
+02 54 32 30 38 30 03
+-1
+1
+COMMENT - Alarm-Grenzwert auf Werkseinstellung gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+347
+Text 2100 - Kalibrierfaktor  gesetzt.
+02 54 32 31 30 30 03
+-1
+1
+COMMENT - Kalibrierfaktor gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+348
+Text 2110 - Kennlinienaufnahme gestartet.
+02 54 32 31 31 30 03
+-1
+1
+COMMENT - Kennlinienaufnahme gestartet.
+0
+1
+0
+0
+
+RECEIVE
+349
+Text 2120 - Kennlinienaufnahme gestoppt.
+02 54 32 31 32 30 03
+-1
+1
+COMMENT - Kennlinienaufnahme gestoppt.
+0
+1
+0
+0
+
+RECEIVE
+350
+Text 2130 - Betriebszustand auf 'System läuft' gesetzt.
+02 54 32 31 33 30 03
+-1
+1
+COMMENT - Betriebszustand auf 'System läuft' gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+351
+Text 2140 - Betriebszustand auf 'Kennlinienaufnahme gestartet' gesetzt.
+02 54 32 31 34 30 03
+-1
+1
+COMMENT - Betriebszustand auf 'Kennlinienaufnahme gestartet' gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+352
+Text 2150 - Betriebszustand auf 'Kennlinienaufnahme 1.Driftpunkt ermittelt' gesetzt.
+02 54 32 31 35 30 03
+-1
+1
+COMMENT - Betriebszustand auf 'Kennlinienaufnahme 1.Driftpunkt ermittelt' gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+353
+Text 2160 - Betriebszustand auf 'Kennlinienaufnahme erfolgreich abgeschlossen' gesetzt.
+02 54 32 31 36 30 03
+-1
+1
+COMMENT - Betriebszustand auf 'Kennlinienaufnahme erfolgreich abgeschlossen' gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+354
+Text 2170 - Betriebszustand auf 'Kennlinienaufnahme fehlerhaft abgeschlossen' gesetzt.
+02 54 32 31 37 30 03
+-1
+1
+COMMENT - Betriebszustand auf 'Kennlinienaufnahme fehlerhaft abgeschlossen' gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+355
+Text 2180 - Betriebszustand auf 'Systemfehler' gesetzt.
+02 54 32 31 38 30 03
+-1
+1
+COMMENT - Betriebszustand auf 'Systemfehler' gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+356
+Text 2190 - Temperaturkompensation ausgeschaltet.
+02 54 32 31 39 30 03
+-1
+1
+COMMENT - Temperaturkompensation ausgeschaltet.
+0
+1
+0
+0
+
+RECEIVE
+357
+Text 2200 - Temperaturkompensation eingeschaltet.
+02 54 32 32 30 30 03
+-1
+1
+COMMENT - Temperaturkompensation eingeschaltet.
+0
+1
+0
+0
+
+RECEIVE
+358
+Text 2210 - System-ID gesetzt.
+02 54 32 32 31 30 03
+-1
+1
+COMMENT - System-ID gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+359
+Text 2220 - System-ID gelöscht.
+02 54 32 32 32 30 03
+-1
+1
+COMMENT - System-ID gelöscht.
+0
+1
+0
+0
+
+RECEIVE
+360
+Text 2230 - Temperatursensor kalibriert
+02 54 32 32 33 30 03
+-1
+1
+COMMENT - Temperatursensor kalibriert
+0
+1
+0
+0
+
+RECEIVE
+361
+Text 2240 - Ausgaben für MRW-Manager
+02 54 32 32 34 30 03
+-1
+1
+COMMENT - Ausgaben erfolgen ab sofort für die MRW-Manager-Software ! 
+0
+1
+0
+0
+
+RECEIVE
+362
+Text 2250 - Neuinitialisierung
+02 54 32 32 35 30 03
+-1
+1
+COMMENT - Neuinitialisierung ! 
+0
+1
+0
+0
+
+RECEIVE
+363
+Text 2255 - Aktueller Alarmstatus gelöscht
+02 54 32 32 35 35 03
+-1
+1
+COMMENT - Aktueller Alarmstatus gelöscht. 
+0
+1
+0
+0
+
+RECEIVE
+364
+Text 2260 - Diagnosespeicher gelöscht
+02 54 32 32 36 30 03
+-1
+1
+COMMENT - Diagnosespeicher gelöscht. 
+0
+1
+0
+0
+
+RECEIVE
+365
+Text 2270 - Betriebsstundenzähler gelöscht
+02 54 32 32 37 30 03
+-1
+1
+COMMENT - Betriebsstundenzähler gelöscht. 
+0
+1
+0
+0
+
+RECEIVE
+366
+Text 2275 - Relativen Betriebsstundenzähler gelöscht
+02 54 32 32 37 35 03
+-1
+1
+COMMENT - Kunden-Betriebsstundenzähler gelöscht. 
+0
+1
+0
+0
+
+RECEIVE
+367
+Text 2280 - E-Modul-Kompensation ausgeschaltet.
+02 54 32 32 38 30 03
+-1
+1
+COMMENT - E-Modul-Kompensation ausgeschaltet.
+0
+1
+0
+0
+
+RECEIVE
+368
+Text 2290 - E-Modul-Kompensation eingeschaltet.
+02 54 32 32 39 30 03
+-1
+1
+COMMENT - E-Modul-Kompensation eingeschaltet.
+0
+1
+0
+0
+
+RECEIVE
+369
+Text 2293 - Zyklische SPI-Kommuniktion ausgeschaltet.
+02 54 32 32 39 33 03
+-1
+1
+COMMENT - Zyklische SPI-Kommuniktion ausgeschaltet.
+0
+1
+0
+0
+
+RECEIVE
+370
+Text 2296 - Zyklische SPI-Kommuniktion eingeschaltet.
+02 54 32 32 39 36 03
+-1
+1
+COMMENT - Zyklische SPI-Kommuniktion eingeschaltet.
+0
+1
+0
+0
+
+RECEIVE
+371
+Text 2300 - Initialisierungsphase
+02 54 32 33 30 30 03
+-1
+1
+COMMENT - Initialisierungsphase : ................................................ 
+0
+1
+0
+0
+
+RECEIVE
+372
+Text 2310 - Synchronisierphase
+02 54 32 33 31 30 03
+-1
+1
+COMMENT - Synchronisierphase : ................................................... 
+0
+1
+0
+0
+
+RECEIVE
+373
+Text 2320 - Überprüfung der Software-Versionen
+02 54 32 33 32 30 03
+-1
+1
+COMMENT - Überprüfung der Software-Versionen : ................................... 
+0
+1
+0
+0
+
+RECEIVE
+374
+Text 2330 - Überprüfung des Speicherbereichs für dynamische Variablen
+02 54 32 33 33 30 03
+-1
+1
+COMMENT - Überprüfung des Speicherbereichs für dynamische Variablen : ............ 
+0
+1
+0
+0
+
+RECEIVE
+375
+Text 2340 - Überprüfung der System-ID
+02 54 32 33 34 30 03
+-1
+1
+COMMENT - Überprüfung der System-ID : ............................................ 
+0
+1
+0
+0
+
+RECEIVE
+376
+Text 2350 - Motion-Grenzwert gesetzt.
+02 54 32 33 35 30 03
+-1
+1
+COMMENT - Motion-Grenzwert gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+377
+Text 2360 - Motion-Timer gesetzt.
+02 54 32 33 36 30 03
+-1
+1
+COMMENT - Zeitbasis zur Motion-Überprüfung gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+378
+Text 2365 - NoMotion-Filter gesetzt.
+02 54 32 33 36 35 03
+-1
+1
+COMMENT - No-Motion-Filter gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+379
+Text 2370 - DockLight-Modus gesetzt.
+02 54 32 33 37 30 03
+-1
+1
+COMMENT - DockLight-Modus gesetzt
+0
+1
+0
+0
+
+RECEIVE
+380
+Text 2380 - DockLight-Modus gelöscht
+02 54 32 33 38 30 03
+-1
+1
+COMMENT - DockLight-Modus gelöscht.
+0
+1
+0
+0
+
+RECEIVE
+381
+Text 2390 - Artikelnummer gesetzt.
+02 54 32 33 39 30 03
+-1
+1
+COMMENT - Artikelnummer gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+382
+Text 2400 - Seriennummer gesetzt.
+02 54 32 34 30 30 03
+-1
+1
+COMMENT - Seriennummer gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+383
+Text 2410 - Statistik: Filter der Temperaturauswertung gesetzt
+02 54 32 34 31 30 03
+-1
+1
+COMMENT - Statistik: Filter der Temperaturauswertung gesetzt
+0
+1
+0
+0
+
+RECEIVE
+384
+Text 2420 - Statistik: Filter der Gewichtsauswertung gesetzt
+02 54 32 34 32 30 03
+-1
+1
+COMMENT - Statistik: Filter der Gewichtsauswertung gesetzt
+0
+1
+0
+0
+
+RECEIVE
+385
+Text 2430 - Statistik: Motion-Limit der Gewichtsauswertung gesetzt
+02 54 32 34 33 30 03
+-1
+1
+COMMENT - Statistik: Motion-Limit der Gewichtsauswertung gesetzt
+0
+1
+0
+0
+
+RECEIVE
+386
+Text 2440 - Statistik: Filter der Grenzwertüberwachung gesetzt
+02 54 32 34 34 30 03
+-1
+1
+COMMENT - Statistik: Filter der Grenzwertüberwachung gesetzt
+0
+1
+0
+0
+
+RECEIVE
+387
+Text 2450 - Statistik: Grenzwert der Grenzwertüberwachung gesetzt
+02 54 32 34 35 30 03
+-1
+1
+COMMENT - Statistik: Grenzwert der Grenzwertüberwachung gesetzt
+0
+1
+0
+0
+
+RECEIVE
+388
+Text 2460 - Stromrückführung ausgeschaltet
+02 54 32 34 36 30 03
+-1
+1
+COMMENT - Die Stromrückführung wurde ausgeschaltet
+0
+1
+0
+0
+
+RECEIVE
+389
+Text 2470 - Stromrückführung eingeschaltet
+02 54 32 34 37 30 03
+-1
+1
+COMMENT - Die Stromrückführung wurde eingeschaltet
+0
+1
+0
+0
+
+RECEIVE
+390
+Text 2480 - Nullpunkt auf aktuelles Gewicht gesetzt
+02 54 32 34 38 30 03
+-1
+1
+COMMENT - Nullpunkt auf aktuelles Gewicht gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+391
+Text 2490 - Strom-Rückführung ausgeschaltet
+02 54 32 34 39 30 03
+-1
+1
+COMMENT - Die Strom-Rückführung ist ausgeschaltet.
+0
+1
+0
+0
+
+RECEIVE
+392
+Text 2500 - Strom-Rückführung eingeschaltet
+02 54 32 35 30 30 03
+-1
+1
+COMMENT - Die Strom-Rückführung ist eingeschaltet.
+0
+1
+0
+0
+
+RECEIVE
+393
+Text 2510 - Ist-Sollstrom-Abweichung gesetzt
+02 54 32 35 31 30 03
+-1
+1
+COMMENT - Die Ist-Sollstrom-Abweichung wurde gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+394
+Text 2520 - Maximale Ist-Sollstrom-Abweichung gesetzt
+02 54 32 35 32 30 03
+-1
+1
+COMMENT - Der Grenzwert der maximalen Ist-Sollstrom-Abweichung wurde gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+395
+Text 2530 - Integral-Anteil der Stromregelung gesetzt
+02 54 32 35 33 30 03
+-1
+1
+COMMENT - Integral-Anteil der Stromregelung gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+396
+Text 2535 - Proportional-Anteil der Stromregelung gesetzt
+02 54 32 35 33 35 03
+-1
+1
+COMMENT - Proportional-Anteil der Stromregelung gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+397
+Text 2540 - Test des unteren Grenzwertes gestartet 
+02 54 32 35 34 30 03
+-1
+1
+COMMENT - Test des unteren Grenzwertes gestartet.
+0
+1
+0
+0
+
+RECEIVE
+398
+Text 2550 - Test des oberen Grenzwertes gestartet 
+02 54 32 35 35 30 03
+-1
+1
+COMMENT - Test des oberen Grenzwertes gestartet.
+0
+1
+0
+0
+
+RECEIVE
+399
+Text 2560 - Messwerttiefe 'Gewichtwert' gesetzt 
+02 54 32 35 36 30 03
+-1
+1
+COMMENT - Messwerttiefe zur Gewichtsermittlung gesetzt - System neu starten und kalibrieren !!!
+0
+1
+0
+0
+
+RECEIVE
+400
+Text 2570 - Messwerttiefe 'Stromrückführung' gesetzt 
+02 54 32 35 37 30 03
+-1
+1
+COMMENT - Messwerttiefe zur Stromrückführung gesetzt - System neu starten und kalibrieren !!!
+0
+1
+0
+0
+
+RECEIVE
+401
+Text 2580 - Grenzwert 'Nullpunktüberprüfung' gesetzt 
+02 54 32 35 38 30 03
+-1
+1
+COMMENT - Grenzwert 'Nullpunktüberprüfung' gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+402
+Text 2590 - Grenzwert 'Temperaturgang' gesetzt 
+02 54 32 35 39 30 03
+-1
+1
+COMMENT - Grenzwert 'Temperaturgang' gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+403
+Text 2600 - Grenzwert 'Drift' gesetzt 
+02 54 32 36 30 30 03
+-1
+1
+COMMENT - Grenzwert 'Drift' gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+404
+Text 2610 - Zellentyp gesetzt
+02 54 32 36 31 30 03
+-1
+1
+COMMENT - Beschreibung des Zellentyps gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+405
+Text 2620 - Zeithysterese gesetzt 
+02 54 32 36 32 30 03
+-1
+1
+COMMENT - Zeithysterese für Grenzwertüberschreitung gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+406
+Text 2630 - Testmodus aktiviert
+02 54 32 36 33 30 03
+-1
+1
+COMMENT - System für die Überprüfung von Hardware- und Softwarekomponenten aktiviert.
+0
+1
+0
+0
+
+RECEIVE
+407
+Text 2631 - AD5422 - Externer Widerstand deaktiviert
+02 54 32 36 33 31 03
+-1
+1
+COMMENT - AD5422: Es wird der interne Widerstand zur Stromeinstellung verwendet.
+0
+1
+0
+0
+
+RECEIVE
+408
+Text 2640 - Testmodus deaktiviert
+02 54 32 36 34 30 03
+-1
+1
+COMMENT - System für die Überprüfung von Hardware- und Softwarekomponenten abgeschaltet.
+0
+1
+0
+0
+
+RECEIVE
+409
+Text 2641 - AD5422 - Externer Widerstand aktiviert
+02 54 32 36 34 31 03
+-1
+1
+COMMENT - AD5422: Es wird der externe Widerstand zur Stromeinstellung verwendet.
+0
+1
+0
+0
+
+RECEIVE
+410
+Text 2640 - Testmodus deaktiviert
+02 54 32 36 34 30 03
+-1
+1
+COMMENT - System für die Überprüfung von Hardware- und Softwarekomponenten abgeschaltet.
+0
+1
+0
+0
+
+RECEIVE
+411
+Text 2650 - UART-Test CH0
+02 54 32 36 35 30 03
+-1
+1
+COMMENT - Die Serielle Schnittstelle des Kanal 0 ist okay.
+0
+1
+0
+0
+
+RECEIVE
+412
+Text 2652 - UART-Test CH1
+02 54 32 36 35 32 03
+-1
+1
+COMMENT - Die Serielle Schnittstelle des Kanal 1 ist okay.
+0
+1
+0
+0
+
+RECEIVE
+413
+Text 2655 - SPI-Test okay
+02 54 32 36 35 35 03
+-1
+1
+COMMENT - Die SPI Schnittstelle ist okay.
+0
+1
+0
+0
+
+RECEIVE
+414
+Text 2660 - Eeprom-Test gestartet
+02 54 32 36 36 30 03
+-1
+1
+COMMENT - Der Eeprom-Test wurde gestartet - bitte warten !
+0
+1
+0
+0
+
+RECEIVE
+415
+Text 2688 - Die ADC-Wandlerrate wurde verändert
+02 54 32 36 38 38 03
+-1
+1
+COMMENT - Die ADC-Wandlerrate wurde verändert.
+0
+1
+0
+0
+
+RECEIVE
+416
+Text 2690 - LED-Test gestartet
+02 54 32 36 39 30 03
+-1
+1
+COMMENT - Routine zur Überprüfung der LEDs gestartet.
+0
+1
+0
+0
+
+RECEIVE
+417
+Text 2700 - LED-Test gestoppt
+02 54 32 37 30 30 03
+-1
+1
+COMMENT - Routine zur Überprüfung der LEDs gestoppt.
+0
+1
+0
+0
+
+RECEIVE
+418
+Text 2730 - LED-Test gestoppt
+02 54 32 37 33 30 03
+-1
+1
+COMMENT - Alle Routinen zur Überprüfung der Hardware gestoppt.
+0
+1
+0
+0
+
+RECEIVE
+419
+Text 2790 - LED-Testmode gelöscht
+02 54 32 37 39 30 03
+-1
+1
+COMMENT - LED-Testmode gelöscht.
+0
+1
+0
+0
+
+RECEIVE
+420
+Text 2800 - LED-Testmode gesetzt
+02 54 32 38 30 30 03
+-1
+1
+COMMENT - LED-Testmode gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+421
+Text 2810 - Reset-Zähler gelöscht
+02 54 32 38 31 30 03
+-1
+1
+COMMENT - Reset-Zähler gelöscht.
+0
+1
+0
+0
+
+RECEIVE
+422
+Text 2820 - Reset-Freigabe gelöscht
+02 54 32 38 32 30 03
+-1
+1
+COMMENT - Reset-Freigabe bei Kommunikationsproblemen gelöscht.
+0
+1
+0
+0
+
+RECEIVE
+423
+Text 2830 - RS232-Baudrate gesetzt
+02 54 32 38 33 30 03
+-1
+1
+COMMENT - RS232-Baudrate gesetzt.
+0
+1
+0
+0
+
+RECEIVE
+424
+Text 2840 - SPI-Test ausgeschaltet
+02 54 32 38 34 30 03
+-1
+1
+COMMENT - SPI-Test ausgeschaltet.
+0
+1
+0
+0
+
+RECEIVE
+425
+Text 2850 - SPI-Test eingeschaltet
+02 54 32 38 35 30 03
+-1
+1
+COMMENT - SPI-Test eingeschaltet.
+0
+1
+0
+0
+
+RECEIVE
+426
+Text 2860 - SPI-Test Zähler gelöscht
+02 54 32 38 36 30 03
+-1
+1
+COMMENT - SPI-Test Zähler gelöscht.
+0
+1
+0
+0
+
+RECEIVE
+427
+Text 3000 - Hardware-Version
+02 54 33 30 30 30 03
+-1
+1
+COMMENT - Hardware-Version : ..................................................... 
+0
+1
+0
+0
+
+RECEIVE
+428
+Text 3010 - Software-Version
+02 54 33 30 31 30 03
+-1
+1
+COMMENT - Software-Version : ..................................................... 
+0
+1
+0
+0
+
+RECEIVE
+429
+Text 3020 - SystemID
+02 54 33 30 32 30 03
+-1
+1
+COMMENT - SystemID : ............................................................. 
+0
+1
+0
+0
+
+RECEIVE
+430
+Text 3030 - Applikation
+02 54 33 30 33 30 03
+-1
+1
+COMMENT - Applikation : .......................................................... 
+0
+1
+0
+0
+
+RECEIVE
+431
+Text 3400 - Überprüfung der Kompensation
+02 54 33 34 30 30 03
+-1
+1
+COMMENT - Überprüfung der Kompensation : 
+0
+1
+0
+0
+
+RECEIVE
+432
+Text 3410 - Driftermittlung
+02 54 33 34 31 30 03
+-1
+1
+COMMENT - Driftermittlung : 
+0
+1
+0
+0
+
+RECEIVE
+433
+Text 3420 - Letzter abgearbeiteter Status der Kennlinienaufnahme
+02 54 33 34 32 30 03
+-1
+1
+COMMENT - Letzter abgearbeiteter Status der Kennlinienaufnahme 
+0
+1
+0
+0
+
+RECEIVE
+434
+Text 3430 - Kennlinienaufnahme komplett abgeschlossen
+02 54 33 34 33 30 03
+-1
+1
+COMMENT - Kennlinienaufnahme komplett abgeschlossen 
+0
+1
+0
+0
+
+RECEIVE
+435
+Text 3480 - Maximalwert bei Temperatur 
+02 54 33 34 38 30 03
+-1
+1
+COMMENT - Maximalwert bei Temperatur  : 
+0
+1
+0
+0
+
+RECEIVE
+436
+Text 3490 - Maximalwert
+02 54 33 34 39 30 03
+-1
+1
+COMMENT - Maximalwert :                 
+0
+1
+0
+0
+
+RECEIVE
+437
+Text 3500 - Minimalwert bei Temperatur 
+02 54 33 35 30 30 03
+-1
+1
+COMMENT - Minimalwert bei Temperatur  : 
+0
+1
+0
+0
+
+RECEIVE
+438
+Text 3510 - Minimalwert
+02 54 33 35 31 30 03
+-1
+1
+COMMENT - Minimalwert :                 
+0
+1
+0
+0
+
+RECEIVE
+439
+Text 3520 - 1.Wert
+02 54 33 35 32 30 03
+-1
+1
+COMMENT - 1.Wert : 
+0
+1
+0
+0
+
+RECEIVE
+440
+Text 3530 - 2.Wert
+02 54 33 35 33 30 03
+-1
+1
+COMMENT - 2.Wert : 
+0
+1
+0
+0
+
+RECEIVE
+441
+Text 3540 - Drift
+02 54 33 35 34 30 03
+-1
+1
+COMMENT - Drift  : 
+0
+1
+0
+0
+
+RECEIVE
+442
+Text 3550 - Zellenkennlinie
+02 54 33 35 35 30 03
+-1
+1
+COMMENT - Zellenkennlinie :  
+0
+1
+0
+0
+
+RECEIVE
+443
+Text 3560 - Betriebszeit
+02 54 33 35 36 30 03
+-1
+1
+COMMENT - Betriebszeit : ......................................................... 
+0
+1
+0
+0
+
+RECEIVE
+444
+Text 3570 - Betriebszeit (relativ)
+02 54 33 35 37 30 03
+-1
+1
+COMMENT - Betriebszeit (relativ) : ............................................... 
+0
+1
+0
+0
+
+RECEIVE
+445
+Text 3580 - Artikelnummer
+02 54 33 35 38 30 03
+-1
+1
+COMMENT - Artikelnummer : ........................................................ 
+0
+1
+0
+0
+
+RECEIVE
+446
+Text 3590 - Seriennummer
+02 54 33 35 39 30 03
+-1
+1
+COMMENT - Seriennummer : ......................................................... 
+0
+1
+0
+0
+
+RECEIVE
+447
+Text 3600 - Maximallast
+02 54 33 36 30 30 03
+-1
+1
+COMMENT - Maximale Systemlast : .................................................. 
+0
+1
+0
+0
+
+RECEIVE
+448
+Text 3610 - Maximale Ist-Sollstrom-Abweichung
+02 54 33 36 31 30 03
+-1
+1
+COMMENT - Maximale Ist-Sollstrom-Abweichung [mA] : ............................... 
+0
+1
+0
+0
+
+RECEIVE
+449
+Text 3620 - Integral-Anteil der Stromregelung
+02 54 33 36 32 30 03
+-1
+1
+COMMENT - Integral-Anteil der Stromregelung [%] : ................................ 
+0
+1
+0
+0
+
+RECEIVE
+450
+Text 3625 - Proportional-Anteil der Stromregelung
+02 54 33 36 32 35 03
+-1
+1
+COMMENT - Proportional-Anteil der Stromregelung [%] : ............................ 
+0
+1
+0
+0
+
+RECEIVE
+451
+Text 3630 - Grenzwert 'Nullpunktüberwachung'
+02 54 33 36 33 30 03
+-1
+1
+COMMENT - Grenzwert der Nullpunktüberwachung [kg] : .............................. 
+0
+1
+0
+0
+
+RECEIVE
+452
+Text 3640 - Grenzwert 'Temperaturgang'
+02 54 33 36 34 30 03
+-1
+1
+COMMENT - Grenzwert des Temperaturgangs [kg] : ................................... 
+0
+1
+0
+0
+
+RECEIVE
+453
+Text 3650 - Grenzwert 'Drift'
+02 54 33 36 35 30 03
+-1
+1
+COMMENT - Grenzwert der Drift [kg] : ............................................. 
+0
+1
+0
+0
+
+RECEIVE
+454
+Text 3660 - Zellentyp
+02 54 33 36 36 30 03
+-1
+1
+COMMENT - Typ der Wägezelle : .................................................... 
+0
+1
+0
+0
+
+RECEIVE
+455
+Text 3670 - Standardzelle
+02 54 33 36 37 30 03
+-1
+1
+COMMENT Standard-Wägezelle
+0
+1
+0
+0
+
+RECEIVE
+456
+Text 3675 - XL-Zelle
+02 54 33 36 37 35 03
+-1
+1
+COMMENT XL-Wägezelle
+0
+1
+0
+0
+
+RECEIVE
+457
+Text 3680 - Aktuelle Filtertiefe
+02 54 33 36 38 30 03
+-1
+1
+COMMENT - Aktuelle Filtertiefe : ................................................. 
+0
+1
+0
+0
+
+RECEIVE
+458
+Text 3690 - Aktuelle Zeithysterese
+02 54 33 36 39 30 03
+-1
+1
+COMMENT - Aktuelle Zeithysterese bei Grenzwertüberschreitung : ................... 
+0
+1
+0
+0
+
+RECEIVE
+459
+Text 3700 - Motion-Zeitbasis
+02 54 33 37 30 30 03
+-1
+1
+COMMENT - Aktuelle Zeitbasis zur Motion-Überprüfung : ............................ 
+0
+1
+0
+0
+
+RECEIVE
+460
+Text 3710 - Freier Diagnosespeicher
+02 54 33 37 31 30 03
+-1
+1
+COMMENT - Freier Diagnosespeicher (0 = Überlauf) : 
+0
+1
+0
+0
+
+RECEIVE
+461
+Text 3720 - RS232-Baudrate
+02 54 33 37 32 30 03
+-1
+1
+COMMENT - RS232-Baudrate : ....................................................... 
+0
+1
+0
+0
+
+RECEIVE
+462
+Text 4000 - =======
+02 54 34 30 30 30 03
+-1
+1
+COMMENT - ========= 
+0
+1
+0
+0
+
+RECEIVE
+463
+Text 4010 - bei
+02 54 34 30 31 30 03
+-1
+1
+COMMENT - bei : .................................................................. 
+0
+1
+0
+0
+
+RECEIVE
+464
+Text 4020 - Tabellenkopf Kennlinie
+02 54 34 30 32 30 03
+-1
+1
+COMMENT -    Temperatur       Korrekturwert
+0
+1
+0
+0
+
+RECEIVE
+465
+Text 4030 - Systemzeit
+02 54 34 30 33 30
+-1
+1
+COMMENT Systemzeit :
+0
+1
+0
+0
+
+RECEIVE
+466
+Text 4040 - OKAY
+02 54 34 30 34 30
+-1
+1
+COMMENT OKAY
+0
+1
+0
+0
+
+RECEIVE
+467
+Text 4050 - --------------------
+02 54 34 30 35 30 03
+-1
+1
+COMMENT - --------------------
+0
+1
+0
+0
+
+RECEIVE
+468
+Text 4060 - --------------------------------------------------------------------------------
+02 54 34 30 36 30 03
+-1
+1
+COMMENT - --------------------------------------------------------------------------------
+0
+1
+0
+0
+
+RECEIVE
+469
+Text 4070 - Absolut-Statistik
+02 54 34 30 37 30 03
+-1
+1
+COMMENT - Absolut-Statistik :
+0
+1
+0
+0
+
+RECEIVE
+470
+Text 4080 - Relativ-Statistik
+02 54 34 30 38 30 03
+-1
+1
+COMMENT - Relativ-Statistik :
+0
+1
+0
+0
+
+RECEIVE
+471
+Text 5000 - Dynamischer Datenspeicher zu klein !
+02 54 35 30 30 30 03
+-1
+1
+COMMENT - Dynamischer Datenspeicher zu klein !
+0
+1
+0
+0
+
+RECEIVE
+472
+Text 5010 - Initialisierungsfehler !
+02 54 35 30 31 30 03
+-1
+1
+COMMENT - Initialisierungsfehler !
+1
+1
+0
+0
+
+RECEIVE
+473
+Text 5020 - Keine ID vergeben !
+02 54 35 30 32 30 03
+-1
+1
+COMMENT - Platine besitzt keine Identifizierung !
+0
+1
+0
+0
+
+RECEIVE
+474
+Text 5030 - ID bereits vorhanden !
+02 54 35 30 33 30 03
+-1
+1
+COMMENT - ID ist bereits gesetzt !
+0
+1
+0
+0
+
+RECEIVE
+475
+Text 5040 - ID konnte nicht gelöscht werden !
+02 54 35 30 34 30 03
+-1
+1
+COMMENT - Passwort falsch - System-ID konnte nicht gelöscht werden !
+0
+1
+0
+0
+
+RECEIVE
+476
+Text 5060 - Fehler beim Teachen des Taras !
+02 54 35 30 36 30 03
+-1
+1
+COMMENT - Fehler beim Teachen des Taras !
+0
+1
+0
+0
+
+RECEIVE
+477
+Text 5070 - Kein Diagnoseeintrag vorhanden
+02 54 35 30 37 30 03
+-1
+1
+COMMENT - Kein Diagnoseeintrag vorhanden !
+0
+1
+0
+0
+
+RECEIVE
+478
+Text 5080 - Softwareinkompatibilität !
+02 54 35 30 38 30 03
+-1
+1
+COMMENT - Softwareinkompatibilität !
+1
+1
+0
+0
+
+RECEIVE
+479
+Text 5090 - Kanal 1 meldet sich nicht mehr !
+02 54 35 30 39 30 03
+-1
+1
+COMMENT - Kanal 1 meldet sich nicht mehr - Systemreset !
+0
+1
+0
+0
+
+RECEIVE
+480
+Text 5100 - Drift-Fehler
+02 54 35 31 30 30 03
+-1
+1
+COMMENT - Drift-Fehler 
+0
+1
+0
+0
+
+RECEIVE
+481
+Text 5110 - Abweichung bei der Kompensationsprüfung im Minimum zu gross
+02 54 35 31 31 30 03
+-1
+1
+COMMENT - Abweichung bei der Kompensationsprüfung im Minimum zu gross
+0
+1
+0
+0
+
+RECEIVE
+482
+Text 5120 - Abweichung bei der Kompensationsprüfung im Maximum zu gross
+02 54 35 31 32 30 03
+-1
+1
+COMMENT - Abweichung bei der Kompensationsprüfung im Maximum zu gross
+0
+1
+0
+0
+
+RECEIVE
+483
+Text 5130 - Driftermittlung wurde nicht durchgeführt
+02 54 35 31 33 30 03
+-1
+1
+COMMENT - Driftermittlung wurde nicht durchgeführt
+0
+1
+0
+0
+
+RECEIVE
+484
+Text 5140 - Kennlinien wurde nicht aufgenommen
+02 54 35 31 34 30 03
+-1
+1
+COMMENT - Kennlinien wurde nicht aufgenommen
+0
+1
+0
+0
+
+RECEIVE
+485
+Text 5150 - Extrema wurden nicht ermittelt
+02 54 35 31 35 30 03
+-1
+1
+COMMENT - Extrema wurden nicht ermittelt
+0
+1
+0
+0
+
+RECEIVE
+486
+Text 5160 - Fehler - Gewicht instabil
+02 54 35 31 36 30 03
+-1
+1
+COMMENT - Fehler - Gewicht instabil !
+0
+1
+0
+0
+
+RECEIVE
+487
+Text 5170 - Fehler - Zellentyp noch nicht definiert
+02 54 35 31 37 30 03
+-1
+1
+COMMENT - Fehler - Zellentyp noch nicht definiert !
+0
+1
+0
+0
+
+RECEIVE
+488
+Text 5175 - Fehler - Kennlinienaufnahme nicht angelaufen
+02 54 35 31 37 35 03
+-1
+1
+COMMENT - Fehler - Kennlinienaufnahme nicht angelaufen !
+0
+1
+0
+0
+
+RECEIVE
+489
+Text 5180 - Fehler beim Eeprom-Test - Kanal 0
+02 54 35 31 38 30 03
+-1
+1
+COMMENT - Der Eeprom-Test zeigte Fehler beim Kanal 0 !!!
+0
+1
+0
+0
+
+RECEIVE
+490
+Text 5190 - Fehler beim Eeprom-Test - Kanal 1
+02 54 35 31 39 30 03
+-1
+1
+COMMENT - Der Eeprom-Test zeigte Fehler beim Kanal 1 !!!
+0
+1
+0
+0
+
+RECEIVE
+491
+Text 5200 - Fehler beim Eeprom-Test - Kanal 0 und Kanal 1
+02 54 35 32 30 30 03
+-1
+1
+COMMENT - Der Eeprom-Test zeigte bei beiden Kanälen Fehler !!!
+0
+1
+0
+0
+
+RECEIVE
+492
+Text 5210 - Fehler beim SPI-Test
+02 54 35 32 31 30 03
+-1
+1
+COMMENT - Der SPI-Test zeigte einen Fehler !!!
+0
+1
+0
+0
+
+RECEIVE
+493
+Text 5220 - Fehler - 1.Referenzpunkt fehlt
+02 54 35 32 32 30 03
+-1
+1
+COMMENT - Fehler - 1.Referenzpunkt fehlt !
+0
+1
+0
+0
+
+RECEIVE
+494
+Text 9000 - MOBA Mobile Automation AG
+02 54 39 30 30 30 03
+-1
+1
+COMMENT - MOBA Mobile Automation AG - Software : ................................. 
+0
+1
+0
+0
+
+RECEIVE
+495
+Text 9002 - MOBA Mobile Automation AG
+02 54 39 30 30 32 03
+-1
+1
+COMMENT - MOBA Mobile Automation AG - Hardware : ................................. 
+0
+1
+0
+0
+
+RECEIVE
+496
+Text 9005 - MOBA Mobile Automation AG (Entwicklungssoftware)
+02 54 39 30 30 35 03
+-1
+1
+COMMENT - MOBA Mobile Automation AG - (Entwicklungs-)Software : .................. 
+0
+1
+0
+0
+
+RECEIVE
+497
+Text 9010 - Datum :                    Prüfer :
+02 54 39 30 31 30 03
+-1
+1
+COMMENT - Datum : ___________________________           Prüfer : ___________________________ 
+1
+1
+0
+0
+
+RECEIVE
+498
+Text 9020 - Software-Version 'ADuC836-Projekt'
+02 54 39 30 32 30 03
+-1
+1
+COMMENT - Software-Version 'ADuC836-Projekt' : ................................... 
+0
+1
+0
+0
+
+RECEIVE
+499
+Text 9030 - Software-Version 'ADC-Modul'
+02 54 39 30 33 30 03
+-1
+1
+COMMENT - Software-Version 'ADC-Modul' : ......................................... 
+0
+1
+0
+0
+
+RECEIVE
+500
+Text 9040 - Software-Version 'DAC-Modul'
+02 54 39 30 34 30 03
+-1
+1
+COMMENT - Software-Version 'DAC-Modul' : ......................................... 
+0
+1
+0
+0
+
+RECEIVE
+501
+Text 9050 - Software-Version 'SPI-Modul'
+02 54 39 30 35 30 03
+-1
+1
+COMMENT - Software-Version 'SPI-Modul' : ......................................... 
+0
+1
+0
+0
+
+RECEIVE
+502
+Text 9060 - Software-Version 'RS232-Modul'
+02 54 39 30 36 30 03
+-1
+1
+COMMENT - Software-Version 'RS232-Modul' : ....................................... 
+0
+1
+0
+0
+
+RECEIVE
+503
+Text 9070 - Software-Version 'Watchdog-Modul'
+02 54 39 30 37 30 03
+-1
+1
+COMMENT - Software-Version 'Watchdog-Modul' : .................................... 
+0
+1
+0
+0
+
+RECEIVE
+504
+Text 9080 - Software-Version 'Timer-Modul'
+02 54 39 30 38 30 03
+-1
+1
+COMMENT - Software-Version 'Timer-Modul' : ....................................... 
+0
+1
+0
+0
+
+RECEIVE
+505
+Text 9090 - Software-Version 'Flash-Modul'
+02 54 39 30 39 30 03
+-1
+1
+COMMENT - Software-Version 'Flash-Modul' : ....................................... 
+0
+1
+0
+0
+
+RECEIVE
+506
+Text 9100 - Software-Version 'External-Modul'
+02 54 39 31 30 30 03
+-1
+1
+COMMENT - Software-Version 'External-Modul' : .................................... 
+0
+1
+0
+0
+
+RECEIVE
+507
+Text 9110 - Software-Version 'Messwert-Modul'
+02 54 39 31 31 30 03
+-1
+1
+COMMENT - Software-Version 'Messwert-Modul' : .................................... 
+0
+1
+0
+0
+
+RECEIVE
+508
+Text 9120 - Software-Version 'Mittelwertfilter-Modul'
+02 54 39 31 32 30 03
+-1
+1
+COMMENT - Software-Version 'Mittelwertfilter-Modul' : ............................ 
+0
+1
+0
+0
+
+RECEIVE
+509
+Text 9130 - Software-Version 'Totbandfilter-Modul'
+02 54 39 31 33 30 03
+-1
+1
+COMMENT - Software-Version 'Totbandfilter-Modul' : ............................... 
+0
+1
+0
+0
+
+RECEIVE
+510
+Text 9140 - Software-Version 'Temperaturkompensations-Modul'
+02 54 39 31 34 30 03
+-1
+1
+COMMENT - Software-Version 'Temperaturkompensations-Modul' : ..................... 
+0
+1
+0
+0
+
+RECEIVE
+511
+Text 9150 - Software-Version 'TeachIn-Modul'
+02 54 39 31 35 30 03
+-1
+1
+COMMENT - Software-Version 'TeachIn-Modul' : ..................................... 
+0
+1
+0
+0
+
+RECEIVE
+512
+Text 9160 - Software-Version 'Statistik-Modul'
+02 54 39 31 36 30 03
+-1
+1
+COMMENT - Software-Version 'Statistik-Modul' : ................................... 
+0
+1
+0
+0
+
+RECEIVE
+513
+Text 9170 - Software-Version 'Eeprom-Modul'
+02 54 39 31 37 30 03
+-1
+1
+COMMENT - Software-Version 'Eeprom-Modul' : ...................................... 
+0
+1
+0
+0
+
+RECEIVE
+514
+Text 9500 - ohne Strom-Rückführung
+02 54 39 35 30 30 03
+-1
+1
+COMMENT - ohne Strom-Rückführung !
+0
+1
+0
+0
+
+RECEIVE
+515
+Text 9990 - MAX[0] - 
+02 54 39 39 39 30 03
+-1
+1
+COMMENT - MAX[0] - 
+0
+1
+0
+0
+
+RECEIVE
+516
+Text 9991 - MAX[1] - 
+02 54 39 39 39 31 03
+-1
+1
+COMMENT - MAX[1] - 
+0
+1
+0
+0
+
+RECEIVE
+517
+E001 - Kanal-Nummer ungültig !!!
+02 45 30 30 31 03
+-1
+1
+COMMENT  - Kanal-Nummer ungültig !!!
+1
+1
+0
+0
+
+RECEIVE
+518
+E002 - Parameter außerhalb des Bereichs !!!
+02 45 30 30 32 03
+-1
+1
+COMMENT  - Parameter außerhalb des Bereichs !!!
+0
+1
+0
+0
+
+RECEIVE
+519
+E004 - Unbekanntes Komando !!!
+02 45 30 30 34 03
+-1
+1
+COMMENT  - Unbekanntes Kommando !!!
+0
+1
+0
+0
+
+RECEIVE
+520
+E005 - Fehler bei der Befehlsausführung !!!
+02 45 30 30 35 03
+-1
+1
+COMMENT  - Fehler bei der Befehlsausführung !!!
+1
+1
+0
+0
+
+RECEIVE
+521
+E006 - Befehl noch nicht implementiert !!!
+02 45 30 30 36 03
+-1
+1
+COMMENT  - Befehl noch nicht implementiert !!!
+0
+1
+0
+0
+
+RECEIVE
+522
+E007 - Parameter fehlt !!!
+02 45 30 30 37 03
+-1
+1
+COMMENT  - Parameter fehlt !!!
+0
+1
+0
+0
+
+RECEIVE
+523
+E008 - Unerwartetes Zeichen im Kommandostring / überflüssiger Parameter !!!
+02 45 30 30 38 03
+-1
+1
+COMMENT  - Unerwartetes Zeichen im Kommandostring / überflüssiger Parameter !!!
+0
+1
+0
+0
+
+RECEIVE
+524
+E009 - Wert außerhalb des Grenzwertes !!!
+02 45 30 30 39 03
+-1
+1
+COMMENT  - Wert außerhalb des Grenzwertes !!!
+0
+1
+0
+0
+
+RECEIVE
+525
+E010 - Drifterkennung läuft (nur SLC) !!!
+02 45 30 31 30 03
+-1
+1
+COMMENT  - Drifterkennung läuft (nur SLC) !!!
+0
+1
+0
+0
+
+RECEIVE
+526
+E011 - Parameter der Partner unterschiedlich !!!
+02 45 30 31 31 03
+-1
+1
+COMMENT  - Parameter der Partner unterschiedlich !!!
+0
+1
+0
+0
+
+RECEIVE
+527
+E012 - undefinierter Fehlercode
+02 45 30 31 32 03
+-1
+1
+COMMENT  - undefinierter Fehlercode
+0
+1
+0
+0
+
+RECEIVE
+528
+E102 - Kanal 1 - Parameter außerhalb des Bereichs !!!
+02 45 31 30 32 03
+-1
+1
+COMMENT  - Kanal 1 - Parameter außerhalb des Bereichs !!!
+0
+1
+0
+0
+
+RECEIVE
+529
+E104 - Kanal 1 - Unbekanntes Kommando !!!
+02 45 31 30 34 03
+-1
+1
+COMMENT  - Kanal 1 - Unbekanntes Kommando !!!
+0
+1
+0
+0
+
+RECEIVE
+530
+E105 - Kanal 1 - Fehler bei der Befehlsausführung !!!
+02 45 31 30 35 03
+-1
+1
+COMMENT  - Kanal 1 - Fehler bei der Befehlsausführung !!!
+0
+1
+0
+0
+
+RECEIVE
+531
+E106 - Kanal 1 - Befehl noch nicht implementiert !!!
+02 45 31 30 36 03
+-1
+1
+COMMENT  - Kanal 1 - Befehl noch nicht implementiert !!!
+0
+1
+0
+0
+
+RECEIVE
+532
+E107 - Kanal 1 - Parameter fehlt !!!
+02 45 31 30 37 03
+-1
+1
+COMMENT  - Kanal 1 - Parameter fehlt !!!
+0
+1
+0
+0
+
+RECEIVE
+533
+E108 - Kanal 1 - Unerwartetes Zeichen im Kommandostring / überflüssiger Parameter !!!
+02 45 31 30 38 03
+-1
+1
+COMMENT  - Kanal 1 - Unerwartetes Zeichen im Kommandostring / überflüssiger Parameter !!!
+0
+1
+0
+0
+
+RECEIVE
+534
+E109 - Kanal 1 - Wert außerhalb des Grenzwertes !!!
+02 45 31 30 39 03
+-1
+1
+COMMENT  - Kanal 1 - Wert außerhalb des Grenzwertes !!!
+0
+1
+0
+0
+
+RECEIVE
+535
+E110 - Kanal 1 - Drifterkennung läuft (nur SLC) !!!
+02 45 31 31 30 03
+-1
+1
+COMMENT  - Kanal 1 - Drifterkennung läuft (nur SLC) !!!
+0
+1
+0
+0
+
+RECEIVE
+536
+E111 - Kanal 1 - Parameter der Partner unterschiedlich !!!
+02 45 31 31 31 03
+-1
+1
+COMMENT  - Kanal 1 - Parameter der Partner unterschiedlich !!!
+0
+1
+0
+0
+
+RECEIVE
+537
+E112 - Kanal 1 - undefinierter Fehlercode
+02 45 31 31 32 03
+-1
+1
+COMMENT  - Kanal 1 - undefinierter Fehlercode
+0
+1
+0
+0
+
+RECEIVE
+538
+E0002 - Netzteilspannung außer Bereich
+02 45 30 30 30 32 03
+-1
+1
+COMMENT - Netzteilspannung außer Bereich
+0
+1
+0
+0
+
+RECEIVE
+539
+E0003 - Keine Kommunikation zum Partner möglich
+02 45 30 30 30 33 03
+-1
+1
+COMMENT - Es ist keine Kommunikation zum Partner möglich
+0
+1
+0
+0
+
+RECEIVE
+540
+E0020 - Kanal 0- und Kanal 1- Software nicht kompatibel
+02 45 30 30 32 30 03
+-1
+1
+COMMENT - Kanal 0- und Kanal 1- Software nicht kompatibel
+0
+1
+0
+0
+
+RECEIVE
+541
+E0021 - Nicht genügend Speicherplatz für dynamische Variablen vorhanden
+02 45 30 30 32 31 03
+-1
+1
+COMMENT - Nicht genügend Speicherplatz für dynamische Variablen vorhanden
+0
+1
+0
+0
+
+RECEIVE
+542
+E0022 - System-ID nicht gefunden
+02 45 30 30 32 32 03
+-1
+1
+COMMENT - System-ID nicht gefunden
+0
+1
+0
+0
+
+RECEIVE
+543
+E0023 - Initialisierungsfehler
+02 45 30 30 32 33 03
+-1
+1
+COMMENT - Fehler während der Initialisierungsphase
+0
+1
+0
+0
+
+RECEIVE
+544
+E0024 - Überlastfehler
+02 45 30 30 32 34 03
+-1
+1
+COMMENT - Fehler während der Initialisierungsphase
+0
+1
+0
+0
+
+RECEIVE
+545
+E0032 - Fehler beim Beschreiben des Eeproms
+02 45 30 30 33 32 03
+-1
+1
+COMMENT - Fehler beim Beschreiben des Eeproms
+0
+1
+0
+0
+
+RECEIVE
+546
+E0033 - Fehler beim Beschreiben des Flashs
+02 45 30 30 33 33 03
+-1
+1
+COMMENT - Fehler beim Beschreiben des Flashs
+0
+1
+0
+0
+
+RECEIVE
+547
+E0034 - Fehler beim Auslesen des Eeproms
+02 45 30 30 33 34 03
+-1
+1
+COMMENT - Fehler beim Auslesen des Eeproms
+0
+1
+0
+0
+
+RECEIVE
+548
+E0035 - Fehler beim Auslesen des Flashs
+02 45 30 30 33 35 03
+-1
+1
+COMMENT - Fehler beim Auslesen des Flashs
+0
+1
+0
+0
+
+RECEIVE
+549
+E0036 - Später löschen ! Nicht genügend Speicherplatz für dynamische Variablen vorhanden
+02 45 30 30 33 36 03
+-1
+1
+COMMENT - Nicht genügend Speicherplatz für dynamische Variablen vorhanden
+0
+1
+0
+0
+
+RECEIVE
+550
+E0037 - Es ist ein Watchdog aufgetreten
+02 45 30 30 33 37 03
+-1
+1
+COMMENT - Es ist ein Watchdog aufgetreten
+0
+1
+0
+0
+
+RECEIVE
+551
+E0038 - Später löschen ! Keine Kommunikation zum Partner möglich
+02 45 30 30 33 38 03
+-1
+1
+COMMENT - Es ist keine Kommunikation zum Partner möglich
+0
+1
+0
+0
+
+RECEIVE
+552
+E0064 - Abweichung zwischen Ist- und Sollstrom zu groß
+02 45 30 30 36 34 03
+-1
+1
+COMMENT - Die Abweichung zwischen Ist- und Sollstrom ist zu groß !
+0
+1
+0
+0
+
+RECEIVE
+553
+E0096 - Partner im Sicherheitszustand 
+02 45 30 30 39 36 03
+-1
+1
+COMMENT - Partner im Sicherheitszustand  !
+0
+1
+0
+0
+
+RECEIVE
+554
+E0112 - Fehler 'Netzteilstatus'
+02 45 30 31 31 32 03
+-1
+1
+COMMENT - Netzteil meldet einen Fehlerzustand !
+0
+1
+0
+0
+
+RECEIVE
+555
+M0001 - Systemneustart
+02 4D 30 30 30 31 03
+-1
+1
+COMMENT - Systemneustart
+0
+1
+0
+0
+
+RECEIVE
+556
+M0002 - Grenzwert geteacht
+02 4D 30 30 30 32 03
+-1
+1
+COMMENT - Grenzwert geteacht
+0
+1
+0
+0
+
+RECEIVE
+557
+M0003 - Tara geteacht
+02 4D 30 30 30 33 03
+-1
+1
+COMMENT - Tara geteacht
+0
+1
+0
+0
+
+RECEIVE
+558
+M0004 - Nullpunkt gesetzt
+02 4D 30 30 30 34 03
+-1
+1
+COMMENT - Nullpunkt gesetzt
+0
+1
+0
+0
+
+RECEIVE
+559
+M0005 - Nullpunkt auf Wert gesetzt
+02 4D 30 30 30 35 03
+-1
+1
+COMMENT - Nullpunkt auf Wert gesetzt
+0
+1
+0
+0
+
+RECEIVE
+560
+M0006 - Kalibrierfaktor ermittelt
+02 4D 30 30 30 36 03
+-1
+1
+COMMENT - Kalibrierfaktor ermittelt
+0
+1
+0
+0
+
+RECEIVE
+561
+M0007 - Kalibrierfaktor auf Wert gesetzt
+02 4D 30 30 30 37 03
+-1
+1
+COMMENT - Kalibrierfaktor auf Wert gesetzt
+0
+1
+0
+0
+
+RECEIVE
+562
+M0008 - Diagnosespeicher gelöscht
+02 4D 30 30 30 38 03
+-1
+1
+COMMENT - Diagnosespeicher gelöscht
+0
+1
+0
+0
+
+RECEIVE
+563
+M0009 - Alarm gelöscht
+02 4D 30 30 30 39 03
+-1
+1
+COMMENT - Alarm gelöscht
+0
+1
+0
+0
+
+RECEIVE
+564
+M0017 - Tara manuell gesetzt
+02 4D 30 30 31 37 03
+-1
+1
+COMMENT - Tara wurde manuell gesetzt
+0
+1
+0
+0
+
+RECEIVE
+565
+M0018 - Kennlinienaufnahme gestartet
+02 4D 30 30 31 38 03
+-1
+1
+COMMENT - Kennlinienaufnahme gestartet
+0
+1
+0
+0
+
+RECEIVE
+566
+M0019 - Diagnosespeicher wegen Initialisierung gelöscht
+02 4D 30 30 31 39 03
+-1
+1
+COMMENT - Diagnosespeicher wegen Initialisierung gelöscht
+0
+1
+0
+0
+
+RECEIVE
+567
+M0021 - Betriebsstundenzähler gelöscht
+02 4D 30 30 32 31 03
+-1
+1
+COMMENT - Betriebsstundenzähler gelöscht
+0
+1
+0
+0
+
+RECEIVE
+568
+M0022 - Später löschen ! Watchdogadresse gelöscht
+02 4D 30 30 32 32 03
+-1
+1
+COMMENT - Watchdogadresse gelöscht
+0
+1
+0
+0
+
+RECEIVE
+569
+M0023 - Später löschen ! Kennlinienaufnahme gestoppt
+02 4D 30 30 32 33 03
+-1
+1
+COMMENT - Kennlinienaufnahme gestoppt
+0
+1
+0
+0
+
+RECEIVE
+570
+M0024 - Kalibrierung der Stromschnittstelle gespeichert
+02 4D 30 30 32 34 03
+-1
+1
+COMMENT - Kalibrierung der Stromschnittstelle gespeichert
+0
+1
+0
+0
+
+RECEIVE
+571
+M0025 - Kalibrierung der Stromschnittstelle gespeichert und Sicherung angelegt
+02 4D 30 30 32 35 03
+-1
+1
+COMMENT - Kalibrierung der Stromschnittstelle gespeichert und Sicherung angelegt
+0
+1
+0
+0
+
+RECEIVE
+572
+M0026 - Kalibrierung der Stromschnittstelle gelöscht
+02 4D 30 30 32 36 03
+-1
+1
+COMMENT - Kalibrierung der Stromschnittstelle gelöscht
+0
+1
+0
+0
+
+RECEIVE
+573
+M0027 - erster Kalibrierpunkt gesetzt
+02 4D 30 30 32 37 03
+-1
+1
+COMMENT - erster Kalibrierpunkt gesetzt
+0
+1
+0
+0
+
+RECEIVE
+574
+M0028 - zweiter Kalibrierpunkt gesetzt
+02 4D 30 30 32 38 03
+-1
+1
+COMMENT - zweiter Kalibrierpunkt gesetzt
+0
+1
+0
+0
+
+RECEIVE
+575
+M0029 - Später löschen ! Betriebsstundenzähler gelöscht
+02 4D 30 30 32 39 03
+-1
+1
+COMMENT - Betriebsstundenzähler gelöscht
+0
+1
+0
+0
+
+RECEIVE
+576
+M0030 - Relativen Betriebsstundenzähler gelöscht
+02 4D 30 30 33 30 03
+-1
+1
+COMMENT - Kunden-Betriebsstundenzähler gelöscht
+0
+1
+0
+0
+
+RECEIVE
+577
+M0031 - Reset aufgrund eines INI-Befehls ausgeführt
+02 4D 30 30 33 31 03
+-1
+1
+COMMENT - Reset aufgrund eines INI-Befehls ausgeführt
+0
+1
+0
+0
+
+RECEIVE
+578
+M0032 - Messwerttiefe 'Gewichtsermittlung' gesetzt
+02 4D 30 30 33 32 03
+-1
+1
+COMMENT - Die Messwerttiefe zur Gewichtsermittlung wurde gesetzt
+0
+1
+0
+0
+
+RECEIVE
+579
+M0033 - Messwerttiefe 'Stromrückführung' gesetzt
+02 4D 30 30 33 33 03
+-1
+1
+COMMENT - Die Messwerttiefe der Stromrückführung wurde gesetzt
+0
+1
+0
+0
+
+RECEIVE
+580
+M0034 - Kennlinienaufnahme gestoppt
+02 4D 30 30 33 34 03
+-1
+1
+COMMENT - Kennlinienaufnahme gestoppt
+0
+1
+0
+0
+
+RECEIVE
+581
+M0035 - Watchdogadresse gelöscht
+02 4D 30 30 33 35 03
+-1
+1
+COMMENT - Watchdogadresse gelöscht
+0
+1
+0
+0
+
+RECEIVE
+582
+M0036 - Kennlinienaufnahme erfolgreich abgeschlossen
+02 4D 30 30 33 36 03
+-1
+1
+COMMENT - Kennlinienaufnahme erfolgreich abgeschlossen
+0
+1
+0
+0
+
+RECEIVE
+583
+M0037 - Kennlinienaufnahme fehlerhaft abgeschlossen
+02 4D 30 30 33 37 03
+-1
+1
+COMMENT - Kennlinienaufnahme fehlerhaft abgeschlossen
+0
+1
+0
+0
+
+RECEIVE
+584
+W0001 - Temperaturkompensation ausgeschaltet
+02 57 30 30 30 31 03
+-1
+1
+COMMENT - Temperaturkompensation ausgeschaltet
+0
+1
+0
+0
+
+RECEIVE
+585
+W0002 - Temperaturkompensation eingeschaltet
+02 57 30 30 30 32 03
+-1
+1
+COMMENT - Temperaturkompensation eingeschaltet
+0
+1
+0
+0
+
+RECEIVE
+586
+W0003 - System-ID gelöscht
+02 57 30 30 30 33 03
+-1
+1
+COMMENT - System-ID gelöscht
+0
+1
+0
+0
+
+RECEIVE
+587
+W0004 - Später löschen ! E-Modul-Kompensation wurde ausgeschaltet
+02 57 30 30 30 34 03
+-1
+1
+COMMENT - E-Modul-Kompensation wurde ausgeschaltet
+0
+1
+0
+0
+
+RECEIVE
+588
+W0005- Später löschen ! E-Modul-Kompensation wurde eingeschaltet
+02 57 30 30 30 35 03
+-1
+1
+COMMENT - E-Modul-Kompensation wurde eingeschaltet
+0
+1
+0
+0
+
+RECEIVE
+589
+W0006 - E-Modul-Kompensation wurde ausgeschaltet
+02 57 30 30 30 36 03
+-1
+1
+COMMENT - E-Modul-Kompensation wurde ausgeschaltet
+0
+1
+0
+0
+
+RECEIVE
+590
+W0007- E-Modul-Kompensation wurde eingeschaltet
+02 57 30 30 30 37 03
+-1
+1
+COMMENT - E-Modul-Kompensation wurde eingeschaltet
+0
+1
+0
+0
+
+RECEIVE
+591
+W0032 - Stromrückführung wurde ausgeschaltet
+02 57 30 30 33 32 03
+-1
+1
+COMMENT - Die Stromrückführung wurde ausgeschaltet
+0
+1
+0
+0
+
+RECEIVE
+592
+W0034 - Korrekturwert(e) der Temperaturkompensation manuell gesetzt
+02 57 30 30 33 34 03
+-1
+1
+COMMENT - Korrekturwert(e) der Temperaturkompensation manuell gesetzt
+0
+1
+0
+0
+
+RECEIVE
+593
+W0033 - Stromrückführung wurde eingeschaltet
+02 57 30 30 33 33 03
+-1
+1
+COMMENT - Die Stromrückführung wurde eingeschaltet
+0
+1
+0
+0
+
